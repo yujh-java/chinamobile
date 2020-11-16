@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>7581b1bf-8db5-4c38-8f1c-101fb682b979</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-26 16:27:50</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-28 10:34:52</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuU9S2w3aXvhJ7QftZZa7sgt+71r4zpGmIwVrLin8yRl9yFF6yRXVAwqKtVo83YCKr</signature>
+    <managed>false</managed>
+    <title>报表权限维护</title>
+    <deleted>false</deleted>
+    <categoryName>报表查询</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>26e12356-bbb0-4411-abb5-626ea8338793</id>
+            <title>报表权限维护</title>
+            <templateFile>{"pc":"报表查询-报表权限维护.htm","mobile":"报表查询-报表权限维护_m.htm","tablet":"报表查询-报表权限维护.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>e23daf57-f89b-452d-b99f-ede7fedf6e71</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

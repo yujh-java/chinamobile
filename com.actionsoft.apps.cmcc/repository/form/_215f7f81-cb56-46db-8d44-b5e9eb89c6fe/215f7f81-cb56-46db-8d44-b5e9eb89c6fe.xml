@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>215f7f81-cb56-46db-8d44-b5e9eb89c6fe</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-06 15:10:47</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-18 11:14:08</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuiJscDuGDfXogI54whLdCQcz3OFTHaiogkcf9ifLri1ngSUuVYn4Ve4dDWPuNDa5h</signature>
+    <managed>false</managed>
+    <title>重大重点项目结项研究院子流程表单快照</title>
+    <deleted>false</deleted>
+    <categoryName>重大重点项目结题</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/end?form=end_read&amp;type=end&amp;finance=edit&amp;process_id=@processParentId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>d470e9f3-884c-4ef5-b9d5-853bcb2c9562</id>
+            <title>重大重点项目结项研究院子流程表单快照</title>
+            <templateFile>{"pc":"重大重点项目结题-重大重点项目结项研究院子流程表单快照.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

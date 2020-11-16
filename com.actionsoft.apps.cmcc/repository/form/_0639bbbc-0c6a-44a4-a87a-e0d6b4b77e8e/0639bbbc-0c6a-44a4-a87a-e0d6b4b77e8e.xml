@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>0639bbbc-0c6a-44a4-a87a-e0d6b4b77e8e</id>
+    <createUser>admin</createUser>
+    <createTime>2017-12-21 15:53:42</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-25 12:46:42</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuW0RyPq2n10mTg7C/pgsapEiFHjj9Dyy2e7Q5G1TXEksHwuBiUeDCwcc5OQIMWZd4</signature>
+    <managed>false</managed>
+    <title>专业公司维护</title>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>865b3b67-4680-437d-9a9d-cc5717a96168</id>
+            <title>专业公司维护</title>
+            <templateFile>{"pc":"数据信息-专业公司维护.htm","mobile":"数据信息-专业公司维护_m.htm","tablet":"数据信息-专业公司维护.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>a898725d-e577-4a38-ac3e-60c541b99487</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform","mobile":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

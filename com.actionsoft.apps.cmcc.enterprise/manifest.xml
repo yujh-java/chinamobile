@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>东软企标</name>  
+  <version>1.0</version>  
+  <buildNo>6</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>true</categoryVisible>  
+  <description><![CDATA[]]></description>  
+  <details><![CDATA[]]></details>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.cmcc.enterprise.util.MyPlugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires/>  
+  <properties> 
+    <property action="edit" group="需求部门ID" name="QBXQBMID" title="企标管理需求部门ID" type="input" isSystem="false" desc="通过调用东软接口获取需求部门ID" ref="">http://10.2.5.92:8082/esmp/DRQB/getdemandandundertake?processId=</property>  
+    <property action="edit" group="功能按钮" name="LOGOFF_BUTTON" title="注销按钮事件" type="input" isSystem="false" desc="" ref="">http://10.2.5.92:8082/esmp/DRQB/updateablcstate?state=3&amp;processId=</property> 
+  </properties>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.2">_bpm.portal</depend>  
+  <modelAdministrator>admin</modelAdministrator>  
+  <installDate>2017-11-27 10:24:31</installDate>  
+  <releaseDate>2017-11-27</releaseDate>  
+  <productId/> 
+</app>

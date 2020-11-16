@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boModel>
+    <id>53ae9446-56bc-4e3e-93a9-685d0b0eab35</id>
+    <createUser>admin</createUser>
+    <createTime>2017-06-12 10:07:48</createTime>
+    <updateTime>2017-06-12 10:11:56</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuOGx8/YVSpri+UTqCUoaO5hEYPliF3Cwdb7+bZxqMwimbc6pmWFteL+R+8wVyqgQx</signature>
+    <managed>false</managed>
+    <title>组织架构同步排序维护明细</title>
+    <name>BO_ACT_PM_LDAPSYNC_ORDER_S</name>
+    <collection>false</collection>
+    <system>false</system>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <entityType>TABLE</entityType>
+    <viewType></viewType>
+    <viewSql></viewSql>
+    <boItems>
+        <boItem>
+            <id>1aebb9c4-8d1c-4092-9524-1a4f76004d4f</id>
+            <name>LDAPBMBH</name>
+            <title>LDAP 部门编号</title>
+            <columnType>TEXT</columnType>
+            <length>128</length>
+            <nullable>true</nullable>
+            <defaultValue></defaultValue>
+            <columnWidth>100</columnWidth>
+            <componentId>AWSUI.Text</componentId>
+            <componentSetting>{"search":"0"}</componentSetting>
+            <display>true</display>
+            <deleted>false</deleted>
+            <modify>true</modify>
+            <componentExtendCode></componentExtendCode>
+            <persistenceType>ENTITY</persistenceType>
+            <validateType></validateType>
+            <validateRule></validateRule>
+            <validateTip></validateTip>
+            <validateErr>0</validateErr>
+            <tooltip></tooltip>
+            <copy>false</copy>
+            <displayRule></displayRule>
+            <calcFormula></calcFormula>
+        </boItem>
+        <boItem>
+            <id>21f4a7c5-8009-4c77-b697-2027d294e88d</id>
+            <name>LDAPBMMC</name>
+            <title>LDAP 部门名称</title>
+            <columnType>TEXT</columnType>
+            <length>128</length>
+            <nullable>true</nullable>
+            <defaultValue></defaultValue>
+            <columnWidth>100</columnWidth>
+            <componentId>AWSUI.Text</componentId>
+            <componentSetting>{"search":"0"}</componentSetting>
+            <display>true</display>
+            <deleted>false</deleted>
+            <modify>true</modify>
+            <componentExtendCode></componentExtendCode>
+            <persistenceType>ENTITY</persistenceType>
+            <validateType></validateType>
+            <validateRule></validateRule>
+            <validateTip></validateTip>
+            <validateErr>0</validateErr>
+            <tooltip></tooltip>
+            <copy>false</copy>
+            <displayRule></displayRule>
+            <calcFormula></calcFormula>
+        </boItem>
+    </boItems>
+    <boIndexs/>
+    <boRelations/>
+</boModel>

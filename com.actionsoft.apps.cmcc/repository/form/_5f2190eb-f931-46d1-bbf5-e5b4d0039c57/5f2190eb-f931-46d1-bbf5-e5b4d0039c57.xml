@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>5f2190eb-f931-46d1-bbf5-e5b4d0039c57</id>
+    <createUser>admin</createUser>
+    <createTime>2017-07-18 14:57:32</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-11 10:30:25</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu2/vjrzmBIPqHKmR9RNp9yBtWOIR4H5+gCaH6FyQQphDG32ywnrqe2Fo7lKhWiltq</signature>
+    <managed>false</managed>
+    <title>成果提交快照表单</title>
+    <deleted>false</deleted>
+    <categoryName>重大重点项目里程碑成果提交评价</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/milestone?form=check_score&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>184cad32-e1c7-49f6-afdb-6a1395aace71</id>
+            <title>成果提交快照表单</title>
+            <templateFile>{"tablet":"","pc":"重大重点项目里程碑成果提交评价-成果提交-成果提交快照表单.htm","mobile":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

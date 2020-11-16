@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>任务扩展接口</name>  
+  <version>1.0</version>  
+  <buildNo>10</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>false</categoryVisible>  
+  <description><![CDATA[中国移动相关接口]]></description>  
+  <details><![CDATA[中国移动相关接口]]></details>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.cmcc.integration.Plugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires> 
+    <require appId="" notActiveHandler=""/> 
+  </requires>  
+  <properties> 
+    <property action="edit" group="SPMS接口" name="STATE_WRITEBACK" title="状态回写接口" type="input" isSystem="false" desc="" ref="">http://10.2.5.187/spms/api/workflow/projectworkflowinfo</property>  
+    <property action="edit" group="SPMS接口" name="LOGOFF_BUTTON" title="注销按钮接口" type="input" isSystem="false" desc="" ref="">http://10.2.5.187/spms/api/workflow/cancel</property>  
+    <property action="edit" group="SPMS接口" name="PROJECT_DATA_WRITEBACK" title="立项信息获取接口" type="input" isSystem="false" desc="" ref="">http://10.2.5.187/spms/api/workflow/reqous</property>  
+    <property action="edit" group="SPMS接口" name="ProjectInjection" title="一般委托项目信息接口" type="input" isSystem="false" desc="" ref="">http://10.2.5.187/spms/hq/api/workflow/task</property>  
+    <property action="edit" group="接口参数" name="urlPath" title="邮件、短信接口" type="input" isSystem="false" desc="接口地址" ref="">http://10.1.5.142:8182/api/message/send?access_token=CYAWP7OYm1AE2uUg</property>  
+    <property action="edit" group="接口参数" name="app" title="标识app" type="input" isSystem="false" desc="流程系统标识" ref="">WORK_FLOW</property> 
+    <property action="edit" group="基础参数" name="YJY_DEPTID" title="研究院部门ID" type="input" isSystem="false" desc="" ref="">fd7ef633-6453-4c02-93b4-ced754511b41</property>
+  
+  </properties>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.1">_bpm.portal</depend>  
+  <installDate>2017-02-16 16:25:20</installDate>  
+  <productId/> 
+</app>

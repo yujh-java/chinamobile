@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>31ff2b41-7717-4ea1-bb41-ed555c15b723</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-06 14:56:36</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-19 17:01:04</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzupOb07/mQ7TFyEHaFgYwOiwXI/aWcegbEiHk2X9KX2gPfiwZgM/hkGJVKBYZ0wlr6</signature>
+    <managed>false</managed>
+    <title>重大重点项目研究院子流程表单快照</title>
+    <deleted>false</deleted>
+    <categoryName>重大重点项目立项</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/open?form=open_read&amp;process_id=@processParentId()&amp;cmri=1","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>c89eadbd-8a57-40e2-a6bc-587311a36083</id>
+            <title>重大重点项目研究院子流程表单快照</title>
+            <templateFile>{"tablet":"","pc":"重大重点项目立项-项目立项-重大重点项目研究院子流程表单快照.htm","mobile":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

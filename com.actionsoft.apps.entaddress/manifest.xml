@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>单位通讯录</name>  
+  <version>1.0</version>  
+  <buildNo>9</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>false</categoryVisible>  
+  <releaseDate>2014-01-06</releaseDate>  
+  <description><![CDATA[快速、方便的查找单位同事联系信息]]></description>  
+  <details><![CDATA[单位通讯录根据AWS平台的组织结构数据自动构建，为查询单位同事信息提供了简单、直观的交互界面。该应用采用了服务端缓存、异步加载和分批提取查询结果技术，能够支持拥有数万员工的大型企业，同时该应用还支持按姓氏发音来分类查找单位同事。
+    
+<b>主要功能</b>
+ - 浏览单位联系人列表（可配置允许出现的信息）
+ - 模糊查询联系人
+ - 查看联系人详细信息
+ - 最近浏览记录
+ - 打印联系人信息（支持开关选项）
+ - 导出联系人信息（支持开关选项）
+ - 个人可修改自己的联系信息 
+ - 管理通讯录管理员
+	]]></details>  
+  <installDate/>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.entaddress.plugin.Plugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <upgradeRollback/>  
+  <depend versions="6.1">_bpm.portal</depend>  
+  <requires> 
+    <require appId="com.actionsoft.apps.network" notActiveHandler="none"/> 
+  </requires>  
+  <deployment> 
+    <system id="obj_00093403df6a17ed729913d64f48f930" icon16="../commons/img/home_16.png" icon64="../commons/img/home_64.png" icon96="../commons/img/home_96.png" notifier="" name="%u9996%u9875" target="mainFrame" url="/" deployUrlType="2" source="1"> 
+      <directory id="obj_677b85287e6a492a91925b57cf34ef96" icon16="../commons/img/home_16.png" icon64="../commons/img/home_64.png" icon96="../commons/img/home_96.png" notifier="" name="%u4E2A%u4EBA" target="mainFrame" url="/" deployUrlType="2" source="0"> 
+        <function id="obj_37fa3a92c3cc4e478c6628936da9b287" icon16="../apps/com.actionsoft.apps.entaddress/img/icon16.png" icon64="../apps/com.actionsoft.apps.entaddress/img/icon64.png" icon96="../apps/com.actionsoft.apps.entaddress/img/icon96.png" notifier="" name="%u5355%u4F4D%u901A%u8BAF%u5F55" target="mainFrame" url="./w?sid=@sid&amp;cmd=com.actionsoft.apps.entaddress_home" deployUrlType="1"/> 
+      </directory> 
+    </system> 
+  </deployment>  
+  <properties> 
+    <property action="edit" group="单位通讯录" name="allowPrint" title="是否允许打印" type="combox" isSystem="false" desc="是否允许打印（true，false），默认为true" ref="true|false">true</property>  
+    <property action="edit" group="单位通讯录" name="allowExp" title="是否允许导出" type="combox" isSystem="false" desc="是否允许导出（true，false），默认为true" ref="true|false">false</property>  
+    <property action="edit" group="单位通讯录" name="rowLimit" title="数据加载条数" type="input" isSystem="false" desc="数据加载条数，默认每次加载100条">100</property>  
+    <property action="edit" group="单位通讯录" name="defaultShowOpt" title="访问时默认显示当前位置" type="input" isSystem="false" desc="访问时默认显示当前，0-单位，1-部门">0</property>  
+    <property action="edit" group="单位通讯录" name="positionNameDisplay" title="职务名称是否显示" type="combox" isSystem="false" desc="职务名称是否显示，true/false，默认为false，不显示" ref="true|false">true</property>  
+    <property action="edit" group="单位通讯录" name="positionName" title="职务名称" type="input" isSystem="false" desc="职务名称">职务</property>  
+    <property action="edit" group="单位通讯录" name="officeFaxDisplay" title="传真号码是否显示" type="combox" isSystem="false" desc="传真号码是否显示，true/false，默认为false，不显示" ref="true|false">false</property>  
+    <property action="edit" group="单位通讯录" name="officeFaxName" title="传真号码" type="input" isSystem="false" desc="传真号码">传真号码</property>  
+    <property action="edit" group="单位通讯录" name="displayUserMap" title="是否显示兼任账户" type="combox" isSystem="false" desc="通讯录是否显示兼任账户信息，“全显示”为不受任何控制，全部显示兼任账户；“根据组织结构兼任账户控制”将根据组织结构中的兼任账户设置的“是否显示”控制；“不显示”则完全不显示兼任账户，默认“全显示”" ref="全显示:1|根据组织结构兼任账户控制:2|不显示:3">1</property>  
+    <property action="edit" group="单位通讯录" name="rolesHideMobile" title="手机端隐藏手机号的角色" type="input" isSystem="false" desc="手机端隐藏手机号的角色，多个以逗号分隔, 例如系统/管理员,员工/普通用户" ref=""/>  
+    <property action="edit" group="单位通讯录" name="rolesHideOfficeTel" title="手机端隐藏固定电话的角色" type="input" isSystem="false" desc="手机端隐藏固定电话的角色，多个以逗号分隔, 例如系统/管理员,员工/普通用户" ref=""/>  
+    <property action="edit" group="单位通讯录" name="rolesHideMobileOfPC" title="PC端隐藏手机号的角色" type="input" isSystem="false" desc="PC端隐藏手机号的角色，多个以逗号分隔, 例如系统/管理员,员工/普通用户" ref=""/>  
+    <property action="edit" group="单位通讯录" name="rolesHideOfficeTelOfPC" title="PC端隐藏固定电话的角色" type="input" isSystem="false" desc="PC端隐藏固定电话的角色，多个以逗号分隔, 例如系统/管理员,员工/普通用户" ref=""/> 
+  </properties>  
+  <productId/>  
+  <unInstallDate>2017-02-22 10:18:38</unInstallDate>
+</app>

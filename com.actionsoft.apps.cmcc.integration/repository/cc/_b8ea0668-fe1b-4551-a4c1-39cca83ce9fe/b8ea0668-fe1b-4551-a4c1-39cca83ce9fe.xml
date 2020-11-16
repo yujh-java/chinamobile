@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>b8ea0668-fe1b-4551-a4c1-39cca83ce9fe</id>
+    <createUser>admin</createUser>
+    <createTime>2017-02-16 16:28:08</createTime>
+    <updateTime>2017-02-16 16:28:08</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuhsM89tlFsml/h+pas+ibVGgIePwzacTEncHe7Wkgn8YVhHz+e4zPCQfOOWamK8M3</signature>
+    <managed>false</managed>
+    <name>任务接口秘钥</name>
+    <type>sysidentity</type>
+    <updateUser></updateUser>
+    <group></group>
+    <log>false</log>
+    <properties>{"ut_pwd":"iGbbgGBLA4UnmYQN4p5xdg==","ut":"awscmcc","idAdministrator":"","alias":"xawscmcc","keypass":"wlT6aC5mtHjACGogDzdUtw==","webApi":false,"rules":[]}</properties>
+    <desc></desc>
+</ccModel>

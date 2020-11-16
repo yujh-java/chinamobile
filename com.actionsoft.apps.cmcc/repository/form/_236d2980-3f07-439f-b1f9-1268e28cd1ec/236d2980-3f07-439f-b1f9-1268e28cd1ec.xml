@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>236d2980-3f07-439f-b1f9-1268e28cd1ec</id>
+    <createUser>admin</createUser>
+    <createTime>2017-07-18 18:09:30</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-23 14:36:44</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuMKRMT+YHOZ6Js3F82h7wGgUswViXa6LhNpVrwBZ8lRNVbo+S54V57qowWkzWjrw/</signature>
+    <managed>false</managed>
+    <title>取消终止流程表单快照</title>
+    <deleted>false</deleted>
+    <categoryName>取消终止流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/workflow/stop?form=stop_read&amp;type=cmri-stop&amp;finance=read&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>64cc5146-e722-4842-9555-5df2ed804fd4</id>
+            <title>取消终止流程表单快照</title>
+            <templateFile>{"pc":"取消终止流程-取消终止流程表单快照.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

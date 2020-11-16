@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><I18N #实例高级分类管理></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript"
+	src="../commons/js/jquery/scripts/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="../commons/css/awsui.css">
+<script type="text/javascript" src="../commons/js/public.js"></script>
+<script type="text/javascript" src="../commons/js/awsui.js"></script>
+<script type="text/javascript" src="../commons/js/jquery/scripts/ui/chart/aws.chart.js"></script>
+<script src="../commons/js/jquery/scripts/ui/reference/jquery-ui.js"></script>
+<script type="text/javascript" src="../apps/com.actionsoft.apps.addons.ldapsync/js/com.actionsoft.apps.addons.ldapsync.js"></script>
+<link rel="stylesheet" href="../commons/js/jquery/themes/default/public.css">
+<script type="text/javascript">
+	var searchScope = "<#searchScope>";
+	var targetDeptRdo = "<#targetDeptRdo>";
+	var type_sync_dept = "<#type_sync_dept>";
+	var mappingUserId = "<#mappingUserId>";
+	var mappingUserDeptId = "<#mappingUserDeptId>";
+	var mappingDeptId = "<#mappingDeptId>";
+	var mappingParentDeptId = "<#mappingParentDeptId>";
+	var isExec = "<#isExec>";
+	var props = <#props>;
+</script>
+<style type="text/css"> 
+.graph{ 
+	width:100px; 
+	border:1px solid #B2AFB0;
+	height:15px;
+} 
+#bar{ 
+	display:block; 
+	background:#43CA63; 
+	float:left; 
+	height:100%; 
+	text-align:center; 
+} 
+#barNum{ 
+	position:absolute;
+}
+.awsui-select-span{vertical-align: middle;}
+.awsui-ux .required:before{margin-top: 13px;}
+.dept_style{color:#1991e4}
+.user_style{color:#2560cd}
+.failur_style{color:#e58282}
+.clock_style{color:#000000;filter:alpha(opacity=40); -moz-opacity:0.4; opacity:0.4;}
+.bg_style{background-color: #f7f7f7;}
+.log_style{color:#000000;filter:alpha(opacity=7); -moz-opacity:0.7; opacity:0.7;}
+</style> 
+</head>
+<body>
+	<form method="post" id="frmMain" name="frmMain">
+		<div id="mainDiv" style="overflow: hidden; margin-left: 0px; padding: 0px">
+			<div id="toolbar" class="awsui-toolbar fixed" align="right">
+						<table>
+							<tr>
+							  <span class="button" title='查看最近一次执行日志' id="showLogBtn" onclick="showLog()">查看日志</span>
+							  <span onclick="saveConfig()" class="button green">保存</span>
+							  <span onclick="execSync()" class="button blue">执行同步</span>
+							</tr>
+						</table>
+			</div>
+			<div id="center" style="margin-top: 3px; border: 0px blue solid;">
+				<table class="awsui-ux">
+					<tbody>
+						<tr>
+								<td class="awsui-ux-title">LDAP适配器</td>
+								<td>
+										<select id="ccLdap" class="awsui-select" onchange="switchCCServer()">
+											<#ccldapHTML>
+										</select>
+										&nbsp;&nbsp;&nbsp;
+										<span class='button' title='测试连接是否可用' onclick="testConnect()">测试连接</span>
+										<span class='button' title='查看一个ldap组织和人员属性' id="showStructBtn" onclick="showStruct()">结构参考</span>
+								</td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">同步线程数</td>
+							<td><input type="text"  style='min-width:60px;width:60px;' name="maxConc" id="maxConc" class ="txt"  value="<#maxConc>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">部门搜索上下文</td>
+							<td><input class="awsui-textbox" type="text" id="dept_root_rdn" awsui-qtip="配置部门的搜索子上下文,相对于CC，例如：<br/>cn=orgs"  value="<#dept_root_rdn>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">人员搜索上下文</td>
+							<td><input class="awsui-textbox" type="text" id="dept_user_rdn" awsui-qtip="配置人员的搜索子上下文,相对于CC，例如：<br/>cn=users" value="<#dept_user_rdn>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">根部门</td>
+							<td><input class="awsui-textbox" type="text" id="dept_root_filter" awsui-qtip="例如：<br/>(OrgID=1078545053688469848)、<br/>(&(objectClass=organizationalUnit)(ParentOrg=1078545053688469848))"  value="<#dept_root_filter>" style="width: 55%;">
+								<span style="margin-left: 35px;">
+									搜索范围   <select class="awsui-select"  id="searchScope" style="width: 12%;" >
+										<option value="0">CC LDAP指定目录</option>
+										<option value="1">CC LDAP指定目录下一级</option>
+										<option value="2">CC LDAP指定目录下级</option>
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">部门</td>
+							<td><input class="awsui-textbox" type="text" id="filter-dept" awsui-qtip="部门搜索条件，例如：<br/>(objectClass=organizationalUnit)" value="<#filter-dept>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">人员</td>
+							<td><input class="awsui-textbox" type="text" id="filter-user" awsui-qtip="人员搜索条件，例如：<br/>(objectclass=person)" value="<#filter-user>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">部门变更</td>
+							<td><input class="awsui-textbox" type="text" id="filter-dept-inc" awsui-qtip="新增或者属性变化部门的搜索条件，例如：<br/>" value="<#filter-dept-inc>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">人员变更</td>
+							<td><input class="awsui-textbox" type="text" id="filter-user-inc" awsui-qtip="新增或者属性变化人员的搜索条件，例如：<br/>" value="<#filter-user-inc>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">被删部门</td>
+							<td><input class="awsui-textbox" type="text" id="filter-dept-del" awsui-qtip="被删部门的搜索条件，例如：<br/>" value="<#filter-dept-del>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">被删人员</td>
+							<td><input class="awsui-textbox" type="text" id="filter-user-del" awsui-qtip="被删人员的搜索条件，例如：<br/>" value="<#filter-user-del>"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title" style="vertical-align: top;padding-top: 12px;">关联定义</td>
+							<td><table>
+								<tr>
+									<td width="75px">用户ID</td>
+									<td class='required' ><select class="awsui-select" id="userIdAttr" style="width: 240px;" awsui-qtip="ldap人员唯一标志属性"><option value="">请选择</option></select></td>
+									<td width="75px">用户部门</td>
+									<td class='required' ><select class="awsui-select" id="userDeptId" style="width: 240px;" awsui-qtip="ldap人员的部门关系属性"><option value="">请选择</option></select></td>
+								</tr>
+								<tr>
+									<td width="75px">部门ID</td>
+									<td class='required' ><select class="awsui-select" id="deptId" style="width: 240px;" awsui-qtip="ldap部门唯一标志属性"><option value="">请选择</option></select></td>
+									<td width="75px">父部门</td>
+									<td class='required' ><select class="awsui-select" id="parentDeptId" style="width: 240px;" awsui-qtip="ldap部门的父部门关系属性"><option value="">请选择</option></select></td>
+								</tr>
+								<tr>
+									<td class='required' colspan='4'>用户的部门属性值与部门属性&nbsp;<select class="awsui-select" id="userDeptRelation" style="width: 180px;" awsui-qtip="用户部门和部门属性的相等关系"><option value="">请选择</option></select>&nbsp;相同</td>
+								</tr>
+							</table></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">同步到</td>
+							<td class="required" valign="top">
+								<input type="radio" name="targetDeptRdo" id="root" value="root" class="awsui-radio"  ><label for="root" class="awsui-radio-label">根部门</label>
+								<span id="spanSelect">
+									<select class="awsui-select awsui-select-nofit" id="target_company">
+										<#companyHTML>
+									</select>
+								</span>
+								<input type="radio" name="targetDeptRdo" id="targ" value="targ" class="awsui-radio"><label for="targ" class="awsui-radio-label">其它部门</label>
+								<span id="spanText">
+									<input type="text" readonly  class="awsui-buttonedit txt" style="vertical-align: inherit;width: 363px"  id="deptName" name="deptName" value="<#deptName>">
+									<input type="hidden" id="target_department" name="target_department" value="<#target_department>">
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">默认角色</td>
+							<td class="required">
+								<input type="text" readonly  class="awsui-buttonedit txt" id="roleName" name="roleName" value="<#roleName>">
+								<input type="hidden" id="roleId" name="roleId" value="<#roleId>">
+							</td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">同步删除</td>
+							<td><input type="checkbox" class="awsui-checkbox" id="sync_delete" <#sync_delete> ></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">扩展接口</td>
+							<td><input type="text"  name="sync-adapter" id="sync-adapter" class ="txt"  value="<#sync-adapter>" awsui-qtip="实现：<#sync-adapter-holder>，打包在本App的lib目录"></td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">部门属性配置</td>
+							<td  class="required tit">
+								<div id="keyGridToolbar" class="awsui-toolbar" style="width:100%;">
+			  						<a id="keyGridAdd" class="awsui-linkbutton" onclick="addDeptRow()">
+								  		<span class="icon icon-add"></span>
+								  		<span class="title">添加</span>
+								  	</a>
+								  	<a id="keyGridDelete" class="awsui-linkbutton" onclick="deleteDeptRow()">
+								  		<span class="icon icon-remove"></span>
+								  		<span class="title">删除</span>
+							  		</a>
+					      		 </div>
+									<table class="table table-bordered" id="sync_dept_map" style="margin-top: 5px;">
+										<tbody>
+											<tr id="deptAttTh">
+												<th width="3%" class="" > <input type="checkbox" class="awsui-checkbox check-all" id="all_select" group="all_select" value=""/></th>
+												<th width="19%" class="">LDAP字段</th>
+												<th width="19%" class="">AWS组织结构</th>
+											</tr>
+											<#syncDeptHTML>
+										</tbody>
+									</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="awsui-ux-title">人员属性配置</td>
+							<td  class="required tit">
+								<div id="keyGridToolbar" class="awsui-toolbar" style="width:100%;">
+			  						<a id="keyGridAdd" class="awsui-linkbutton" onclick="addUserRow();">
+								  		<span class="icon icon-add"></span>
+								  		<span class="title">添加</span>
+								  	</a>
+								  	<a id="keyGridDelete" class="awsui-linkbutton" onclick="deleteUserRow();">
+								  		<span class="icon icon-remove"></span>
+								  		<span class="title">删除</span>
+							  		</a>
+					      		 </div>
+									<table class="table table-bordered" id="sync_user_map" style="margin-top: 5px;">
+										<tbody>
+											<tr id="userAttTh">
+												<th width="3%" class=""><input type="checkbox" class="awsui-checkbox check-all" id="all_select2" group="all_select" value=""/></th>
+												<th width="19%" class="">LDAP字段</th>
+												<th width="19%" class="">AWS组织结构</th>
+											</tr>
+											<#syncUserHTML>
+										</tbody>
+									</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 默认角色 -->
+		<div id="displayArea"></div>
+		
+		<!--  添加同步部门 -->
+		<div id="deptDlg" title="添加部门属性关联" style="width:600px;display:none;">
+		    <table class="awsui-ux"  >
+				<tr >
+					<td width="11%">LDAP字段&nbsp;&nbsp;</td>
+					<td><select id="addLdapDept"  class="awsui-select" style="width: 200px;"><option value="">请选择</option></select></td>
+					<td width="15%">AWS部门属性</td>
+					<td><select id="addAwsDept" class="awsui-select" style="width: 200px;"><option value="">请选择</option><#awsDepOption></select></td>
+				</tr>
+			</table>
+		</div>
+		
+		<!--  添加同步人员 -->
+		<div id="userDlg" title="添加人员属性关联" style="width:600px;display:none;">
+		    <table class="awsui-ux">
+				<tr >
+					<td width="11%">LDAP字段&nbsp;&nbsp;</td>
+					<td><select id="addLdapUser"  class="awsui-select" style="width: 200px;"><option value="">请选择</option></select></td>
+					<td width="15%">AWS人员属性</td>
+					<td><select id="addAwsUser" class="awsui-select" style="width: 200px;"><option value="">请选择</option><#awsUserAttr></select></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="structDlg" title="查看结构" style="width:800px;height:450px;display: none;">
+		 	<div id="content" style="height:390px;" class="dlg-content awsui-ux">
+				<div style="padding:0px 10px;" class="awsui-simple-tab" contentid="content" onbeforechange="onbeforechange" onchange="onchange">
+				    <a tit="params" class="active" id="aDept" onclick="switchTab('aDept','structInfoDept','aUser','structInfoInfo')">部门</a>
+				    <a tit="normal" id="aUser" onclick="switchTab('aUser','structInfoInfo','aDept','structInfoDept')">人员</a>
+				</div>
+				<div id="infos" style="height:340px;border:1px solid #ddd;border-top:0px;overflow: scroll;">
+				    <div tit="params"  id="structInfoDept" ></div>
+				    
+				    <div tit="normal"  id="structInfoInfo" style="display: none;"></div>
+				    
+				</div>
+			</div>
+		</div>
+		
+		<div id="logDlg" title="查看日志" style="width:800px;height:480px;display: none;">
+		<div id="content" style="height:390px;" class="dlg-content awsui-ux">
+			<table style="width: 100%;">
+				<tr>
+					<td>
+						<table class="table table-thin">
+							<tr>
+								<td style="width: 90%;">
+									<table style="width: 100%;">
+										<tr>
+											<td style='width:70%'>
+												<table style="width: 100%;">
+														<tr>
+															<td colspan="2" class='clock_style'>开始时间：<span id="log_startTime" ></span> </td>
+														</tr>
+														<tr>
+															<td style='width:50%;text-align:center;'><div style='width:210px;' class='bg_style'><img src="../apps/com.actionsoft.apps.addons.ldapsync/img/dept.png" style="vertical-align: middle;"><span class='dept_style'>部门：共<span id="dept_all"></span>个</span></div></td>
+															<td style='text-align:center;'><div style='width:210px;' class='bg_style'><img src="../apps/com.actionsoft.apps.addons.ldapsync/img/user.png"><span class='user_style'>人员：共<span id="user_all"></span>个</span></div></td>
+														</tr>
+														<tr>
+															<td style='width:50%;'>
+																	<img src="../apps/com.actionsoft.apps.addons.ldapsync/img/dept_add.png">&nbsp;<span class="dept_style">新增成功 (<span id="dept_add"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>新增失败 (<span id="dept_fadd"></span>)</span><br/>
+																    <img src="../apps/com.actionsoft.apps.addons.ldapsync/img/dept_update.png">&nbsp;<span class="dept_style">更新成功 (<span id="dept_upd"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>更新失败 (<span id="dept_fupd"></span>)</span><br/>
+																    <img src="../apps/com.actionsoft.apps.addons.ldapsync/img/dept_remove.png">&nbsp;<span class="dept_style">删除成功 (<span id="dept_del"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>删除失败 (<span id="dept_fdel"></span>)</span>
+															</td>
+															<td>
+																	<img src="../apps/com.actionsoft.apps.addons.ldapsync/img/user_add.png">&nbsp;<span class='user_style'>新增成功 (<span id="user_add"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>新增失败 (<span id="user_fadd"></span>)</span><br/>
+																	<img src="../apps/com.actionsoft.apps.addons.ldapsync/img/user_update.png">&nbsp;<span class='user_style'>更新成功 (<span id="user_upd"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>更新失败 (<span id="user_fupd"></span>)</span><br/>
+																	<img src="../apps/com.actionsoft.apps.addons.ldapsync/img/user_remove.png">&nbsp;<span class='user_style'>删除成功 (<span id="user_del"></span>)</span>&nbsp;&nbsp;<span class='failur_style'>删除失败 (<span id="user_fdel"></span>)</span>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="2" class='clock_style'>结束时间：<span id="log_endTime"></span> </td>
+														</tr>
+												</table>
+											</td>
+											<td style="border-left: 1px solid rgb(208, 207, 207);" align="center">
+												<div style='text-align: center;font-weight: bold;font-size:27px;' id='processstatus'></div>
+												<div id='processpercent' style='margin-top:10px;'>
+													<font id='processed' style="color:green;font-size: 36px;"></font><font style="font-size: 27px;"> / </font><font id='total' style='font-size: 21px;'></font>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div style="width: 100%;height: 215px;overflow: scroll;">
+										<table id="detailTab">
+										</table>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+		<#sid>
+	</form>
+</body>
+</html>

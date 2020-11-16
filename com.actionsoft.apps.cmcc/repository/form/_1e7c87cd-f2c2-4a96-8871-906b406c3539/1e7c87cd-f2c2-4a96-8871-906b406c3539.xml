@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>1e7c87cd-f2c2-4a96-8871-906b406c3539</id>
+    <createUser>admin</createUser>
+    <createTime>2017-03-23 14:36:22</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-19 17:00:46</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu41ajZnhjZim7EkfZ+7h2MpchMMIQyTCgJYmq36WBCJTOGKesSp+AbdAxB+mOdhS5</signature>
+    <managed>false</managed>
+    <title>重大重点项目立项申请</title>
+    <deleted>false</deleted>
+    <categoryName>重大重点项目立项</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/Workflow/open?form=main&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>9f1de016-a2dc-4353-917e-8c84df0a4140</id>
+            <title>重大重点项目立项申请</title>
+            <templateFile>{"tablet":"","pc":"重大重点项目立项-项目立项-重大重点项目立项申请.htm","mobile":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

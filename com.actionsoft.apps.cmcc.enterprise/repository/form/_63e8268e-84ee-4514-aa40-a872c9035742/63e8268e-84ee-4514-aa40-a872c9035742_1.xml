@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>63e8268e-84ee-4514-aa40-a872c9035742</id>
+    <createUser>admin</createUser>
+    <createTime>2017-12-05 10:04:28</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-05 10:05:03</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzudlC62XeDoRGFLKSbo/o7oW6YWveD5jK3DhabcY1xHObpGC1PmnGJqo61c8YYejD+</signature>
+    <managed>false</managed>
+    <title>重点企标送审单</title>
+    <deleted>false</deleted>
+    <categoryName>企标审批稿</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://keyan.test.cmri.cn/esmp/QBJH/QBBX/qblcshow?state=1&amp;processId=@processid()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>0c4645f7-34d0-49f8-8a87-bc5c111ea354</id>
+            <title>重点企标送审单</title>
+            <templateFile>{"pc":"企标审批稿-重点企标送审单.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

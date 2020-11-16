@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>fb3c3415-c951-4591-8ac6-9a1a4a7c0e3f</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-05 14:26:06</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-05 16:10:06</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu24cB5qS5eJqlbiQZA2T2WYGWpeba7uL7vapeYMDWO+pREkqfBLWqUM0OuyjRkiwg</signature>
+    <managed>false</managed>
+    <title>邮件模板配置表</title>
+    <deleted>false</deleted>
+    <categoryName>模板配置</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"","mobile":""}</url>
+    <urlHeight>{"pc":"","mobile":""}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>3c0991c4-a872-4523-8c5b-d196c381bf49</id>
+            <title>邮件模板配置表</title>
+            <templateFile>{"tablet":"模板配置-邮件模板配置表.htm","pc":"模板配置-邮件模板配置表.htm","mobile":"模板配置-邮件模板配置表_m.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>51d21619-6404-462d-bb63-b206587b7810</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>b16e7f11-e6da-4b91-890f-ca56bc606c1d</id>
+    <createUser>admin</createUser>
+    <createTime>2017-04-13 18:19:19</createTime>
+    <updateUser></updateUser>
+    <updateTime>2018-01-03 18:01:17</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuqk+B9TdPpxaYEfvQWDldQmkXEFTSIh3Khkgb53ZRM4IQj6E/QpU4d9hPhvETKOaE</signature>
+    <managed>false</managed>
+    <title>项目评价打分表单</title>
+    <deleted>false</deleted>
+    <categoryName>重大重点项目结题评分</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/end?type=hq-end_score&amp;form=end_score_grade&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>3da424bb-84c2-452e-b083-50ce4161a959</id>
+            <title>项目评价打分表单</title>
+            <templateFile>{"pc":"重大重点项目结题评分-项目评价打分表单.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

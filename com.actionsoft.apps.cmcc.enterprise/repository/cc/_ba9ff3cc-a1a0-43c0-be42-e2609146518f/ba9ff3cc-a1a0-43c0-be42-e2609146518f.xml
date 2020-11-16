@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>ba9ff3cc-a1a0-43c0-be42-e2609146518f</id>
+    <createUser>admin</createUser>
+    <createTime>2017-11-28 17:31:38</createTime>
+    <updateUser>admin</updateUser>
+    <updateTime>2017-11-28 17:32:59</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu1V++CVexRjihemj8vRsi72WJPrqLa/nu28bCD61YoQkK+/XMVAKq7y1THAXQIjSL</signature>
+    <managed>false</managed>
+    <name>东软企标</name>
+    <type>http</type>
+    <group></group>
+    <log>false</log>
+    <properties>{"user":"admin","password":"test123","httpUrl":"http://keyan.test.cmri.cn/esmp/DRQB/getdemandandundertake","method":"GET","encoding":"UTF-8","group":"","desc":"","diyData":"","params":[{"key":"processId","value":""}],"idcheck":false}</properties>
+    <desc></desc>
+</ccModel>

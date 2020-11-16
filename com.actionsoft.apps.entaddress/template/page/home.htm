@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><I18N#单位通讯录></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!-- JQuery -->
+	<script type="text/javascript" src="../commons/js/jquery/scripts/jquery.js"></script>
+	<script type="text/javascript" src="../commons/js/jquery/scripts/jquery.textchange.js"></script>
+	<script type="text/javascript" src="../apps/com.actionsoft.apps.skins.metro/lib/jquery.mobile/jquery.mobile.custom.js"></script>
+	
+	<!-- jquery jcrop -->
+	<link rel="stylesheet" type="text/css" href="../commons/js/jquery/scripts/ui/jquery.jcrop/css/jquery.Jcrop.css" />	
+	<script type="text/javascript" src="../commons/js/jquery/scripts/ui/jquery.jcrop/js/jquery.Jcrop.js"></script>
+	<!-- AWS UI -->
+	<link rel="stylesheet" type="text/css" href="../commons/css/awsui.css">
+	<script type="text/javascript" src="../commons/js/awsui.js"></script>
+	<script type='text/javascript' src='../commons/js/public.js'></script>
+	<script type="text/javascript" src="../commons/js/jquery/scripts/ui/aws.photocut.js"></script>
+	<style type="text/css">
+		#uploadUserPortraitDailog.awsui-dialog .dlg-close {
+			width: 24px;
+			height: 24px;
+			background: transparent url(../apps/com.actionsoft.apps.skins.menuportal1/img/dlg_closed.png) 0px 0px no-repeat;
+			top: 14px;
+			right: 15px;
+		}
+		
+		#uploadUserPortraitDailog.awsui-dialog .dlg-close:hover {
+			background-position: 0px 0px;
+		}
+	</style>
+	<script type="text/javascript">
+        var sessionId = "<#sid>";
+        var sid = "<#sid>";
+		var sysAppId = "<#sysAppId>";
+		var uid = "<#uid>";
+		var companyName = "<#companyName>";
+		var companyId = "<#companyId>";
+		var userPhoto = "<#userPhoto>";
+		var userPhotoTmp = "<#userPhotoTmp>";
+		var appId ="<#appId>";
+		var rowLimit = <#rowLimit>;
+		var positionNameDisplay = <#positionNameDisplay>;
+		var positionName = '<#positionName>';
+		
+		var officeFaxDisplay = <#officeFaxDisplay>;
+		var officeFaxName = '<#officeFaxName>';
+		var requiredEmail = <#requiredEmail>;
+		var requiredOfficeTel = <#requiredOfficeTel>;
+		var requiredMobile = <#requiredMobile>;
+		<!--国际化语言-->
+		var 单位通讯录 = '<I18N#单位通讯录>';
+		var 添加 = '<I18N#添加>';
+		var 关闭 = '<I18N#关闭>';
+		var 在线 = '<I18N#在线>';
+		var 离线 = '<I18N#离线>';
+		var 编辑 = '<I18N#编辑>';
+		var 加载更多 = '<I18N#加载更多>';
+		var 兼 = '<I18N#兼>';
+		var 确定 = '<I18N#确定>';
+		var 电话格式不正确 = '<I18N#电话格式不正确>';
+		var 邮箱格式不正确 = '<I18N#邮箱格式不正确>';
+		var 邮箱超长最大长度为36 = '<I18N#邮箱超长最大长度为36>';
+		var 手机格式不正确 = '<I18N#手机格式不正确>';
+		var 传真格式不正确 = '<I18N#传真格式不正确>';
+		var 个人信息修改成功 = '<I18N#个人信息修改成功>';
+		var 单位或部门不允许为空 = '<I18N#单位或部门不允许为空>';
+		var 设置成功 = '<I18N#设置成功>';
+		var 输入用户名或姓名查询 = '<I18N#输入用户名或姓名查询>';
+		var 移除 = '<I18N#移除>';
+		var 移除成功 = '<I18N#移除成功>';
+		var 全部单位 = '<I18N#全部单位>';
+      </script>
+	  <!-- MySelf-->
+	  	<link rel="stylesheet" type="text/css" href="../apps/com.actionsoft.apps.entaddress/css/entaddress.css">
+    	<script type="text/javascript" src="../apps/com.actionsoft.apps.entaddress/js/home.js"></script>
+    	<script type="text/javascript" src="../apps/com.actionsoft.apps.entaddress/js/userphoto.upload.js"></script>
+</head>
+<body>
+	<!-- 隐藏的参数-->
+	<input type="hidden" id="userId" name="userId" value="" />
+	<input type="hidden" id="companyId" name="companyId" value="" />
+	<input type="hidden" id="departmentId" name="departmentId" value="<#departmentId>">
+	<input type="hidden" id="containSubDept" name="containSubDept" value="1">
+	<input type="hidden" id="fileName" name="fileName" value="">
+	<input type="hidden" id="comId" name="comId" value="" />
+	<input type="hidden" id="deptId" name="deptId" value="">
+	<!-- 单位通讯录主界面-->
+	<!-- 标题栏 -->
+	<div class="ea-header-panel" style="padding: 2px;">
+		<span class="ea-header-title"><I18N#单位通讯录></span>
+		<div class="ea-header-button">
+			<#allowPrintExpHtml>
+		</div>
+	</div>
+	<!-- 横向分割线 -->
+	<hr class="ea-crosswise-parting-line" style="left: 3px;right: 3px;">
+	<div class="layout ea-maincontext-panel" style="top: 35px;">
+		<!-- 右侧内容区域 -->
+		<div id="simple-right" class="show_right_entaddress" style="height: 100%; ">
+			<!-- 字母检索区域 -->
+			<div id="ABC_CARD" class="ea-letter-panel">
+				<span onclick="showABCTab(this,'*');" class='ea-letter-card select' style="width: 28px;"><I18N#全部></span>
+				<span onclick="showABCTab(this,'a');" class="ea-letter-card">A</span>
+				<span onclick="showABCTab(this,'b');" class="ea-letter-card">B</span>
+				<span onclick="showABCTab(this,'c');" class="ea-letter-card">C</span>
+				<span onclick="showABCTab(this,'d');" class="ea-letter-card">D</span>
+				<span onclick="showABCTab(this,'e');" class="ea-letter-card">E</span>
+				<span onclick="showABCTab(this,'f');" class="ea-letter-card">F</span>
+				<span onclick="showABCTab(this,'g');" class="ea-letter-card">G</span>
+				<span onclick="showABCTab(this,'h');" class="ea-letter-card">H</span>
+				<span onclick="showABCTab(this,'i');" class="ea-letter-card">I</span>
+				<span onclick="showABCTab(this,'j');" class="ea-letter-card">J</span>
+				<span onclick="showABCTab(this,'k');" class="ea-letter-card">K</span>
+				<span onclick="showABCTab(this,'l');" class="ea-letter-card">L</span>
+				<span onclick="showABCTab(this,'m');" class="ea-letter-card">M</span>
+				<span onclick="showABCTab(this,'n');" class="ea-letter-card">N</span>
+				<span onclick="showABCTab(this,'o');" class="ea-letter-card">O</span>
+				<span onclick="showABCTab(this,'p');" class="ea-letter-card">P</span>
+				<span onclick="showABCTab(this,'q');" class="ea-letter-card">Q</span>
+				<span onclick="showABCTab(this,'r');" class="ea-letter-card">R</span>
+				<span onclick="showABCTab(this,'s');" class="ea-letter-card">S</span>
+				<span onclick="showABCTab(this,'t');" class="ea-letter-card">T</span>
+				<span onclick="showABCTab(this,'u');" class="ea-letter-card">U</span>
+				<span onclick="showABCTab(this,'v');" class="ea-letter-card">V</span>
+				<span onclick="showABCTab(this,'w');" class="ea-letter-card">W</span>
+				<span onclick="showABCTab(this,'x');" class="ea-letter-card">X</span>
+				<span onclick="showABCTab(this,'y');" class="ea-letter-card">Y</span>
+				<span onclick="showABCTab(this,'z');" class="ea-letter-card">Z</span>
+			</div>
+			<!-- 联系人列表区域 -->
+			<div class="ea-contacts-list-header-panel">
+				<table class="ea-contacts-list-header" cellspace="0" cellpadding="0">
+					<tr>
+						<th class="reportTitle" style="width:36px; text-align: center; "><I18N#序号></th>
+						<th class="reportTitle" style="width:115px; text-align: left;"><span style="padding-left: 42px; "><I18N#姓名></span></th>
+						<th class="reportTitle" style="width:140px; text-align: left; " fieldName="dept" ><I18N#部门></th>
+						<th class="reportTitle" style="width:140px; text-align: left;"><I18N#邮箱></th>
+						<th class="reportTitle" style="width:100px; text-align: left;" fieldName="phone" ><I18N#电话></th>
+						<th class="reportTitle" style="width:100px; text-align: center;"><I18N#手机></th>
+					</tr>
+				</table>
+			</div>
+			<!--单位联系人列表信息-->
+			<div class="ea-contacts-list-panel" id="contactsContentDiv">
+				
+			</div>
+		</div>
+	</div>
+	<!-- 设置单位管理员权限对话框-->
+	<div id="entaddress_unitAddress_dlg" title="<I18N#设置通讯录管理员>" style="width: 640px;display:none;">
+        <table class="table table-thin" style="border-bottom: 1px solid #DDDDDD; ">
+            <tr>
+           		<th style="width: 35px;" ><I18N#序号></th>
+	            <th style="width: 210px; text-align: left; "><I18N#维护范围></th>
+	            <th style="width: 300px; text-align: left; "><I18N#管理员></th>
+				<th style="width: 90px;"><I18N#操作></th>
+			</tr>
+        </table>
+   		<div style="height: 300px; overflow: auto;">
+   			<table class="table table-thin table-hover" id="entAddressManager_table">
+	        </table>
+   		</div>
+	</div>
+	<!-- 联系人详细信息-->
+	<div id="unitAddressMessage-dlg" class="awsui-dialog" style="position: absolute; display:none; width:600px; height: 430px; ">
+		<div id="viewUserName" style="font-size: 24px; padding: 5px 15px 15px 15px; font-weight: bold;"></div>
+		<div id="content" style="height:360px;width:560px;margin-left: -30px; margin-top: -20px;position: relative;">
+			<form id="saveAddressForm" action="" name="frmMain">
+                  <table class="awsui-ux">
+					<tr><td>		
+						<fieldset>
+  						<legend><I18N#基本信息></legend>
+                        <table border="0" class="awsui-ux" >
+                           <tr>
+                                <td class="awsui-ux-title" style="width: 50px;" ><I18N#姓名></td>
+								<td style="width:260px;">
+									<input id="userName" class="awsui-textbox"  readonly="readonly" style="background: #F6F6FD;" type="text"/>
+								</td>
+                            </tr>
+                            <tr>
+                            	<td class="awsui-ux-title" style="width: 50px;" ><I18N#单位></td>
+                                <td style="width:260px;">
+                                    <input id="company" class="awsui-textbox" readonly="readonly" style="background: #F6F6FD;" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;"><I18N#部门></td>
+                                <td style="width:260px;">
+                                    <input id="departmentName" readonly="readonly" class="awsui-textbox" style="background: #F6F6FD;" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;" ><I18N#职务></td>
+                                <td style="width:260px;">
+                                    <input id="positionName" readonly="readonly" class="awsui-textbox" style="background: #F6F6FD;" type="text"/>
+                                </td>
+                            </tr>
+                         </table>
+                  </fieldset>
+				</td></tr>
+				<tr><td>	
+					<fieldset>
+  					<legend><I18N#联系信息></legend>
+                        <table border="0" class="awsui-ux" id="eaEditTable" >
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;" ><I18N#手机></td>
+                                <td style="width:260px;">
+                                    <input id="mobile"  readonly="readonly"  class="awsui-textbox" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;" ><I18N#邮箱></td>
+                                <td style="width:260px;">
+                                    <input id="email"  readonly="readonly"  class="awsui-textbox" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;"><I18N#电话></td>
+                                <td style="width:260px;">
+                                    <input id="officeTel"  readonly="readonly"  class="awsui-textbox" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="awsui-ux-title" style="width: 50px;"><I18N#传真></td>
+                                <td style="width:260px;">
+                                    <input id="officeFax"  readonly="readonly"  class="awsui-textbox" type="text" />
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+				</td></tr>
+			</table>
+	 	</form>
+	 </div>
+	<div style="padding: 10px 20px; text-align: right; ">
+		<span id="updateBtn" type="button" class="button blue">确定</span>
+		<span id="viewCloseBtn" type="button" class="button">关闭</span>
+ 	</div>	 
+	 <div class="pic" id="upfile"> 
+		<img node-type="pic" id="userPicture" src="" class="pic_user_photo"/>
+	</div>
+	
+	</div>
+	<div id="add_entaddress_unitAddress_dlg" title="<I18N#增加通讯录管理员>" style="width:610px;display:none;">
+		<div id="content" style="height:300px;overflow:auto;" class="dlg-content awsui-ux">
+			<div class="unit_tree_left">
+				<div style="padding: 8px 0; font-size: 16px;">
+					<img src="../apps/com.actionsoft.apps.entaddress/img/scope.png">
+					<I18N#维护范围>
+				</div>
+				<div class="unit_tree_all">
+					
+				</div>
+				<div class="unit_tree">
+					<ul id="org_unit_tree" class="ea-orgtree"></ul>
+				</div>
+			</div>
+			<div class="unit_tree_right">
+				<div class="todo-edit-row">
+					<div style="padding: 8px 0; font-size: 16px; ">
+						<img src="../apps/com.actionsoft.apps.entaddress/img/person.png">
+						<I18N#管理员>
+					</div>
+					<div id="entAddress-principalDiv" class="awsui-superinput" style="width: 98%; margin-left: 0px; display: inline-block; margin-top: 0;">
+					   <input type="text" id="entAddress-principal" placeholder="<I18N#输入用户名或姓名查询>" title="<I18N#输入用户名或姓名查询>" awsui-qtip="<I18N#管理员>" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 上传个人头像 仅支持png、jpg、jpeg、gif格式的图片文件-->
+	<div id="uploadUserPortraitDailog" class="awsui-dialog uploadUserPortraitDailog" style="background: RGB(1,161,88);width:707px; height: 439px; min-height: 300px; border: 1px solid #DDDDDD; display: none; padding-bottom: 30px; ">
+         <div class="title">
+        	<span class="title-tit"><I18N#修改头像></span>
+        	<span class="title-info"><I18N#仅支持png、jpg、jpeg、gif格式的图片文件，文件大小2M内>。</span>
+        </div>
+        <div class="uploadDlgContent">
+        	<div class="uploadImgDiv">
+	        	<span id="uploadImage" class="button red"><I18N#选择图片></span>
+	        	<div class="userimgdiv">
+	        		<img id="userPhotoImage" />
+	        	</div>
+	        	<span class="photoSpanCls">原始图片</span>
+        	</div>
+        	<div class="preview-outer">
+	        	<span class="preview-title"><I18N#头像预览></span>
+				<div id="preview-pane" class="previewPanel">
+					<!-- 方形 -->
+					<div class="preview-container">
+						<img id="userPhotoPreview" class="jcrop-preview" />
+					</div>
+					
+					<!-- 圆形 -->
+					<div class="preview-container2">
+						<img id="userPhotoPreview2" class="jcrop-preview"/>
+					</div>
+					
+				</div>
+        	</div>
+			<div id="jcrop-botton" style="display: inline-block; position: absolute;width: 90px; right: 0px; bottom: 15px; text-align: center; ">
+				<span id="crop" class="button green"><I18N#确定></span>
+			</div>
+			<div class="clear"></div>
+       </div>
+	</div>
+</body>
+</html>

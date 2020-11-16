@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>6add20df-c1af-4531-81b4-2cdbf7e363e5</id>
+    <createUser>admin</createUser>
+    <createTime>2017-03-14 14:15:12</createTime>
+    <updateTime>2017-03-16 10:58:29</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzut6w0Y4DZ7/tl4FCkMFWgRqNsLOdwO9j2WR1HeqUEUGAdWd0uNxFpv5402Ur3nMMf</signature>
+    <managed>false</managed>
+    <name>组织</name>
+    <type>ldap</type>
+    <updateUser>admin</updateUser>
+    <group></group>
+    <log>true</log>
+    <properties>{"java.naming.factory.initial":"com.sun.jndi.ldap.LdapCtxFactory","java.naming.provider.url":"ldap://10.2.3.90:389/dc=chinamobile,dc=com","java.naming.referral":"","java.naming.authoritative":"","java.naming.batchsize":"","java.naming.dns.url":"","java.naming.language":"","java.naming.factory.object":"","java.naming.security.credentials":"!QAZ@WSX","java.naming.security.principal":"uid=spms,ou=account,ou=apps,dc=chinamobile,dc=com","java.naming.security.protocol":"LDAP","java.naming.factory.state":"","java.naming.factory.url.pkgs":"","java.naming.factory.port":"","java.naming.factory.host":"","group":"","desc":"","diyData":[]}</properties>
+    <desc></desc>
+</ccModel>

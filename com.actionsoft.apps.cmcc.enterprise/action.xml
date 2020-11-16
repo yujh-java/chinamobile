@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aws-actions>
+	<!-- 注销按钮事件 -->
+	<cmd-bean name="com.actionsoft.apps.cmcc_enterprise_logoff">
+		<param name="sid" />
+		<param name="processInstId" />
+		<param name="processDefid" />
+	</cmd-bean>
+	<!-- 获取审批意见事件 -->
+	<cmd-bean name="com.actionsoft.apps.cmcc_enterpriseVirtual">
+		<param name="sid" />
+		<param name="processid" />
+	</cmd-bean>
+	<!-- 判断是否是研究院 -->
+	<cmd-bean name="com.actionsoft.apps.cmcc_enterprise_isResearchInstitute">
+		<param name="sid" />
+	</cmd-bean>
+</aws-actions>

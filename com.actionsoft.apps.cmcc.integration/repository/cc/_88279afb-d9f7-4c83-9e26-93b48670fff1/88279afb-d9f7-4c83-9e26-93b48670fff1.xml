@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>88279afb-d9f7-4c83-9e26-93b48670fff1</id>
+    <createUser>admin</createUser>
+    <createTime>2017-06-28 09:57:19</createTime>
+    <updateTime>2017-06-28 09:57:19</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuzis8S16z1Y9x9Njn0cOAslx8mdZoWMtSiqF2eHePWiyiMk/1TY6np7dF4Uuj8eON</signature>
+    <managed>false</managed>
+    <name>任务接口服务策略</name>
+    <type>wspolicy</type>
+    <updateUser></updateUser>
+    <group></group>
+    <log>false</log>
+    <properties>{"serviceType":"publish","sysIdentity":"b8ea0668-fe1b-4551-a4c1-39cca83ce9fe","clientSysId":"","secType":"UsernameToken","keystore":"","truststore":"","http_basic":true,"http_SSL":false,"R_useUT":true,"R_ut_digest":false,"R_useX509":false,"R_useX509Sign":false,"useUT":false,"ut_digest":false,"useX509":false,"enc_keyIdentifier":"","enc_parts":"","useX509Sign":false,"sig_keyIdentifier":"","sig_parts":"","useTimestamp":false,"timeToLive":""}</properties>
+    <desc></desc>
+</ccModel>

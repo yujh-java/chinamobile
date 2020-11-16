@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>企标报批单</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css?v=1427093101000' name='schemeCss' />
+<link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1489747055000' name='buttonCss' />
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css?v=1508724470000?v=1508724470000?v=1507529968000?v=1507529968000' name='themeCss' />
+
+<style>
+	body {
+		min-width: 1248px !important;overflow: auto !important;
+	}
+</style>
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+
+	</head>
+<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<div id="aws-form-container" class="aws-form-ux-container" border="0">
+<table id="aws-form-maintable" class="awsui-ux aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-titlebg" class="aws-form-ux-titlebg" style="display: none;"><!--若自定义模板title的 id -->
+<td id="aws-form-title" class="aws-form-ux-header">企标报批只读单</td>
+</tr>
+<tr id="aws-form-formcontent" class="aws-form-ux-formcontent">
+<td>
+<table id="table_container" class="awsui-ux table-striped" style="padding: 0px;" width="100%" cellspacing="3" cellpadding="0">
+<tbody>
+<tr>
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" src="../../esmp/LCZX/LCFQ/qblcshow?state=2&amp;processId=" name="urlFormIframe" frameborder="0"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 80%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1490610715000" type="text/javascript"></script>
+<script id="formOnload">// <![CDATA[
+function formOnload(){
+		 
+	var host = window.location.host;
+	var newurl = "http://"+host+"/esmp/LCZX/LCFQ/qblcshow?state=2&processId=@processid()";
+	document.getElementById("urlFormIframe").src = newurl;
+	//添加审批意见事件
+	awsui.ajax.request({
+		type : "POST",
+		url : "./jd",
+		alert:false,
+		dataType : "json",
+		data : {
+			cmd : "com.actionsoft.apps.cmcc_enterpriseVirtual",
+			sid:sid,
+			processid:processInstId
+		},
+		success : function(data) {
+			var html = data.msg;
+			$("#logsbody").append(html);
+		}
+	});
+	if(openState == 11){
+		reload_BTN_ADHOC_TASK_OK();
+	}
+}
+//加签、会签、传阅等按钮事件
+$('#dialog_toolbar_action_page_frame').load(function() { 
+	if(stepId =="obj_c7bfdd0e82100001a18b1e30f6931927"){//处室领导审批
+		if(openState == 1){
+			hiddenMemo("obj_397dabd3d9a8438d97fb2c4439ec6d86");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_397dabd3d9a8438d97fb2c4439ec6d86").parent().next().next().remove();
+			//如果是研究院，则隐藏审核菜单“送企标管理接口人审核”，否则隐藏“送企标编写单位领导审批”
+			if(isResearchInstitute){
+				hiddenMemo("obj_e62cc61b0e164c749b1bbd4351a31022");
+				$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e62cc61b0e164c749b1bbd4351a31022").parent().next().next().remove();
+			}else{
+				hiddenMemo("obj_e196816ce52f431aad820879c3236522");
+				$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e196816ce52f431aad820879c3236522").parent().next().next().remove();
+			}
+		}else{
+			WBCDLJ = "处室领导审批";
+			hiddenMemo("obj_e62cc61b0e164c749b1bbd4351a31022");
+			hiddenMemo("obj_10c2511684c041ea80cdef4b8d9b07a6");
+			hiddenMemo("obj_394883ba8f494c2faef7d23b8523c128");
+			hiddenMemo("obj_e196816ce52f431aad820879c3236522");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e62cc61b0e164c749b1bbd4351a31022").parent().next().next().remove();
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_10c2511684c041ea80cdef4b8d9b07a6").parent().next().next().remove();
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_394883ba8f494c2faef7d23b8523c128").parent().next().next().remove();
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e196816ce52f431aad820879c3236522").parent().next().next().remove();
+		}
+		nextStepName_jq = "相关处室会签";
+		$("#dialog_toolbar_action_page_frame").show();
+		//处理加签
+		setTimeout(function(){
+			var actionIdMap = new Object();
+			actionIdMap[3]="obj_394883ba8f494c2faef7d23b8523c128";//加签
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+				reload_BTN_Default_Action(actionIdMap,"obj_397dabd3d9a8438d97fb2c4439ec6d86",null);
+			}
+		},500);
+	}else if(stepId =="obj_c7bfdd4949800001c18618e6780b11e1"){//集团企标管理员
+		
+		$("#BTN_Default_Action").removeAttr("onclick");
+		$("#dialog_toolbar_action_page_frame").show();
+		var yzrMemoIdEnd = new Array();
+		yzrMemoIdEnd.push(['obj_8ef8abaec4db4e61824d34d0a7decf2a']);
+		reload_BTN_Default_Action(null, null, null, null, null, yzrMemoIdEnd);
+		
+	}else{
+		$("#dialog_toolbar_action_page_frame").show();
+	}
+});  
+$(document).ready(function(){
+	$("#BTN_TRANSACT").off("click").on("click", function() {
+		$("#dialog_toolbar_action_page_frame").hide();
+		FormToolBarAction.BTN_TRANSACT();		
+	});
+});
+// ]]></script>
+</body>
+</html>

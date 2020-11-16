@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>项目管理</name>  
+  <version>1.0</version>  
+  <buildNo>88</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>true</categoryVisible>  
+  <description><![CDATA[移动科研管理平台功能]]></description>  
+  <details><![CDATA[移动科研管理平台功能]]></details>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.cmcc.Plugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires> 
+    <require appId="com.actionsoft.apps.cmcc.integration" notActiveHandler="error"/>  
+    <require appId="com.actionsoft.apps.cmcc.email" notActiveHandler="error"/> 
+  </requires>  
+  <requires> 
+    <require appId="com.actionsoft.apps.cmcc.integration" notActiveHandler="error"/>  
+    <require appId="com.actionsoft.apps.cmcc.email" notActiveHandler="error"/> 
+  </requires>  
+  <properties> 
+    <property action="edit" group="立项" name="PROJECTUSER_DEPTNO" title="项目管理人员加签部门编号" type="input" isSystem="false" desc="多个角色以英文逗号（,）分割" ref="">00030087000500000000</property>  
+    <property action="edit" group="立项" name="PROJECTUSER_ROLENAME" title="项目管理人员加签角色" type="input" isSystem="false" desc="多个角色以英文逗号（,）分割" ref="">财务管理人员</property>  
+    <property action="edit" group="公用" name="NOLEADERS_OUTIDS" title="没有领导部门编号" type="textarea" isSystem="false" desc="立项、结项需求部门会签，没有部门领导的部门编号" ref=""/> 
+  </properties>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.2">_bpm.portal</depend>  
+  <installDate>2017-02-21 14:20:38</installDate>  
+  <productId/>  
+  <releaseDate>2017-06-19</releaseDate>  
+  <upgradeDate>2017-06-19 19:23:53</upgradeDate>  
+  <modelAdministrator/>  
+  <deployment> 
+    <directory> 
+      <function id="obj_56b2d72d9afe42eda52ca09769cf59b5" icon16="../apps/com.actionsoft.apps.cmcc/img/icon16.png" icon64="../apps/com.actionsoft.apps.cmcc/img/icon64.png" icon96="../apps/com.actionsoft.apps.cmcc/img/icon96.png" notifier="" name="%u96C6%u56E2%u91CD%u5927%u91CD%u70B9%u9879%u76EE%u91CC%u7A0B%u7891%u6210%u679C%u63D0%u4EA4%u8BC4%u4EF7" target="mainFrame" url="./w?sid=@sid&amp;cmd=CLIENT_BPM_WORKLIST_MAIN&amp;processGroupId=obj_413b51f50d554dfd8f399085a97e742c&amp;boxTitle=" deployUrlType="2" source="0" orderIndex="1"/> 
+    </directory>  
+    <directory> 
+      <function id="obj_aa27231597754302b941c676afc96bb3" icon16="../apps/com.actionsoft.apps.cmcc/img/icon16.png" icon64="../apps/com.actionsoft.apps.cmcc/img/icon64.png" icon96="../apps/com.actionsoft.apps.cmcc/img/icon96.png" notifier="" name="%u96C6%u56E2%u91CD%u5927%u91CD%u70B9%u9879%u76EE%u7ACB%u9879%u7533%u8BF7" target="mainFrame" url="./w?sid=@sid&amp;cmd=CLIENT_BPM_WORKLIST_MAIN&amp;processGroupId=obj_7d1aba2e31b546fdb4ab1bcf1415fce6&amp;boxTitle=" deployUrlType="2" source="0" orderIndex="2"/> 
+    </directory> 
+  </deployment> 
+</app>

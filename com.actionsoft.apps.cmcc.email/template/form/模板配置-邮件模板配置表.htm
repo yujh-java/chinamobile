@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>邮件模板配置表</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+		<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css'  name='schemeCss'/>
+	
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+	<body>
+<form id="frmMain" method="post" name="frmMain">
+<div id="aws-form-container" class="aws-form-ux-container" border="0">
+<table id="aws-form-maintable" class="awsui-ux aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-titlebg" class="aws-form-ux-titlebg"><!--若自定义模板title的 id -->
+<td id="aws-form-title" class="aws-form-ux-header">邮件模板配置表</td>
+</tr>
+<tr id="aws-form-formcontent" class="aws-form-ux-formcontent">
+<td>
+<table id="table_container" class="awsui-ux table-striped" style="padding: 0px;" width="100%" cellspacing="3" cellpadding="0"><colgroup><col class="awsui-ux-title" /><col style="width: 100.0%;" /></colgroup>
+<tbody>
+<tr id="4ff0185a_091d_47bc_94d8_ed5f00b29d04">
+<td class="awsui-ux-title"><label id="TEMPLATENAMELabel" class="aws-form-ux-label" for="TEMPLATENAME">模板名称</label></td>
+<td class="aws-form-ux-content">[#TEMPLATENAME]</td>
+</tr>
+<tr id="8a2843c8_2bb9_4821_87d3_1f209ea4355a">
+<td class="awsui-ux-title"><label id="TEMPLATETYPELabel" class="aws-form-ux-label" for="TEMPLATETYPE">模板分类</label></td>
+<td class="aws-form-ux-content">[#TEMPLATETYPE]</td>
+</tr>
+<tr id="c118d17b_d77b_4e6e_90f0_89088ddf9f26">
+<td class="awsui-ux-title"><label id="EMAIL_TITLELabel" class="aws-form-ux-label" for="EMAIL_TITLE">邮件标题</label></td>
+<td class="aws-form-ux-content">[#EMAIL_TITLE]</td>
+</tr>
+<tr id="9a6455dd_c7c0_4d98_a628_35a0a22d4e77">
+<td class="awsui-ux-title"><label id="EMAILTOLabel" class="aws-form-ux-label" for="EMAILTO">收件人</label></td>
+<td class="aws-form-ux-content">[#EMAILTO]</td>
+</tr>
+<tr id="cf4e80af_5f25_4562_a887_b5a8ddb799ab">
+<td class="awsui-ux-title"><label id="ISVALIDLabel" class="aws-form-ux-label" for="ISVALID">是否有效（1：有效，0无效）</label></td>
+<td class="aws-form-ux-content">[#ISVALID]</td>
+</tr>
+<tr id="6262caff_c968_4877_88e2_542bdade198f">
+<td class="awsui-ux-title"><label id="EMAIL_CONTENTLabel" class="aws-form-ux-label" for="EMAIL_CONTENT">邮件正文</label></td>
+<td class="aws-form-ux-content">[#EMAIL_CONTENT]</td>
+</tr>
+<tr id="83c09954_2fcb_4e5b_862a_cf6b0c76417b">
+<td class="awsui-ux-title"><label id="SHORTMESSAGELabel" class="aws-form-ux-label" for="SHORTMESSAGE">短信正文</label></td>
+<td class="aws-form-ux-content">[#SHORTMESSAGE]</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>
+
+</body>
+</html>

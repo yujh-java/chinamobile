@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>5e7227f2-22dc-4d21-bb32-a1cad71494c1</id>
+    <createUser>admin</createUser>
+    <createTime>2017-07-25 17:25:28</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-13 14:15:41</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuDS6eEe/UxaRei21qjT3zypgw6CQYBiiV+NFAGTcm24ne8B1BXSNIveK5RYNTAZwG</signature>
+    <managed>false</managed>
+    <title>项目变更流程表单</title>
+    <deleted>false</deleted>
+    <categoryName>研究院项目变更流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/Workflow/change?form=main&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>d987c888-4b3d-4e81-9a9e-f624a9477556</id>
+            <title>项目变更流程表单</title>
+            <templateFile>{"tablet":"","pc":"研究院项目变更流程-项目变更流程-项目变更流程表单.htm","mobile":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

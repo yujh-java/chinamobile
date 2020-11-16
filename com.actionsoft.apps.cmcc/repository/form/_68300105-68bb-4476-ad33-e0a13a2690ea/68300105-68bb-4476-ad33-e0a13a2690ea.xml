@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>68300105-68bb-4476-ad33-e0a13a2690ea</id>
+    <createUser>admin</createUser>
+    <createTime>2017-07-18 10:09:41</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-18 11:33:30</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuIImqsUW4UKxKSvva/3L+rOWOEzngq+AlnonsxapvarKzFw5gylQCo5OqhCTetmhW</signature>
+    <managed>false</managed>
+    <title>自立、国拨计划外项目表单（只读）</title>
+    <deleted>false</deleted>
+    <categoryName>自立、国拨计划外项目审批</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/Workflow/open?form=open_read&amp;isPlan=1&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>0c5f4dd1-19ad-454a-9cd7-eb6436ad0881</id>
+            <title>自立、国拨计划外项目表单（只读）</title>
+            <templateFile>{"pc":"自立、国拨计划外项目审批-自立、国拨计划外项目表单（只读）.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

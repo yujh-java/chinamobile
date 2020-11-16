@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>中国移动邮件应用</name>  
+  <version>1.0</version>  
+  <buildNo>6</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>true</categoryVisible>  
+  <description><![CDATA[]]></description>  
+  <details><![CDATA[]]></details>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.cmcc.email.Plugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires> 
+    <require appId="com.actionsoft.apps.cmcc.integration" notActiveHandler="error"/> 
+  </requires>  
+  <properties> 
+    <property action="edit" group="唯一标识" name="projectFeedback_ognlSign" title="一般委托唯一标识" type="input" isSystem="false" desc="" ref="">d96ec61a-7dd4-4345-b4ff-e7be041fe95b</property>
+    <property action="edit" group="唯一标识" name="projectFeedback_Dept" title="一般委托研发机构承担部所邮件通知" type="input" isSystem="false" desc="" ref="">9d3d17bf-ad63-4a4f-bba9-e1f2619bd718</property>
+    <property action="disabled" group="唯一标识" name="Email_Holiday" title="邮件节假日接口" type="input" isSystem="false" desc="" ref="">http://10.2.5.187/spms/cmri/calendar/getday</property>
+  </properties>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.1">_bpm.portal</depend>  
+  <modelAdministrator/>  
+  <installDate>2017-09-27 15:32:57</installDate>  
+  <productId/>  
+  <releaseDate>2017-09-27</releaseDate> 
+</app>

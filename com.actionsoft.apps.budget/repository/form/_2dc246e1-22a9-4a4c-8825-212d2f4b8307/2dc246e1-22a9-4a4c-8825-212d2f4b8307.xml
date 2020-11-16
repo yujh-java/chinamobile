@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>2dc246e1-22a9-4a4c-8825-212d2f4b8307</id>
+    <createUser>admin</createUser>
+    <createTime>2017-08-24 15:07:50</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-08-25 15:05:22</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuiWvINLpT56FCyFRE4NC1LerP/iJeMANVFXd/K5vCS289rVE/RmwAfjYfeDR3yDYI</signature>
+    <managed>false</managed>
+    <title>预算调整表单</title>
+    <deleted>false</deleted>
+    <categoryName>预算调整流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://keyan.dev.cmri.cn/spms/Workflow/contractexec?form=main&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>9e2f1c6e-a0cf-4d95-b194-7577cbed16d3</id>
+            <title>预算调整表单</title>
+            <templateFile>{"pc":"预算调整流程-预算调整表单.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

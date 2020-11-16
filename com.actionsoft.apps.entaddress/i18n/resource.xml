@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+#############################################################
+##
+## 	AWS CoE国际化配置
+## 
+## Copyright(C)2001-2009 Actionsoft Co.,Ltd
+##
+#############################################################
+-->
+<locale-config>
+	<lang>
+		<item key="单位通讯录">
+			<cn><![CDATA[单位通讯录]]></cn>
+			<en><![CDATA[Company Contacts]]></en>
+			<big5><![CDATA[單位通訊錄]]></big5>
+		</item>
+		<item key="确定">
+			<cn><![CDATA[确定]]></cn>
+			<en><![CDATA[OK]]></en>
+			<big5><![CDATA[確定]]></big5>
+		</item>
+		<item key="离线">
+			<cn><![CDATA[离线]]></cn>
+			<en><![CDATA[Offline]]></en>
+			<big5><![CDATA[離線]]></big5>
+		</item>
+		<item key="在线">
+			<cn><![CDATA[在线]]></cn>
+			<en><![CDATA[Online]]></en>
+			<big5><![CDATA[在線]]></big5>
+		</item>
+		<item key="打印">
+			<cn><![CDATA[打印]]></cn>
+			<en><![CDATA[Print]]></en>
+			<big5><![CDATA[打印]]></big5>
+		</item>
+		<item key="导出">
+			<cn><![CDATA[导出]]></cn>
+			<en><![CDATA[Export]]></en>
+			<big5><![CDATA[導出]]></big5>
+		</item>
+		<item key="添加">
+			<cn><![CDATA[添加]]></cn>
+			<en><![CDATA[Add]]></en>
+			<big5><![CDATA[添加]]></big5>
+		</item>
+		<item key="编辑">
+			<cn><![CDATA[编辑]]></cn>
+			<en><![CDATA[Edit]]></en>
+			<big5><![CDATA[編輯]]></big5>
+		</item>
+		<item key="关闭">
+			<cn><![CDATA[关闭]]></cn>
+			<en><![CDATA[Close]]></en>
+			<big5><![CDATA[關閉]]></big5>
+		</item>
+		<item key="加载更多">
+			<cn><![CDATA[加载更多]]></cn>
+			<en><![CDATA[Load More]]></en>
+			<big5><![CDATA[加載更多]]></big5>
+		</item>
+		
+		<item key="兼">
+			<cn><![CDATA[兼]]></cn>
+			<en><![CDATA[And]]></en>
+			<big5><![CDATA[兼]]></big5>
+		</item>
+		<item key="电话格式不正确">
+			<cn><![CDATA[[电话]格式不正确]]></cn>
+			<en><![CDATA[[Phone] Incorrect format]]></en>
+			<big5><![CDATA[[電話]格式不正確]]></big5>
+		</item>
+		<item key="邮箱格式不正确">
+			<cn><![CDATA[[邮箱]格式不正确]]></cn>
+			<en><![CDATA[[E-mail] Incorrect format]]></en>
+			<big5><![CDATA[[郵箱]格式不正確]]></big5>
+		</item>
+		<item key="邮箱超长最大长度为36">
+			<cn><![CDATA[[邮箱]不允许超过36位字符]]></cn>
+			<en><![CDATA[[E-mail] does not allow more than 36 characters]]></en>
+			<big5><![CDATA[[郵箱]不允許超過36位字符]]></big5>
+		</item>
+		<item key="手机格式不正确">
+			<cn><![CDATA[[手机]格式不正确]]></cn>
+			<en><![CDATA[[Mobile] Incorrect format]]></en>
+			<big5><![CDATA[[手機]格式不正確]]></big5>
+		</item>
+		<item key="传真格式不正确">
+			<cn><![CDATA[[传真]格式不正确]]></cn>
+			<en><![CDATA[[Fax] Incorrect format]]></en>
+			<big5><![CDATA[[傳真]格式不正確]]></big5>
+		</item>
+		<item key="个人信息修改成功">
+			<cn><![CDATA[个人信息修改成功]]></cn>
+			<en><![CDATA[Successfully Modified]]></en>
+			<big5><![CDATA[個人信息修改成功]]></big5>
+		</item>
+		<item key="单位或部门不允许为空">
+			<cn><![CDATA[[单位或部门]不允许为空]]></cn>
+			<en><![CDATA[[Unit or Department] Not null]]></en>
+			<big5><![CDATA[[單位或部門]不允許為空]]></big5>
+		</item>
+		<item key="设置成功">
+			<cn><![CDATA[设置成功]]></cn>
+			<en><![CDATA[Successfully Set]]></en>
+			<big5><![CDATA[設置成功]]></big5>
+		</item>
+		
+		<item key="移除">
+			<cn><![CDATA[移除]]></cn>
+			<en><![CDATA[Remove]]></en>
+			<big5><![CDATA[移除]]></big5>
+		</item>
+		<item key="确认">
+			<cn><![CDATA[确认]]></cn>
+			<en><![CDATA[Confirm]]></en>
+			<big5><![CDATA[確認]]></big5>
+		</item>
+		<item key="移除成功">
+			<cn><![CDATA[移除成功]]></cn>
+			<en><![CDATA[Successfully Remove]]></en>
+			<big5><![CDATA[移除成功]]></big5>
+		</item>
+		<item key="提示">
+			<cn><![CDATA[提示]]></cn>
+			<en><![CDATA[Tip]]></en>
+			<big5><![CDATA[提示]]></big5>
+		</item>
+		<item key="取消">
+			<cn><![CDATA[取消]]></cn>
+			<en><![CDATA[Cancel]]></en>
+			<big5><![CDATA[取消]]></big5>
+		</item>
+		<item key="访问历史">
+			<cn><![CDATA[访问历史]]></cn>
+			<en><![CDATA[Access History]]></en>
+			<big5><![CDATA[訪問歷史]]></big5>
+		</item>
+		<item key="全部">
+			<cn><![CDATA[全部]]></cn>
+			<en><![CDATA[All]]></en>
+			<big5><![CDATA[全部]]></big5>
+		</item>
+		<item key="含下级部门">
+			<cn><![CDATA[含下级部门]]></cn>
+			<en><![CDATA[Subordinate Departments]]></en>
+			<big5><![CDATA[含下級部門]]></big5>
+		</item>
+		<item key="序号">
+			<cn><![CDATA[序号]]></cn>
+			<en><![CDATA[No.]]></en>
+			<big5><![CDATA[序號]]></big5>
+		</item>
+		<item key="姓名">
+			<cn><![CDATA[姓名]]></cn>
+			<en><![CDATA[Name]]></en>
+			<big5><![CDATA[姓名]]></big5>
+		</item>
+		<item key="部门">
+			<cn><![CDATA[部门]]></cn>
+			<en><![CDATA[Department]]></en>
+			<big5><![CDATA[部門]]></big5>
+		</item>
+		<item key="传真">
+			<cn><![CDATA[传真]]></cn>
+			<en><![CDATA[Fax]]></en>
+			<big5><![CDATA[傳真]]></big5>
+		</item>
+		<item key="邮箱">
+			<cn><![CDATA[邮箱]]></cn>
+			<en><![CDATA[E-mail]]></en>
+			<big5><![CDATA[郵箱]]></big5>
+		</item>
+		<item key="电话">
+			<cn><![CDATA[电话]]></cn>
+			<en><![CDATA[Phone]]></en>
+			<big5><![CDATA[電話]]></big5>
+		</item>
+		<item key="手机">
+			<cn><![CDATA[手机]]></cn>
+			<en><![CDATA[Mobile]]></en>
+			<big5><![CDATA[手機]]></big5>
+		</item>
+		<item key="设置通讯录管理员">
+			<cn><![CDATA[设置通讯录管理员]]></cn>
+			<en><![CDATA[Set Contacts Manager]]></en>
+			<big5><![CDATA[設置通訊錄管理員]]></big5>
+		</item>
+		<item key="维护范围">
+			<cn><![CDATA[维护范围]]></cn>
+			<en><![CDATA[Scope]]></en>
+			<big5><![CDATA[維護範圍]]></big5>
+		</item>
+		<item key="管理员">
+			<cn><![CDATA[管理员]]></cn>
+			<en><![CDATA[Administrator]]></en>
+			<big5><![CDATA[管理員]]></big5>
+		</item>
+		<item key="操作">
+			<cn><![CDATA[操作]]></cn>
+			<en><![CDATA[Operating]]></en>
+			<big5><![CDATA[操作]]></big5>
+		</item>
+		<item key="基本信息">
+			<cn><![CDATA[基本信息]]></cn>
+			<en><![CDATA[Basic Info.]]></en>
+			<big5><![CDATA[基本信息]]></big5>
+		</item>
+		<item key="单位">
+			<cn><![CDATA[单位]]></cn>
+			<en><![CDATA[Company]]></en>
+			<big5><![CDATA[單位]]></big5>
+		</item>
+		<item key="职务">
+			<cn><![CDATA[职务]]></cn>
+			<en><![CDATA[Post]]></en>
+			<big5><![CDATA[職務]]></big5>
+		</item>
+		<item key="传真号码">
+			<cn><![CDATA[传真号码]]></cn>
+			<en><![CDATA[Fax]]></en>
+			<big5><![CDATA[传真号码]]></big5>
+		</item>
+		<item key="联系信息">
+			<cn><![CDATA[联系信息]]></cn>
+			<en><![CDATA[Contact Info.]]></en>
+			<big5><![CDATA[聯繫信息]]></big5>
+		</item>
+		<item key="增加通讯录管理员">
+			<cn><![CDATA[增加通讯录管理员]]></cn>
+			<en><![CDATA[Increased Contacts Manager]]></en>
+			<big5><![CDATA[增加通訊錄管理員]]></big5>
+		</item>
+		<item key="全部单位">
+			<cn><![CDATA[全部单位]]></cn>
+			<en><![CDATA[All Companys]]></en>
+			<big5><![CDATA[全部單位]]></big5>
+		</item>
+		<item key="输入用户名或姓名查询">
+			<cn><![CDATA[输入用户名或姓名查询]]></cn>
+			<en><![CDATA[Enter your user name of query]]></en>
+			<big5><![CDATA[輸入用戶名或姓名查詢]]></big5>
+		</item>
+		<item key="请输入姓名部门">
+			<cn><![CDATA[查询联系人]]></cn>
+			<en><![CDATA[Search]]></en>
+			<big5><![CDATA[查询联系人]]></big5>
+		</item>
+		<item key="邮箱电话">
+			<cn><![CDATA[/邮箱/电话]]></cn>
+			<en><![CDATA[/ E-mail / phone]]></en>
+			<big5><![CDATA[/郵箱/電話]]></big5>
+		</item>
+		<item key="手机号码">
+			<cn><![CDATA[/手机]]></cn>
+			<en><![CDATA[/Mobile]]></en>
+			<big5><![CDATA[/手機]]></big5>
+		</item>
+		<item key="没有实现的通讯录导入导出接口">
+			<cn><![CDATA[没有实现的通讯录导入导出接口]]></cn>
+			<en><![CDATA[Import and export address book does not implement the interface]]></en>
+			<big5><![CDATA[沒有實現的通訊錄導入導出接口]]></big5>
+		</item>
+		<item key="修改失败">
+			<cn><![CDATA[修改失败]]></cn>
+			<en><![CDATA[Modification fails]]></en>
+			<big5><![CDATA[修改失敗]]></big5>
+		</item>
+		<item key="临时文件处理单位通讯录的导出">
+			<cn><![CDATA[临时文件处理，单位通讯录的导出]]></cn>
+			<en><![CDATA[Temporary file handling, export unit address book]]></en>
+			<big5><![CDATA[臨時文件處理，單位通訊錄的導出]]></big5>
+		</item>
+	</lang>
+</locale-config>

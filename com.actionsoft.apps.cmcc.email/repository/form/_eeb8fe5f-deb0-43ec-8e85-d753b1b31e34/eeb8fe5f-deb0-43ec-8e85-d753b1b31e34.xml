@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>eeb8fe5f-deb0-43ec-8e85-d753b1b31e34</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-05 15:26:26</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-26 15:25:40</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuOymFeFUbbt97FXsfuzZmE/Yi0XHjxc1wzHKcGwsHiL67bcsmhJhhVAsVQGC1+0QW</signature>
+    <managed>false</managed>
+    <title>流程邮件模板关联表</title>
+    <deleted>false</deleted>
+    <categoryName>模板配置</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>3c32233c-ffe5-41dc-a703-0d44899cabf3</id>
+            <title>流程邮件模板关联表</title>
+            <templateFile>{"pc":"模板配置-流程邮件模板关联表.htm","mobile":"模板配置-流程邮件模板关联表_m.htm","tablet":"模板配置-流程邮件模板关联表.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>bd57d3b6-9e52-47da-8256-b94149eb7c76</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

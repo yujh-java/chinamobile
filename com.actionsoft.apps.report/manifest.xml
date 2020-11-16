@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>流程任务查询</name>  
+  <version>1.0</version>  
+  <buildNo>17</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>true</categoryVisible>  
+  <description><![CDATA[]]></description>  
+  <details><![CDATA[]]></details>  
+  <installListener></installListener>  
+  <pluginListener>com.actionsoft.apps.report.Plugins</pluginListener>  
+  <startListener></startListener>  
+  <stopListener></stopListener>  
+  <upgradeListener></upgradeListener>  
+  <uninstallListener></uninstallListener>  
+  <reloadable>true</reloadable>  
+  <requires/>  
+  <properties/>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.1">_bpm.portal</depend>  
+  <modelAdministrator></modelAdministrator>  
+  <installDate>2017-09-04 14:35:17</installDate>  
+  <productId></productId> 
+</app>

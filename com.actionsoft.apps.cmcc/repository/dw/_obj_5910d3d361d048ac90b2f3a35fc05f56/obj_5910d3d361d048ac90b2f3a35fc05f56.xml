@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AWSDWModel>
+    <id>obj_5910d3d361d048ac90b2f3a35fc05f56</id>
+    <createUser>admin</createUser>
+    <createTime>2017-12-21 15:55:33</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-25 12:37:11</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuGcvyOtse8V+kMOW/3Bp881KZfas/DdU/Y6iMvlWOCSAwfj/rpalDZTpvqG4zuXvV</signature>
+    <managed>false</managed>
+    <processGroupId>obj_5910d3d361d048ac90b2f3a35fc05f56</processGroupId>
+    <processGroupName>专业公司维护</processGroupName>
+    <categoryName>数据信息</categoryName>
+    <dwType>1</dwType>
+    <processAdministrator>admin</processAdministrator>
+    <title id="obj_587e2e3fffcf44719c9492914117ab5c" label="专业公司维护" extendcode="" event=""/>
+    <dataView id="obj_76b1e712064c4456b0ab7e4ddf3e33b0" label="首页" showType="link" orderIndex="0" dwReportType="1" isDefault="false" category="普通视图" implClassName="com.actionsoft.bpms.dw.design.dataview.CommonDataView" security="" event="" url="" userExtendJs="" show="true">
+        <layoutECategoryType></layoutECategoryType>
+        <layoutECategoryTypeLast></layoutECategoryTypeLast>
+        <afterLoadEventCall></afterLoadEventCall>
+        <afterLoadEventScript></afterLoadEventScript>
+        <toolbar id="obj_57d4d424f04e479f9f0dfbb79b2a277c" isshow="true" extendcode="" event="">
+            <button id="obj_e18ae1d4bbf8410aac4713725ee6a45d" refbuttonid="save" cls="" security="" isshow="true" orderindex="1" event="" selectShow="false"/>
+            <button id="obj_7bef8e86ae5f47cc8940a4445a355d9b" refbuttonid="new" cls="" security="" isshow="true" orderindex="2" event="" selectShow="false"/>
+            <button id="obj_619df6cea64d47cb8ccd869e58908424" refbuttonid="delete" cls="" security="" isshow="false" orderindex="3" event="" selectShow="true"/>
+            <button id="obj_3882323230b44cf4aceae408a52b96c1" refbuttonid="print" cls="" security="" isshow="true" orderindex="4" event="" selectShow="false"/>
+            <button id="obj_935cee717b8343ef95b5b4224746af5d" refbuttonid="refresh" cls="" security="" isshow="true" orderindex="5" event="" selectShow="false"/>
+            <button id="obj_7de2b695d1694cff8860a6f70eb8d978" refbuttonid="exportDWData" cls="" security="" isshow="true" orderindex="6" event="" selectShow="false"/>
+        </toolbar>
+        <searcher id="obj_d83ae4b7558f4646b8ec0ff7f1f46d35" isshow="true" layoutType="list" tdGroup="3" textCls="" dwLeftCls="" dwRightCls="" extendcode="" event="" xconditionEvent="" tileOpen="false"/>
+        <navTree id="obj_f48a155520714b888146605d854a87e7" isshow="false" type="" rootcls="" leafcls="" ismultiple="false" isexpanded="true" orderindex="" event=""/>
+        <layout id="obj_83d37b9ff1df4e379058f106a6e4029b" label="" classname="com.actionsoft.bpms.dw.exec.layout.LayoutA" event=""/>
+        <datagrid id="obj_4738ea68b2e2476a9032b4eb4d00a4f9" isshow="true" autoSearch="true" customSet="true" select="false" datasource="bo:BO_ACT_PROC" countSql="" pagesize="15" event="" rowDefHeight="25" showCheckBox="true" ismultiple="true" isshownumbercol="true" numberCellTotal="false" shownumbercolwidth="40" freezeCols="0" wrap="false" nowrapTitle="false" refbehaviorid="%7B%22behavior%22%3A%22openmodifyform%22%2C%22title%22%3A%22%u4E13%u4E1A%u516C%u53F8%u7EF4%u62A4%22%2C%22w%22%3A%22%22%2C%22h%22%3A%22%22%2C%22sw%22%3A%22%22%2C%22isMask%22%3A0%2C%22ih%22%3A%22%22%7D" behaviortarget="tab" extendsql="" identifier="_ID" extend1="" multiHeader="">
+            <column id="obj_af6bcd1a382b492dabb1b923cfd6ae5e" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="COMPANYNAME" label="公司名称" orderindex="0" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_a7015be871bb41698331136c8683f083" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="COMPANYID" label="公司ID" orderindex="1" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_c8e88a99bc8a4ebeac26fb24d8e199f2" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ORGID" label="单位ID" orderindex="2" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_07c3da0945ba4d90b94f082e2c780b2a" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEDATE" label="创建日期" orderindex="3" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_95a3e39fd6c64975a2aceb75b1d217d7" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEUSER" label="创建人" orderindex="4" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_72e26629a14e4944910da4c832aa2538" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEDATE" label="更新日期" orderindex="5" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_0fb0d3aa28464623b1cba53903ab7e04" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEUSER" label="更新人" orderindex="6" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_5d42e0896d7d419abd97dc6f726aa166" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="1" required="0" align="right" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ISEND" label="流程是否结束" orderindex="7" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="NUMBER" handleType="1" boType="" count="false"/>
+            <column id="obj_73dfa216e8e6496bac586412f2ce8edb" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ID" label="业务表ID" orderindex="8" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_bb847884789145c2a7b803df9b7c2d9e" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PROC" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_BINDID" label="流程实例ID" orderindex="9" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+        </datagrid>
+        <reportSetting></reportSetting>
+        <chartSetting></chartSetting>
+    </dataView>
+    <userextendbuttons/>
+    <userextendbehaviors/>
+</AWSDWModel>

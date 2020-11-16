@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boModel>
+    <id>6ec4dd4f-3cd9-484f-98ac-15624043d41b</id>
+    <createUser>admin</createUser>
+    <createTime>2017-05-26 12:05:07</createTime>
+    <updateTime>2017-05-26 12:05:07</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzug6Wz/CAJiLPHLHZFN87dSIhP/3t0kloZ0DosVmQ0Rvoz6BzdA/rlt2TKNtqxpMgp</signature>
+    <managed>false</managed>
+    <title>公共临时表</title>
+    <name>BO_ACT_PUBLIC_TEMPORARY_P</name>
+    <collection>false</collection>
+    <system>false</system>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <entityType>TABLE</entityType>
+    <viewType></viewType>
+    <viewSql></viewSql>
+    <boItems/>
+    <boIndexs/>
+    <boRelations/>
+</boModel>

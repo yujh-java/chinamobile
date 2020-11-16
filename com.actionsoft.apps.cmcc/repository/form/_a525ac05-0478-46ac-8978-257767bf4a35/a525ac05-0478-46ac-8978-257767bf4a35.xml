@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>a525ac05-0478-46ac-8978-257767bf4a35</id>
+    <createUser>admin</createUser>
+    <createTime>2017-07-25 17:26:33</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-11-13 11:18:39</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuAp4KnlKMAzesT2IzJbR4F/QcP9cjlBYvNepL5sibMsAOtW8HbyNURkQRrxj0xy+e</signature>
+    <managed>false</managed>
+    <title>项目变更流程只读表单</title>
+    <deleted>false</deleted>
+    <categoryName>研究院项目变更流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":" http://10.1.5.36/spms/cmri/Workflow/change?form=change_read&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>f74c5bf7-a18c-4a80-a4e0-abe229a20820</id>
+            <title>项目变更流程只读表单</title>
+            <templateFile>{"pc":"研究院项目变更流程-项目变更流程-项目变更流程只读表单.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

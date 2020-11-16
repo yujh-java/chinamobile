@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>ccf72762-6b7d-4b6c-8ba9-296d720433a3</id>
+    <createUser>admin</createUser>
+    <createTime>2017-06-12 10:15:13</createTime>
+    <updateTime>2017-06-12 10:15:14</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuTBVoUbnkKA24/8XqrUlOOPrrT1rR8OmeeqgmWChJuW92TODkMQtuzKxZBCXEXxAk</signature>
+    <managed>false</managed>
+    <title>组织架构同步排序维护单</title>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>ba61b9f5-5db8-45f5-81e1-9ee8ef599b10</id>
+            <title>组织架构同步排序维护单</title>
+            <templateFile>{"pc":"数据信息-组织架构同步排序维护单.htm","mobile":"数据信息-组织架构同步排序维护单_m.htm","tablet":"数据信息-组织架构同步排序维护单.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>6ec4dd4f-3cd9-484f-98ac-15624043d41b</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform","mobile":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"","mobile":""}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+        <formItem>
+            <id>fa0997f0-6ad6-414f-9a74-4e3e1168e13e</id>
+            <title>组织架构同步排序维护明细</title>
+            <templateFile>{"pc":"","mobile":"","tablet":""}</templateFile>
+            <grid>true</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>53ae9446-56bc-4e3e-93a9-685d0b0eab35</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform","mobile":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

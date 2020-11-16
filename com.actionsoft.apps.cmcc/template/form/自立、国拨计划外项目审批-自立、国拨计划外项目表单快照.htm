@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<![endif]-->
+
+<title>研究院计划外开题审批流程</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--公共的js和css start-->
+[#AWSImport] [#AWSUIImport]
+<!--公共的js和css end-->
+<!--配色方案-->
+<link rel='stylesheet' id='schemeCss'
+	href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css?v=1427093101000'
+	name='schemeCss' />
+
+<link type='text/css' rel='stylesheet' id='buttonCss'
+	href='../css/cmcc.common.css?v=1489747055000' name='buttonCss' />
+
+
+
+
+
+
+
+
+<style>
+body {
+	min-width: 1248px !important;
+	overflow: auto !important;
+}
+</style>
+
+
+
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss'
+	href='../apps/_bpm.platform/css/theme/theme.css?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000' name='themeCss' />
+
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<table id="aws-form-maintable" class="awsui-ux aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-titlebg" class="aws-form-ux-titlebg"><!--若自定义模板title的 id --></tr>
+<tr id="aws-form-formcontent" class="aws-form-ux-formcontent">
+<td>
+<table style="border-collapse: separate; border-spacing: 0px;" width="100%" align="center">
+<tbody>
+<tr>
+<td>
+<table id="table_container" class="awsui-ux table-striped" style="padding: 0px;" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" src="../../spms/cmri/Workflow/open?form=open_read&amp;isPlan=1&amp;process_id=" name="urlFormIframe" frameborder="0" scrolling="no"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1491963007000" type="text/javascript"></script>
+<script language="JavaScript" src="../js/commonAddProcessExplain.js?v=1500610717800" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+$('#dialog_toolbar_action_page_frame')
+				.load(
+						function() {
+							if (stepId == "obj_c79516870eb0000148d5f9e61920ea00") {//牵头部所领导审核
+								if (openState == 1) {
+									hiddenMemo("obj_f0e9599dd252430e87c974ca6f9938a2");
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_f0e9599dd252430e87c974ca6f9938a2")
+											.parent().next().next().remove();
+								} else {
+									WBCDLJ = "项目牵头部所领导审核";
+									hiddenMemo("obj_c1b02cdc839c4fe893ea6d1e13fe515f");
+									hiddenMemo("obj_edf5b576600048738b78c5a3bc31307e");
+									hiddenMemo("obj_a9702e6640ac4fd7b462938b8a2c4333");
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_c1b02cdc839c4fe893ea6d1e13fe515f")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_edf5b576600048738b78c5a3bc31307e")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_a9702e6640ac4fd7b462938b8a2c4333")
+											.parent().next().next().remove();
+								}
+								nextStepName_jq = "配合部所会签";
+								$("#dialog_toolbar_action_page_frame").show();
+								//处理加签
+								setTimeout(
+										function() {
+											var actionIdMap = new Object();
+											actionIdMap[3] = "obj_c1b02cdc839c4fe893ea6d1e13fe515f";//加签
+											var toolbarsrc = document
+													.getElementById("dialog_toolbar_action_page_frame").src;
+											if (toolbarsrc
+													.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+												reload_BTN_Default_Action(
+														actionIdMap,
+														"obj_f0e9599dd252430e87c974ca6f9938a2",
+														"");
+											}
+										}, 500);
+								var toolbarsrcUrl = document
+										.getElementById("dialog_toolbar_action_page_frame").src;
+								//各部门管理人员对应表 
+								if ("obj_edf5b576600048738b78c5a3bc31307e" == routeId
+										&& toolbarsrcUrl
+												.indexOf("cmd=CLIENT_BPM_TASK_GOTO_EXEC_PAGE") > -1) {
+									projectManager();
+								}
+							} else if (stepId == "obj_c79516bb152000013d11756c1bb012b1") {//项目管理人员审核
+								if (openState == 1) {
+									hiddenMemo("obj_cfff324e2489439b857c021f65def870");//返回项目管理人员
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_cfff324e2489439b857c021f65def870")
+											.parent().next().next().remove();
+								} else {
+									WBCDLJ = "项目管理人员审核";
+									hiddenMemo("obj_9c139e563cbc45a492e2c63a45399a60");
+									hiddenMemo("obj_5714e6275ca54fd0aaff91b4ddb66ca2");
+									hiddenMemo("obj_22032f9b0a694a9bbf597a40dbe3eb7c");
+									hiddenMemo("obj_f1fb011c7177449aae84b8cac2a0cecf");
+									hiddenMemo("obj_14c058f0a3fa42dd8536031ed1db00f1");
+									hiddenMemo("obj_cab8bc04e7ad46f3bf483937c3a4952c");
+
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_9c139e563cbc45a492e2c63a45399a60")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_5714e6275ca54fd0aaff91b4ddb66ca2")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_22032f9b0a694a9bbf597a40dbe3eb7c")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_f1fb011c7177449aae84b8cac2a0cecf")
+											.parent().next().next().remove();
+									$(
+											window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_14c058f0a3fa42dd8536031ed1db00f1")
+											.parent().next().next().remove();
+									$(
+									                 window.frames["dialog_toolbar_action_page_frame"].document)
+											.find(
+													"#obj_cab8bc04e7ad46f3bf483937c3a4952c")
+											.parent().next().next().remove();
+								}
+								nextStepName_jq = "相关管理部门会签";
+								$("#dialog_toolbar_action_page_frame").show();
+								//处理加签
+								setTimeout(
+										function() {
+											var actionIdMap = new Object();
+											actionIdMap[3] = "obj_9c139e563cbc45a492e2c63a45399a60";//加签
+											var toolbarsrc = document
+													.getElementById("dialog_toolbar_action_page_frame").src;
+											if (toolbarsrc
+													.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+												if (openState == 1) {
+													reload_BTN_Default_Action(
+															actionIdMap,
+															"obj_cfff324e2489439b857c021f65def870",
+															"obj_22032f9b0a694a9bbf597a40dbe3eb7c");
+												} else if (openState == 11) {
+													reload_BTN_Default_Action(
+															actionIdMap,
+															"obj_cfff324e2489439b857c021f65def870",
+															"obj_22032f9b0a694a9bbf597a40dbe3eb7c");
+												}
+											}
+										}, 500);
+							} else if (stepId == "obj_c79516f46ca0000187d770eb12301b28") {//项目管理部门领导审核
+								$("#BTN_Default_Action").removeAttr("onclick");
+								$("#dialog_toolbar_action_page_frame").show();
+								setTimeout(
+										function() {
+											var yzrMemoIdEnd = new Array();
+											yzrMemoIdEnd
+													.push([ 'obj_7966be11b241427dab904c8100749c5d' ]);
+											reload_BTN_Default_Action(null,
+													null, null, null, null,
+													yzrMemoIdEnd);
+										}, 500);
+							} else {
+								$("#dialog_toolbar_action_page_frame").show();
+							}
+						});
+
+		$(document).ready(function() {
+			$("#BTN_TRANSACT").off("click").on("click", function() {
+				$("#dialog_toolbar_action_page_frame").hide();
+				FormToolBarAction.BTN_TRANSACT();
+			});
+		});
+// ]]></script>
+<script type="text/javascript" id="formOnload">// <![CDATA[
+function formOnload() {
+			PROCESSTYPE = "cmri-out2in";
+			var host = window.location.host;
+			var newurl = " http://"
+					+ host
+					+ "/spms/cmri/Workflow/open?form=open_read&isPlan=1&process_id=@processId()";
+			document.getElementById("urlFormIframe").src = newurl;
+			awsui.ajax.request({
+				type : "POST",
+				url : "./jd",
+				alert : false,
+				dataType : "json",
+				data : {
+					cmd : "com.actionsoft.apps.cmcc_Unplaned",
+					sid : sid,
+					processid : processInstId
+				},
+				success : function(data) {
+					var html = data.msg;
+					$("#logsbody").append(html);
+				}
+			});
+
+			if (openState == 11) {
+				reload_BTN_ADHOC_TASK_OK();
+			}
+		}
+// ]]></script>
+<script type="text/javascript" id="auditMenuChange">// <![CDATA[
+function auditMenuChange(){
+  
+   var radios=window.frames['dialog_toolbar_action_page_frame'].document.getElementsByName("commentOption");
+	   for(var i=0;i<radios.length;i++){
+			if(radios[i].checked==true){
+			 routeId = radios[i].id;
+			}
+	   }
+ 
+}
+// ]]></script>
+</body>
+</html>

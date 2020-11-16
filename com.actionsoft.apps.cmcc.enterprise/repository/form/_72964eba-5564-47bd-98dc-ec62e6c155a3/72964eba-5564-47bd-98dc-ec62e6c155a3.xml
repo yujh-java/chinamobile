@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>72964eba-5564-47bd-98dc-ec62e6c155a3</id>
+    <createUser>admin</createUser>
+    <createTime>2017-11-24 11:14:57</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-11-24 11:42:50</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzueTUMI/RkNSUuJEUMXEgV05qPVoNoUYlO9L92Y8i2S2ccrApJsEzW5g397P/HbNwH</signature>
+    <managed>false</managed>
+    <title>测试</title>
+    <deleted>false</deleted>
+    <categoryName>企标报批稿</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://www.baidu.com","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>4917f15c-185b-4382-bd98-015a676165c2</id>
+            <title>测试</title>
+            <templateFile>{"pc":"企标报批稿-测试.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

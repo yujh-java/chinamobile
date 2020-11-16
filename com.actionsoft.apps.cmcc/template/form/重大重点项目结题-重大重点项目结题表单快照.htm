@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<![endif]-->
+
+		<title>重大重点项目结项申请表</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+		<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css'  name='schemeCss'/>
+		<link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1493708787000' name='buttonCss' />
+	<style>
+		 body {
+		min-width: 1248px !important;overflow: auto !important;
+		}
+	</style>
+	
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+	<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<table id="aws-form-maintable" class="aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" name="urlFormIframe" frameborder="0"></iframe></td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1490610715000" type="text/javascript"></script>
+<script id="auditMenuChange">// <![CDATA[
+//审核菜单改变事件
+function auditMenuChange(){
+  if(stepId =="obj_c78359d06df00001fc7b1800d42038b0"){//牵头部所领导审核
+	   var radios=window.frames['dialog_toolbar_action_page_frame'].document.getElementsByName("commentOption");
+	   for(var i=0;i<radios.length;i++){
+			if(radios[i].checked==true){
+			 routeId = radios[i].id;
+			}
+	   }
+  }
+}
+// ]]></script>
+<script type="text/javascript" id="formOnload">// <![CDATA[
+function formOnload(){
+	PROCESSTYPE="hq-end";
+	var host = window.location.host;
+  //财务编辑表单链接
+  /*if(stepId=="obj_c78359b6fa1000018fb41726a3c919ce" && openState ==1){
+	 var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&finance=edit&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }else if(stepId == "obj_c78359b6fa1000018fb41726a3c919ce" || stepId == "obj_c78359c2b84000014c1c150919a04860"
+			|| stepId=="obj_c78cbdcf0ef0000168ac1c371cf59200" || stepId == "obj_c78359d06df00001fc7b1800d42038b0"
+			|| stepId=="obj_c78359d74300000124e7152afcea7c60" || stepId == "obj_c78359ded2d00001ae521b0c18c013f3"
+			|| stepId=="obj_c78359e5bc400001ca7a16701d415bc0" || stepId == "obj_c78cc0aed6d00001ca4c11e01ec0ab10"){
+	//研究院只读
+	 var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&finance=read&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }else{
+	//非研究院只读
+	var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }*/
+ var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=hq-end&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  awsui.ajax.request({
+		type : "POST",
+		url : "./jd",
+        alert:false,
+		dataType : "json",
+		data : {
+			cmd : "com.actionsoft.apps.cmcc_queryOperatelog_jx",
+			sid:sid,
+			processId:processInstId,
+			processDefid:processDefid
+		},
+		success : function(data) {
+			var html = data.msg;
+			$("#logsbody").append(html);
+		}
+	});
+	
+	if(openState == 11){
+		reload_BTN_ADHOC_TASK_OK();
+	}
+}
+$('#dialog_toolbar_action_page_frame').load(function() { 
+	if(stepId == "obj_c7835d078f500001477b19d01c80159d"){//相关部门落实
+		$("#dialog_toolbar_action_page_frame").show();
+		setTimeout(function(){
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			reload_BTN_Default_Action(null,null,null,"obj_783deda90a564d50af42e1d28382327d");
+		},500);
+	}else{
+		$("#dialog_toolbar_action_page_frame").show();
+	}
+});
+$(document).ready(function(){
+	$("#BTN_TRANSACT").off("click").on("click", function() {
+		$("#dialog_toolbar_action_page_frame").hide();
+		FormToolBarAction.BTN_TRANSACT();		
+	});
+});
+// ]]></script>
+<script type="text/javascript" id="formSave">// <![CDATA[
+/*
+参数isTransact为true，表示办理按钮触发的保存动作
+其他情况是保存按钮触发的保存动作
+*/
+function formSave(isTransact){
+	if(isTransact == true){
+		 var isModify =window.frames["urlFormIframe"].isModify;
+		 if(isModify == true){
+			alert("请先点击保存");
+            return false;
+		 }
+    }
+}
+// ]]></script>
+</body>
+</html>

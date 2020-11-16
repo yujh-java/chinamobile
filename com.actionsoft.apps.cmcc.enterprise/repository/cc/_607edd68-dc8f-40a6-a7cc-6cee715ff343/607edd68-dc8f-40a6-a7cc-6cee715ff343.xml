@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>607edd68-dc8f-40a6-a7cc-6cee715ff343</id>
+    <createUser>admin</createUser>
+    <createTime>2018-01-03 16:10:36</createTime>
+    <updateUser></updateUser>
+    <updateTime>2018-01-03 16:10:36</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuxXXY79OGN0CqSIs7Zcff6IQLRx70cc3PgQivJYa3cuktLmtvx50LyobBGMw/ndiX</signature>
+    <managed>false</managed>
+    <name>CreateSessionWebService Api</name>
+    <type>wsprovider</type>
+    <group></group>
+    <log>true</log>
+    <properties>{"name":"CreateSessionWebService Api","serviceId":"CreateSessionWebServiceApi","serviceInterType":"java","policy":"","desc":"","group":"","sei":"","serviceImpl":"com.actionsoft.apps.cmcc.enterprise.webservice.CreateSessionWebService","audit":true,"svType":"sr","svProxy":"","serviceImplType":"j","serviceTranType":"http"}</properties>
+    <desc></desc>
+</ccModel>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<awsScheduleModel>
+    <id>b1d29b0f-4281-47d2-8a4b-c53e71c10bdb</id>
+    <createUser>admin</createUser>
+    <createTime>2017-12-01 17:40:52</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-01 17:54:19</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuyixRIqcRplvK1ydiJPD5S0AQ+Jp+MIOuBou64NHdV6pI1Zs10vRBF+wmH0eWDv5P</signature>
+    <managed>false</managed>
+    <name>添加用户兼职</name>
+    <group>DEFAULT</group>
+    <desc>通过指定用户添加兼职角色</desc>
+    <disabled>false</disabled>
+    <system>false</system>
+    <classz>com.actionsoft.apps.cmcc.enterprise.util.CreateUserMap</classz>
+    <createDate>2017-12-01T17:40:52+08:00</createDate>
+    <triggerRule>0:17:53</triggerRule>
+    <userParam></userParam>
+    <lastToken></lastToken>
+    <concurrent>false</concurrent>
+    <categoryName>未分类</categoryName>
+    <stateful>false</stateful>
+</awsScheduleModel>

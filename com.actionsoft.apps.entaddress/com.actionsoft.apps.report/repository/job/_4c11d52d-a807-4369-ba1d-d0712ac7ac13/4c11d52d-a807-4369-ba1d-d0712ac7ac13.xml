@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<awsScheduleModel>
+    <id>4c11d52d-a807-4369-ba1d-d0712ac7ac13</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-06 10:44:13</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-22 10:43:10</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzukDQVbUFboeGsHyX299ZSULrk/uWDDmCqEiwENVmVqbKT7hUSUw2sKxcw1yQfNo7k</signature>
+    <managed>false</managed>
+    <name>录入节点信息</name>
+    <group>DEFAULT</group>
+    <desc></desc>
+    <disabled>false</disabled>
+    <system>false</system>
+    <classz>com.actionsoft.apps.report.job.SaveNoteInfor</classz>
+    <createDate>2017-09-06T10:44:13+08:00</createDate>
+    <triggerRule>6::0</triggerRule>
+    <userParam></userParam>
+    <lastToken></lastToken>
+    <concurrent>false</concurrent>
+    <categoryName>未分类</categoryName>
+    <stateful>false</stateful>
+</awsScheduleModel>

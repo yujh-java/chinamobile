@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="com.actionsoft.apps.report/src"/>
+	<classpathentry kind="lib" path="com.actionsoft.apps.report/lib/com.actionsoft.apps.report.jar"/>
+	<classpathentry kind="lib" path="lib/com.actionsoft.apps.entaddress.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/aws_jdbc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/aws_lib"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

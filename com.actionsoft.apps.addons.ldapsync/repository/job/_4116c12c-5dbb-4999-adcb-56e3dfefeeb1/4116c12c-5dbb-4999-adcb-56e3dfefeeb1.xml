@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<awsScheduleModel>
+    <id>4116c12c-5dbb-4999-adcb-56e3dfefeeb1</id>
+    <createUser>admin</createUser>
+    <createTime>2017-05-12 19:06:16</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-08-08 17:53:25</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuhZor/V/dLm4aSTjEvh7EwOeeSaONSBWWnztU87dGPt/ZnWZ+jLmMovUL9KMLVz7m</signature>
+    <managed>false</managed>
+    <name>LDAP组织增量同步</name>
+    <group>DEFAULT</group>
+    <desc></desc>
+    <disabled>false</disabled>
+    <system>false</system>
+    <classz>com.actionsoft.apps.addons.ldapsync.IncSyncJob</classz>
+    <createDate>2017-05-12T19:06:16+08:00</createDate>
+    <triggerRule>0:21:0</triggerRule>
+    <userParam>{startTime:"2017-06-14 16:06:03",_comment:"startTime格式：2017-05-11 19:06:03"}</userParam>
+    <lastToken></lastToken>
+    <concurrent>false</concurrent>
+    <categoryName>未分类</categoryName>
+    <stateful>false</stateful>
+</awsScheduleModel>

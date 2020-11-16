@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>f3a7685e-854c-4213-9a60-52d5e8a131d7</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-13 15:56:11</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-18 11:18:47</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu3Ld+kVx1kP1bRqKUc1/egedEN11ZtaIpc/Nq2rMMhei+OqkeMsSMQNZUNPCz78Cd</signature>
+    <managed>false</managed>
+    <title>虚拟收入表单</title>
+    <deleted>false</deleted>
+    <categoryName>虚拟收入确认流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/virtualbudget?&amp;form=virtual_budget&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>3ed5cc6f-2595-4cf2-a424-16fc14d282b4</id>
+            <title>虚拟收入表单</title>
+            <templateFile>{"pc":"虚拟收入确认流程-虚拟收入表单.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

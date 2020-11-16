@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>59d14ee4-8691-49ee-bb1e-41c73cbfa86d</id>
+    <createUser>admin</createUser>
+    <createTime>2017-11-27 11:57:01</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-18 17:47:54</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu5J+bXA2wEDqWFFOsmOXhMIuQiq/ilwjdJ6lRS3UvqA99WY3kN3wV+BtrEHd/XR5O</signature>
+    <managed>false</managed>
+    <title>企标报批单</title>
+    <deleted>false</deleted>
+    <categoryName>企标审批稿</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://keyan.test.cmri.cn/esmp/QBJH/QBBX/qblcshow?state=1&amp;processId=@processid()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>965d91db-ce23-4d10-a687-1fa55c33ff54</id>
+            <title>企标报批单</title>
+            <templateFile>{"tablet":"","pc":"企标审批稿-企标报批稿-企标报批单.htm","mobile":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

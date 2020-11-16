@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>347a7da7-6919-4c27-b9e4-7356bc475248</id>
+    <createUser>admin</createUser>
+    <createTime>2017-12-26 11:40:44</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-26 11:40:44</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzubQz0fJY7/49udvGYNPUp6HylvsEJJxjIonvlIiLKbO21Zx9eygfkYz31ZEFg41dw</signature>
+    <managed>false</managed>
+    <title>角色维护表单</title>
+    <deleted>false</deleted>
+    <categoryName>企标审批稿</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>0b1ea183-d96f-4ddf-944b-0ebabfdf4b5c</id>
+            <title>角色维护表单</title>
+            <templateFile>{"pc":"企标审批稿-角色维护表单.htm","mobile":"企标审批稿-角色维护表单_m.htm","tablet":"企标审批稿-角色维护表单.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>cf61412f-426b-454d-a319-d65dea3956e8</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":""}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

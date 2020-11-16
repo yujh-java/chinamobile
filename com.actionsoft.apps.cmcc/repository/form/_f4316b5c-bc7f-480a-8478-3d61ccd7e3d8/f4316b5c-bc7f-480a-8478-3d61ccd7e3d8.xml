@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>f4316b5c-bc7f-480a-8478-3d61ccd7e3d8</id>
+    <createUser>admin</createUser>
+    <createTime>2017-03-20 11:14:52</createTime>
+    <updateTime>2017-05-31 12:26:25</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuu0BrtckXsrTYWzk9cEk2jbqEEmEqO1khHPOkaiBLnHRyJIZs0a1L7lFVuGZCQI7a</signature>
+    <managed>false</managed>
+    <title>流程信息维护</title>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>b32de200-b10c-475b-96e8-5f70c15d7aee</id>
+            <title>流程信息维护</title>
+            <templateFile>{"pc":"数据信息-流程信息维护.htm","mobile":"数据信息-流程信息维护_m.htm","tablet":"数据信息-流程信息维护.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>6ec4dd4f-3cd9-484f-98ac-15624043d41b</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+        <formItem>
+            <id>4b9ce5e6-2ec1-4070-839e-0931ab8a67db</id>
+            <title>流程信息维护</title>
+            <templateFile>{"pc":"","mobile":"","tablet":""}</templateFile>
+            <grid>true</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>4480d5fc-077e-41b4-a6a7-3c39559619c6</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

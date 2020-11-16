@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>LDAP组织同步</name>  
+  <version>1.0</version>  
+  <buildNo>5</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>false</categoryVisible>  
+  <description><![CDATA[LDAP是轻量目录访问协议，英文全称是Lightweight Directory Access Protocol。]]></description>  
+  <details><![CDATA[当前有企业用户使用LDAP作为基础信息平台，通过该平台集中为各子系统提供统一基准的部门人员信息。组织机构是AWS BPM系统运行的基础，需要用到LDAP的组织定义。选择同步技术方案的原因在于：
+AWS组织模型和LDAP存在差异，直接使用不够灵活，复杂度高
+基于本地cache的元数据访问能获得性能上的优势]]></details>  
+  <installListener/>  
+  <pluginListener>com.actionsoft.apps.addons.ldapsync.Plugins</pluginListener>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires> 
+    <require appId="" notActiveHandler=""/> 
+  </requires>  
+  <properties/>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.1">_bpm.platform</depend>  
+  <installDate></installDate>  
+  <productId/>  
+  <releaseDate>2017-05-15</releaseDate>
+</app>

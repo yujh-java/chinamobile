@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>2fb55c6b-83ca-4b69-8590-11b7e8a92fca</id>
+    <createUser>admin</createUser>
+    <createTime>2017-05-11 14:55:47</createTime>
+    <updateTime>2017-05-31 12:31:06</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuBSnnM7N6/PMIOP07+UaPBfheksz1DHkM1TbZ/VR8jk5va6FNdr6HtR+QLUewX1AB</signature>
+    <managed>false</managed>
+    <title>扩展按钮对应审核菜单信息</title>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>df2a70dd-3909-4d55-8ff3-bff7289dae49</id>
+            <title>扩展按钮对应审核菜单信息</title>
+            <templateFile>{"pc":"数据信息-扩展按钮对应审核菜单信息.htm","mobile":"数据信息-扩展按钮对应审核菜单信息_m.htm","tablet":"数据信息-扩展按钮对应审核菜单信息.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>6ec4dd4f-3cd9-484f-98ac-15624043d41b</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+        <formItem>
+            <id>de4b6364-3ddd-4339-92f9-5f8fb6af701a</id>
+            <title>扩展按钮对应审核菜单信息</title>
+            <templateFile>{"pc":"","mobile":"","tablet":""}</templateFile>
+            <grid>true</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>925e7463-6419-46ab-8d2e-b1d585f0b96f</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

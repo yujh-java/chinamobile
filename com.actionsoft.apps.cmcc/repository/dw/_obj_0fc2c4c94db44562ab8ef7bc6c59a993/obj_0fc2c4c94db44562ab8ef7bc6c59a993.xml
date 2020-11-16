@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AWSDWModel>
+    <id>obj_0fc2c4c94db44562ab8ef7bc6c59a993</id>
+    <createUser>admin</createUser>
+    <createTime>2017-06-12 10:17:00</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-07-20 10:22:26</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuULHifZmY2mh9OVP50GRM3NrOlFvR7OAsrZaB4kBQ4ntIrpHwXEUFsxesBYCKrhRE</signature>
+    <managed>false</managed>
+    <processGroupId>obj_0fc2c4c94db44562ab8ef7bc6c59a993</processGroupId>
+    <processGroupName>组织架构同步排序维护</processGroupName>
+    <categoryName>数据信息</categoryName>
+    <dwType>1</dwType>
+    <processAdministrator>admin</processAdministrator>
+    <title id="obj_e79cbd271c504cd2a4557461938a3107" label="组织架构同步排序维护" extendcode="" event=""/>
+    <dataView id="obj_9c667ee083e545ffa07c71880aecc753" label="首页" showType="link" orderIndex="0" dwReportType="0" isDefault="false" category="普通视图" implClassName="com.actionsoft.bpms.dw.design.dataview.CommonDataView" security="" event="" url="" userExtendJs="" show="true">
+        <layoutECategoryType></layoutECategoryType>
+        <layoutECategoryTypeLast></layoutECategoryTypeLast>
+        <afterLoadEventCall></afterLoadEventCall>
+        <afterLoadEventScript></afterLoadEventScript>
+        <toolbar id="obj_cb5b1e92e0b448b3877bdd4deaf70efe" isshow="true" extendcode="" event="">
+            <button id="obj_6015c654ad144d049e14531bc6cd9e60" refbuttonid="save" cls="" security="" isshow="true" orderindex="1" event="" selectShow="false"/>
+            <button id="obj_81880a05d2d44ef3a5fc62b9587b9f5f" refbuttonid="new" cls="" security="" isshow="true" orderindex="2" event="" selectShow="false"/>
+            <button id="obj_230dff2c7e734ba09478baf18828b72e" refbuttonid="delete" cls="" security="" isshow="false" orderindex="3" event="" selectShow="true"/>
+            <button id="obj_aa67ed1f03be46f7a168759a14f6c903" refbuttonid="print" cls="" security="" isshow="true" orderindex="4" event="" selectShow="false"/>
+            <button id="obj_bbac5817eabe4ac3941980525fee37c2" refbuttonid="refresh" cls="" security="" isshow="true" orderindex="5" event="" selectShow="false"/>
+            <button id="obj_35f47bd2152e4696a7575522bb8dc0c5" refbuttonid="exportDWData" cls="" security="" isshow="false" orderindex="6" event="" selectShow="false"/>
+        </toolbar>
+        <searcher id="obj_310ff93f96d3470ea5a08b6fbc46c0e5" isshow="true" layoutType="list" tdGroup="3" textCls="" dwLeftCls="" dwRightCls="" extendcode="" event="" xconditionEvent="" tileOpen="false"/>
+        <navTree id="obj_00392544b976486aa81710d41310a083" isshow="false" type="" rootcls="" leafcls="" ismultiple="false" isexpanded="true" orderindex="" event=""/>
+        <layout id="obj_94ba1948681043f1b49dd30f073e75fe" label="" classname="com.actionsoft.bpms.dw.exec.layout.LayoutA" event=""/>
+        <datagrid id="obj_55f5c0cb2a9a4f1ca59e9fa8c34e7606" isshow="true" autoSearch="true" customSet="true" select="false" datasource="bo:BO_ACT_PM_LDAPSYNC_ORDER_S" countSql="" pagesize="15" event="" rowDefHeight="25" showCheckBox="true" ismultiple="true" isshownumbercol="true" numberCellTotal="false" shownumbercolwidth="40" freezeCols="0" wrap="false" nowrapTitle="false" refbehaviorid="%7B%22behavior%22%3A%22openform%22%2C%22title%22%3A%22%22%2C%22w%22%3A%22%22%2C%22h%22%3A%22%22%2C%22sw%22%3A%22%22%2C%22isMask%22%3A0%2C%22ih%22%3A%22%22%7D" behaviortarget="blankwin" extendsql="" identifier="_ID" extend1="" multiHeader="">
+            <column id="obj_b9eb6be2c34c4241a3d12c39780ee7df" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="LDAPBMBH" label="LDAP 部门编号" orderindex="0" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_8faa8e9d0d7d48cba429aacb7e16b4f0" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="LDAPBMMC" label="LDAP 部门名称" orderindex="1" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_2fc79cd977184113bc0603754496d261" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ORGID" label="单位ID" orderindex="2" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_c91e816ecae6427990441fd283caf0ba" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEDATE" label="创建日期" orderindex="3" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_40e33dd4bf824cc595b9ec1808a36a0a" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEUSER" label="创建人" orderindex="4" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_1d74b020e25246cea6be2973dcc38b00" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEDATE" label="更新日期" orderindex="5" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_bcc7622e9ea942f69bb41861c61fe92b" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEUSER" label="更新人" orderindex="6" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_eb172cd295d14ca8bdafca0e7fe8ff11" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="1" required="0" align="right" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ISEND" label="流程是否结束" orderindex="7" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="NUMBER" handleType="1" boType="" count="false"/>
+            <column id="obj_b4eb7a7e96a54029a8a361786ad60c39" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ID" label="业务表ID" orderindex="8" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_39709030bf664d0c8f6662c081f03321" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_PM_LDAPSYNC_ORDER_S" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_BINDID" label="流程实例ID" orderindex="9" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+        </datagrid>
+        <reportSetting></reportSetting>
+        <chartSetting></chartSetting>
+    </dataView>
+    <userextendbuttons/>
+    <userextendbehaviors/>
+</AWSDWModel>

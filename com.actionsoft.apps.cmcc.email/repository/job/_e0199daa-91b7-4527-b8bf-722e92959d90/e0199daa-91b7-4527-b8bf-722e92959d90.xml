@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<awsScheduleModel>
+    <id>e0199daa-91b7-4527-b8bf-722e92959d90</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-06 10:52:22</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-27 12:00:34</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuBijiGRbBQdvpYrk+D8LEyG+rf9YZT6fz+Rs+PHOLQi8vSrofIYfnVx7kcd3BwmU8</signature>
+    <managed>false</managed>
+    <name>发送邮件、短息测试定时器</name>
+    <group>DEFAULT</group>
+    <desc></desc>
+    <disabled>false</disabled>
+    <system>false</system>
+    <classz>com.actionsoft.apps.cmcc.email.job.SendEmailIJob</classz>
+    <createDate>2017-09-06T10:52:22+08:00</createDate>
+    <triggerRule>6::0</triggerRule>
+    <userParam></userParam>
+    <lastToken></lastToken>
+    <concurrent>false</concurrent>
+    <categoryName>未分类</categoryName>
+    <stateful>false</stateful>
+</awsScheduleModel>

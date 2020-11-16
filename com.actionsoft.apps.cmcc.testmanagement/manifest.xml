@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<app xmlns="http://www.actionsoft.com.cn/app">  
+  <name>测试管理</name>  
+  <version>1.0</version>  
+  <buildNo>2</buildNo>  
+  <developer id="776cca9a287c8b4d63b9cad216aa3859" tablePrefix="ACT" url="http://www.actionsoft.com.cn">北京炎黄盈动科技发展有限责任公司</developer>  
+  <categoryVisible>true</categoryVisible>  
+  <description><![CDATA[]]></description>  
+  <details><![CDATA[]]></details>  
+  <installListener/>  
+  <pluginListener/>  
+  <startListener/>  
+  <stopListener/>  
+  <upgradeListener/>  
+  <uninstallListener/>  
+  <reloadable>true</reloadable>  
+  <requires> 
+    <require appId="" notActiveHandler=""/> 
+  </requires>  
+  <properties> 
+    <property action="edit" group="相关接口" name="TSM_WORKFLOW_INFO" title="回写状态接口" type="input" isSystem="false" desc="测试管理回写状态接口" ref="">http://10.2.5.85/tms/api/workflow/projectworkflowinfo</property>
+  </properties>  
+  <allowStartup>true</allowStartup>  
+  <allowUpgradeByStore>true</allowUpgradeByStore>  
+  <depend versions="6.2">_bpm.portal</depend>  
+  <modelAdministrator/>  
+  <installDate>2018-12-17 17:33:55</installDate>  
+  <releaseDate>2018-12-17</releaseDate> 
+</app>

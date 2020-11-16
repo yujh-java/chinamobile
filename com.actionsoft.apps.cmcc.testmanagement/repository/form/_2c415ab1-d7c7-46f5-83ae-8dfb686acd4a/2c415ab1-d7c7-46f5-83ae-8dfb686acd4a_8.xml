@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>2c415ab1-d7c7-46f5-83ae-8dfb686acd4a</id>
+    <createUser>admin</createUser>
+    <createTime>2018-12-21 15:51:43</createTime>
+    <updateUser></updateUser>
+    <updateTime>2018-12-21 15:51:43</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuUkKk7b14VohRlUmhr0IfitrJN3sJGg5EOE3ID9Mi5OUHn3H+refd4fjuBhr0CvbM</signature>
+    <managed>false</managed>
+    <title>测试管理确认单快照</title>
+    <deleted>false</deleted>
+    <categoryName>测试准备阶段</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://www.baidu.com","mobile":"http://www.baidu.com"}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>0a1be0b9-0a2a-432f-8033-f39d970efaf2</id>
+            <title>测试管理确认单快照</title>
+            <templateFile>{"pc":"","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform","mobile":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>0d2f9fbe-910e-4a86-b882-19c61f195c90</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-05 15:25:44</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-05 15:25:44</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu3yDIJ13w0PuqXsXSfKq0eVi3YrbgmG4oNX9t5q93poG3Nksowam62buRQ2eQjLjA</signature>
+    <managed>false</managed>
+    <title>邮件模板固定词组</title>
+    <deleted>false</deleted>
+    <categoryName>模板配置</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>0c529601-2bfe-428d-a100-290214a47a51</id>
+            <title>邮件模板固定词组</title>
+            <templateFile>{"pc":"模板配置-邮件模板固定词组.htm","mobile":"模板配置-邮件模板固定词组_m.htm","tablet":"模板配置-邮件模板固定词组.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>22e21cdf-6337-40c9-aae8-aec4ecc69bad</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":""}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

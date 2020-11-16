@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>dc51cc9c-13d0-4871-8698-0763b8ca8aee</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-20 17:01:22</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-18 11:07:42</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuTRUKTKMRo1a27m5mouKURpncvt8gIJ0AyoGlPQR/wgFekH/W00sQMRFH31m/e5K4</signature>
+    <managed>false</managed>
+    <title>研究院项目立项</title>
+    <deleted>false</deleted>
+    <categoryName>研究院项目立项</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/Workflow/open?form=main&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>8e062f44-99f4-4007-b3b8-91e5229261be</id>
+            <title>研究院项目立项</title>
+            <templateFile>{"pc":"研究院项目立项-研究院项目立项.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

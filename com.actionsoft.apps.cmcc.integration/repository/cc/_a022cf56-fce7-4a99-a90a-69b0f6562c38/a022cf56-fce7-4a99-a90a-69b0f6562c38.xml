@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccModel>
+    <id>a022cf56-fce7-4a99-a90a-69b0f6562c38</id>
+    <createUser>admin</createUser>
+    <createTime>2017-02-17 11:06:09</createTime>
+    <updateTime>2017-06-28 09:57:44</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu/Rgo/pnuGP2CAr5bfa6zbxvK7a5CxEADUuKGF234X/2fW61GpTgnvYF4tdClKJnW</signature>
+    <managed>false</managed>
+    <name>TaskWebservice Api</name>
+    <type>wsprovider</type>
+    <updateUser>admin</updateUser>
+    <group></group>
+    <log>true</log>
+    <properties>{"name":"TaskWebservice Api","serviceId":"TaskWebserviceApi","serviceInterType":"java","policy":"88279afb-d9f7-4c83-9e26-93b48670fff1","desc":"","group":"","sei":"","serviceImpl":"com.actionsoft.apps.cmcc.integration.webservice.TaskWebservice","audit":true,"svType":"sr","svProxy":"","serviceImplType":"j","serviceTranType":"http"}</properties>
+    <desc></desc>
+</ccModel>

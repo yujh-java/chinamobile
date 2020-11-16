@@ -1,0 +1,34 @@
+package com.actionsoft.apps.cmcc.standardization.constant;
+/** 
+* @author yujh 
+* @version 创建时间：2019年4月11日 下午3:06:01 
+* 类说明  标准化常量类
+*/
+public class StandardizationConstant {
+	
+	/** 标准化管理APPID **/
+	public static final String APPID = "com.actionsoft.apps.cmcc.standardization";
+	
+	/** 员工职级常量 **/
+	public static final String user_leave1 = "1";// 公司领导
+	public static final String user_leave2 = "2";// 部门负责人
+	public static final String user_leave3 = "3";// 处长
+	public static final String user_leave4 = "4";// 普通员工或处长
+	public static final String user_leave5 = "5";// 普通员工
+	public static final String user_leave6 = "6";// 普通员工
+	
+	//相关组织
+	public static String deptNo_jt = "00030000000000000000";//集团部门编号
+	
+	public static final int ipm_connectTime = 10000;//接口连接时间控制
+	
+	/** 相关部门ID **/
+	public static final String DEPT_ALL="f1c01f98-9184-4e8d-8908-ae5614328586";//全部门ID（一级）
+	
+	/** 相关角色 **/
+	public static final String COMPANY_INTERFACE_PERSON="申请单位接口人";
+	
+	/** 相关节点 **/
+	public static final String END_STEP="obj_c86bc4dd9c00000145cb1800136b10ea";//子流程最后一个节点
+	public static final String HQ_STEP="obj_c86bc6d7a5a00001715a3f5046e01d9c";//会签节点
+}

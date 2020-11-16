@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AWSDWModel>
+    <id>obj_8602188a9135406eaa1e168ee2302a8a</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-05 15:26:57</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-09-06 09:37:46</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzu2XPq1f2D09+KZgCPCh/NpZnMXk80QYSiW8SSEmKgiAwHzl8H6h3zSFCIETyYuyI1</signature>
+    <managed>false</managed>
+    <processGroupId>obj_8602188a9135406eaa1e168ee2302a8a</processGroupId>
+    <processGroupName>邮件模板固定词组表</processGroupName>
+    <categoryName>模板配置</categoryName>
+    <dwType>1</dwType>
+    <processAdministrator></processAdministrator>
+    <title id="obj_501101683b2e4e0cb6bed513d511a884" label="邮件模板固定词组表" extendcode="" event=""/>
+    <dataView id="obj_611035ac653b4c7abbc27a402b31d91d" label="首页" showType="link" orderIndex="0" dwReportType="1" isDefault="false" category="普通视图" implClassName="com.actionsoft.bpms.dw.design.dataview.CommonDataView" security="" event="" url="" userExtendJs="" show="true">
+        <layoutECategoryType></layoutECategoryType>
+        <layoutECategoryTypeLast></layoutECategoryTypeLast>
+        <afterLoadEventCall></afterLoadEventCall>
+        <afterLoadEventScript></afterLoadEventScript>
+        <toolbar id="obj_f04ba3d5d659416f80a0c664858c00f9" isshow="true" extendcode="" event="">
+            <button id="obj_8a7154e6e25943c78ea4b774d1dd49eb" refbuttonid="save" cls="" security="" isshow="true" orderindex="1" event="" selectShow="false"/>
+            <button id="obj_40f81dd5a75547b3b1d1b9135725052e" refbuttonid="new" cls="" security="" isshow="true" orderindex="2" event="" selectShow="false"/>
+            <button id="obj_856073a3025c44708e0134cd17ef2dcf" refbuttonid="delete" cls="" security="" isshow="false" orderindex="3" event="" selectShow="true"/>
+            <button id="obj_6c63bc8508714eb6b620553b02e09372" refbuttonid="print" cls="" security="" isshow="true" orderindex="4" event="" selectShow="false"/>
+            <button id="obj_0ac9f6c3e7364fd9bbe97edfb3f2f559" refbuttonid="refresh" cls="" security="" isshow="true" orderindex="5" event="" selectShow="false"/>
+            <button id="obj_d610c008744548679a9d0f6eef0c52d6" refbuttonid="exportDWData" cls="" security="" isshow="false" orderindex="6" event="" selectShow="false"/>
+        </toolbar>
+        <searcher id="obj_e13bf23fbf6e480abf983fb029406bfb" isshow="true" layoutType="list" tdGroup="3" textCls="" dwLeftCls="" dwRightCls="" extendcode="" event="" xconditionEvent="" tileOpen="false"/>
+        <navTree id="obj_3eb8d70f53f14d108a258795a58071a8" isshow="false" type="" rootcls="" leafcls="" ismultiple="false" isexpanded="true" orderindex="" event=""/>
+        <layout id="obj_5c95861b4da14bf5af56305cdf43d44c" label="" classname="com.actionsoft.bpms.dw.exec.layout.LayoutA" event=""/>
+        <datagrid id="obj_0c46bf46a1594b96bf7ad4671fea0d94" isshow="true" autoSearch="true" customSet="false" select="false" datasource="bo:BO_ACT_EMAIL_FIXED" countSql="" pagesize="15" event="" rowDefHeight="25" showCheckBox="true" ismultiple="false" isshownumbercol="true" numberCellTotal="false" shownumbercolwidth="40" freezeCols="0" wrap="false" nowrapTitle="false" refbehaviorid="%7B%22behavior%22%3A%22openmodifyform%22%2C%22title%22%3A%22%22%2C%22w%22%3A%22%22%2C%22h%22%3A%22%22%2C%22sw%22%3A%22%22%2C%22isMask%22%3A0%2C%22ih%22%3A%22%22%7D" behaviortarget="tab" extendsql="" identifier="_ID" extend1="" multiHeader="">
+            <column id="obj_b0dabb932ee642ab95f460c9f3b77d33" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="FIXEDPARASE" label="名称" orderindex="0" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_5e20363d9a9f410d97c086f0723d8644" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="100px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="PHRASE" label="默认值" orderindex="1" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_77d6fcb00157433b8f4f9d5ca1763548" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="60px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="128" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="MEMO" label="备注" orderindex="2" colbehaviortarget="" ishidden="false" export="true" backHide="false" isusedvalue="false" tableheadsort="true" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="0" boType="" count="false"/>
+            <column id="obj_3593c5090f534ad38111e73d10725fda" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ORGID" label="单位ID" orderindex="3" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_4223ba780c4d4fcebcb355fa1ff3a040" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEDATE" label="创建日期" orderindex="4" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_91106f6bb79f4e9885bdbcd4415150cd" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_CREATEUSER" label="创建人" orderindex="5" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_011c29436c2a47a098e8d2adabf14055" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="135px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="19" required="0" align="center" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEDATE" label="更新日期" orderindex="6" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="DATE" handleType="1" boType="" count="false"/>
+            <column id="obj_a1d99aacb93e4674b31cf503b9a7e0ba" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_UPDATEUSER" label="更新人" orderindex="7" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_7afaf8cc5ae541c286cd89b9cb11c476" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="1" required="0" align="right" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ISEND" label="流程是否结束" orderindex="8" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="NUMBER" handleType="1" boType="" count="false"/>
+            <column id="obj_c6a26de7be744a75a9b01652a9b87b3a" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_ID" label="业务表ID" orderindex="9" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+            <column id="obj_90d234ac476246c481ff5b23e735d368" sort="" isfilter="false" bgcolor="" fontcolor="" fontsize="12px" width="120px" colALias="" colTableAlias="" colTable="BO_ACT_EMAIL_FIXED" length="36" required="0" align="left" showrule="" upshowrule="" upDataClassName="" extend1="" extend2="" security="" event="" field="_BINDID" label="流程实例ID" orderindex="10" colbehaviortarget="" ishidden="true" export="false" backHide="true" isusedvalue="true" tableheadsort="false" colrefbehaviorid="" columnAction="" datatype="TEXT" handleType="1" boType="" count="false"/>
+        </datagrid>
+        <reportSetting></reportSetting>
+        <chartSetting></chartSetting>
+    </dataView>
+    <userextendbuttons/>
+    <userextendbehaviors/>
+</AWSDWModel>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>422bdddb-caa7-4a0a-b060-83e47e9483a7</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-22 17:47:23</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-12-25 17:14:41</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzut4OQAzLfgwsz9TFn0AMLLxu0kvLja89cqLNsbMV62RM1X2cCvKgDIX/AFia3K1BL</signature>
+    <managed>false</managed>
+    <title>研究院内结项</title>
+    <deleted>false</deleted>
+    <categoryName>研究院结项流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/workflow/end?form=open_read&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>2290c077-a66a-4702-87df-e78d86fd05b3</id>
+            <title>研究院内结项</title>
+            <templateFile>{"pc":"研究院结项流程-研究院内结项.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

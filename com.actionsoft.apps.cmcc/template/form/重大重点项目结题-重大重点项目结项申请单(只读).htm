@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<![endif]-->
+
+		<title>重大重点项目结项申请表</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+		<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css'  name='schemeCss'/>
+		<link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1493708787000' name='buttonCss' />
+	<style>
+		 body {
+		min-width: 1248px !important;overflow: auto !important;
+		}
+	</style>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+	<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<table id="aws-form-maintable" class="aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%;" src="../../spms/hq/Workflow/open?form=main&amp;process_id=" name="urlFormIframe" frameborder="0" scrolling="no"></iframe></td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1490610715000" type="text/javascript"></script>
+<script id="auditMenuChange">// <![CDATA[
+//审核菜单改变事件
+function auditMenuChange(){
+  if(stepId =="obj_c78359d06df00001fc7b1800d42038b0"){//牵头部所领导审核
+	   var radios=window.frames['dialog_toolbar_action_page_frame'].document.getElementsByName("commentOption");
+	   for(var i=0;i<radios.length;i++){
+			if(radios[i].checked==true){
+			 routeId = radios[i].id;
+			}
+	   }
+  }
+}
+// ]]></script>
+<script type="text/javascript" id="formOnload">// <![CDATA[
+function formOnload(){
+	PROCESSTYPE="hq-end";
+	var host = window.location.host;
+  //财务编辑表单链接
+  /*if(stepId=="obj_c78359b6fa1000018fb41726a3c919ce" && openState ==1){
+	 var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&finance=edit&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }else if(stepId == "obj_c78359b6fa1000018fb41726a3c919ce" || stepId == "obj_c78359c2b84000014c1c150919a04860"
+			|| stepId=="obj_c78cbdcf0ef0000168ac1c371cf59200" || stepId == "obj_c78359d06df00001fc7b1800d42038b0"
+			|| stepId=="obj_c78359d74300000124e7152afcea7c60" || stepId == "obj_c78359ded2d00001ae521b0c18c013f3"
+			|| stepId=="obj_c78359e5bc400001ca7a16701d415bc0" || stepId == "obj_c78cc0aed6d00001ca4c11e01ec0ab10"){
+	//研究院只读
+	 var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&finance=read&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }else{
+	//非研究院只读
+	var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=end&process_id="+processInstId;
+	 document.getElementById("urlFormIframe").src = newurl;
+  }*/
+  var newurl="http://"+host+"/spms/hq/workflow/end?form=end_read&type=hq-end&process_id="+processInstId;
+  document.getElementById("urlFormIframe").src = newurl;
+  awsui.ajax.request({
+		type : "POST",
+		url : "./jd",
+        alert:false,
+		dataType : "json",
+		data : {
+			cmd : "com.actionsoft.apps.cmcc_queryOperatelog_jx",
+			sid:sid,
+			processId:processInstId,
+			processDefid:processDefid
+		},
+		success : function(data) {
+			var html = data.msg;
+			$("#logsbody").append(html);
+		}
+	});
+	
+	if(openState == 11){
+		reload_BTN_ADHOC_TASK_OK();
+	}
+}
+$('#dialog_toolbar_action_page_frame').load(function() { 
+	/*if(stepId=="obj_c78359d06df00001fc7b1800d42038b0"){//牵头部所领导审核
+		if(openState == 1){
+			hiddenMemo("obj_76b501f3619a4e14b42f87f2417b95ba");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_76b501f3619a4e14b42f87f2417b95ba").parent().next().next().remove();
+		}else{
+			WBCDLJ = "研究院牵头部所领导审核";
+			hiddenMemo("obj_d03e4b2a0fe7494fa83c7e19594ddcfe");
+			hiddenMemo("obj_129a0edb33a94921855502fb2cfb366c");
+			hiddenMemo("obj_78b1c39f2cc9447ca0af3f0b5196db54");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_d03e4b2a0fe7494fa83c7e19594ddcfe").parent().next().next().remove();
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_129a0edb33a94921855502fb2cfb366c").parent().next().next().remove();
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_78b1c39f2cc9447ca0af3f0b5196db54").parent().next().next().remove();
+		}
+		nextStepName_jq = "配合部所会签";
+		$("#dialog_toolbar_action_page_frame").show();
+		//处理加签
+		setTimeout(function(){
+			var actionIdMap = new Object();
+			actionIdMap[3]="obj_129a0edb33a94921855502fb2cfb366c";//加签
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+				 if (openState == 1) {
+					reload_BTN_Default_Action(actionIdMap,"obj_76b501f3619a4e14b42f87f2417b95ba","");
+				 }else if(openState == 11){
+					reload_BTN_Default_Action(actionIdMap,"obj_76b501f3619a4e14b42f87f2417b95ba","");
+				 }
+			}
+		},500);
+		var toolbarsrcUrl = document.getElementById("dialog_toolbar_action_page_frame").src;
+		//各部门管理人员对应表 
+		if("obj_d03e4b2a0fe7494fa83c7e19594ddcfe"==routeId && toolbarsrcUrl.indexOf("cmd=CLIENT_BPM_TASK_GOTO_EXEC_PAGE")>-1){
+			projectManager();
+		}
+	}else if(stepId=="obj_c78359d74300000124e7152afcea7c60"){//项目管理人员
+		if(openState == 1){
+			awsui.ajax.request({
+				type : "POST",
+				url : "./jd",
+				alert:false,
+				dataType : "json",
+				data : {
+					cmd : "com.actionsoft.apps.cmcc_queryProjectType",
+					sid:sid,
+					processId:processInstId
+				},
+				ok : function(r) {//项目类型
+					var  projectType = r.data.projectType;
+					if(projectType=="10002" || projectType=="10007" || projectType=="10014"
+						|| projectType=="10000" || projectType=="10001"){//自立项目
+						updateMemo("obj_7fc3473d4b4344588a091577daa45f2b","同意立项，结束流程");
+					}
+					$("#dialog_toolbar_action_page_frame").show();
+				}
+			});
+		}
+		$("#dialog_toolbar_action_page_frame").show();
+		//处理加签
+		setTimeout(function(){
+			var actionIdMap = new Object();
+			actionIdMap[3]="obj_1fdcacbe0bbe4fe895bf56198160c505";//加签
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+				 reload_BTN_Default_Action(null,null,"obj_1747da10c0ff4d78857694a27e4018df");
+			}
+		},500);
+	}else if(stepId == "obj_c78359e5bc400001ca7a16701d415bc0"){//主管院领导
+		awsui.ajax.request({
+			type : "POST",
+			url : "./jd",
+			alert:false,
+			dataType : "json",
+			data : {
+				cmd : "com.actionsoft.apps.cmcc_queryProjectType",
+				sid:sid,
+				processId:processInstId
+			},
+			ok : function(r) {
+				var  projectType = r.data.projectType;
+				if(projectType=="10002" || projectType=="10007" || projectType=="10014"
+					|| projectType=="10000" || projectType=="10001"){
+					updateMemo("obj_601205cf0dcc4055a73f8f6e7c839b0d","同意，结束流程");
+				}
+				$("#dialog_toolbar_action_page_frame").show();
+			}
+		});
+	}else if(stepId == "obj_c78cc0aed6d00001ca4c11e01ec0ab10"){//院领导审批
+		awsui.ajax.request({
+			type : "POST",
+			url : "./jd",
+			alert:false,
+			dataType : "json",
+			data : {
+				cmd : "com.actionsoft.apps.cmcc_queryProjectType",
+				sid:sid,
+				processId:processInstId
+			},
+			ok : function(r) {
+				var  projectType = r.data.projectType;
+				if(projectType=="10002" || projectType=="10007" || projectType=="10014"
+					|| projectType=="10000" || projectType=="10001"){
+					updateMemo("obj_f86f10c91d094baf9a097d4d4e2f4879","同意，结束流程");
+				}
+				$("#dialog_toolbar_action_page_frame").show();
+			}
+		});
+	}else */
+	if(stepId == "obj_c7835a012b100001a2551e3085691feb"){//牵头研发机构项目接口人
+		$("#BTN_Default_Action").removeAttr("onclick");
+		if (openState == 1) {
+			//隐藏返回研发机构接口人
+			hiddenMemo("obj_7e76f0f7f7b54f489ba5aaf8028803f3");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_7e76f0f7f7b54f489ba5aaf8028803f3").parent().next().next().remove();			
+			var parentTaskId = $("#parentTaskInstId").val();
+			awsui.ajax.request({
+				type : "POST",
+				url : "./jd",
+				alert:false,
+				dataType : "json",
+				data : {
+					cmd : "com.actionsoft.apps.cmcc_queryParentActivityId",
+					sid:sid,
+					parentTaskId:parentTaskId,
+					processId:processInstId
+				},
+				ok : function(r) {
+					//判断是否有配合部门
+					var PHYFJGBMID = r.data.PHYFJGBMID;
+					var parentActivityId = r.data.parentActivityId;
+					if(PHYFJGBMID == ""){
+						//配合部门为空，隐藏送配合会签路径
+						hiddenMemo("obj_0fe962bc052b4e34bcf23381f6c3f179");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_0fe962bc052b4e34bcf23381f6c3f179").parent().next().next().remove();
+					}else if(/*parentActivityId == 'false'*/
+							parentActivityId !="obj_c7835a47a4d0000182bccba011086190" 
+							&& parentActivityId !="obj_c7835a64531000015d8525a0317019e8" 
+							&& parentActivityId !="obj_c7f89fc53a2000011a1f10ed53e99c00"){
+						//隐藏送总部接口人路径、送总部接口人并阅知其他人
+						hiddenMemo("obj_fb377b202ab345daab5bbb5145802b41");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_fb377b202ab345daab5bbb5145802b41").parent().next().next().remove();
+						//hiddenMemo("obj_a04bf051c27040c1a2ae1e8b3d934650");
+						//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_a04bf051c27040c1a2ae1e8b3d934650").parent().next().next().remove();				
+					}
+					$("#dialog_toolbar_action_page_frame").show();
+				}
+			});
+		}else{
+			WBCDLJ = "牵头研发机构接口人处理";
+			//隐藏送总部接口人路径、送总部接口人并阅知其他人、送配合会签、返回起草路径、送主管领导审批
+			hiddenMemo("obj_fb377b202ab345daab5bbb5145802b41");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_fb377b202ab345daab5bbb5145802b41").parent().next().next().remove();
+			//hiddenMemo("obj_a04bf051c27040c1a2ae1e8b3d934650");
+			//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_a04bf051c27040c1a2ae1e8b3d934650").parent().next().next().remove();				
+			hiddenMemo("obj_0fe962bc052b4e34bcf23381f6c3f179");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_0fe962bc052b4e34bcf23381f6c3f179").parent().next().next().remove();
+			hiddenMemo("obj_7ae38cbc4407428e8afbba945fb377c9");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_7ae38cbc4407428e8afbba945fb377c9").parent().next().next().remove();
+			
+			//chenxf add 2018-4-12
+			//隐藏主管领导
+			hiddenMemo("obj_c009b29b97fa41168e9d580d47cb4bac");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_c009b29b97fa41168e9d580d47cb4bac").parent().next().next().remove();
+			//隐藏加签
+			hiddenMemo("obj_54d03a02ff10437287c638584ba36acb");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_54d03a02ff10437287c638584ba36acb").parent().next().next().remove();
+			
+			$("#dialog_toolbar_action_page_frame").show();
+		}
+		nextStepName_jq = "相关部所会签";
+		//处理加签
+		setTimeout(function(){
+			var actionIdMap = new Object();
+			actionIdMap[3]="obj_54d03a02ff10437287c638584ba36acb";//加签
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			//var yzrMemoIdNotEnd = new Array();
+		    //yzrMemoIdNotEnd.push(['obj_a04bf051c27040c1a2ae1e8b3d934650']);
+			if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+				 if (openState == 1) {
+					reload_BTN_Default_Action(actionIdMap,"obj_7e76f0f7f7b54f489ba5aaf8028803f3","","","");
+				 }else if(openState == 11){
+					reload_BTN_Default_Action(actionIdMap,"obj_7e76f0f7f7b54f489ba5aaf8028803f3","","","");
+				 }
+			}
+		},500);
+	}else if(stepId =="obj_c7f89fc53a2000011a1f10ed53e99c00"){ //总部研发项目接口人处理 chenxf modify 2018-5-2
+		//总部研发项目接口人处理
+		var parentTaskId = $("#parentTaskInstId").val();
+			awsui.ajax.request({
+				type : "POST",
+				url : "./jd",
+				alert:false,
+				dataType : "json",
+				data : {
+					cmd : "com.actionsoft.apps.cmcc_queryParentActivityId",
+					sid:sid,
+					parentTaskId:parentTaskId,
+					processId:processInstId
+				},
+				ok : function(r) {
+					 var ISXQBM = r.data.ISXQBM;
+					 var parentActivityId = r.data.parentActivityId;	
+					 if(parentActivityId == "obj_c7835a012b100001a2551e3085691feb"){//接口人返回
+						if(ISXQBM == false){//无需求部门
+							hiddenMemo("obj_8cbc8fed802e4114b2c52a74549c98dc");
+							$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_8cbc8fed802e4114b2c52a74549c98dc").parent().next().next().remove();	
+						}else{
+							hiddenMemo("obj_eaaff77ac36d46f1a4ec3a114d4fa3da");
+							$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_eaaff77ac36d46f1a4ec3a114d4fa3da").parent().next().next().remove();
+							hiddenMemo("obj_e64e90d113a543f18f55afd0a7b8de87");
+							$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e64e90d113a543f18f55afd0a7b8de87").parent().next().next().remove();
+							hiddenMemo("obj_59651431218a4e77b76ec8a34be941ca");
+							$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_59651431218a4e77b76ec8a34be941ca").parent().next().next().remove();
+						}
+					 }else if(parentActivityId == "obj_c7835a7796f00001abba116f1c6b5ec0"){//技术部门返回
+						//hiddenMemo("obj_8cbc8fed802e4114b2c52a74549c98dc");//需求部门路径
+						//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_8cbc8fed802e4114b2c52a74549c98dc").parent().next().next().remove();
+						hiddenMemo("obj_eaaff77ac36d46f1a4ec3a114d4fa3da");//技术部路径
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_eaaff77ac36d46f1a4ec3a114d4fa3da").parent().next().next().remove();
+					 }else if(parentActivityId == "obj_c7835d00afe00001e15315be8100db40"){//公司领导返回
+						//hiddenMemo("obj_8cbc8fed802e4114b2c52a74549c98dc");//需求部门路径
+						//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_8cbc8fed802e4114b2c52a74549c98dc").parent().next().next().remove();
+						hiddenMemo("obj_eaaff77ac36d46f1a4ec3a114d4fa3da");//技术部路径
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_eaaff77ac36d46f1a4ec3a114d4fa3da").parent().next().next().remove();
+						//hiddenMemo("obj_e64e90d113a543f18f55afd0a7b8de87");//公司领导路径
+						//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e64e90d113a543f18f55afd0a7b8de87").parent().next().next().remove();
+					 }else{
+					    //hiddenMemo("obj_8cbc8fed802e4114b2c52a74549c98dc");//需求部门路径
+						//$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_8cbc8fed802e4114b2c52a74549c98dc").parent().next().next().remove();
+					 }
+					 $("#dialog_toolbar_action_page_frame").show();
+				}
+		});
+		//chenxf add 2018-06-12
+		//$("#dialog_toolbar_action_page_frame").show();
+		var text = $("#BTN_Default_Action").text();
+		if(text=='下一步'){
+			//移除发送点击事件
+			$("#BTN_Default_Action").removeAttr("onclick"); 
+			//添加下一步事件
+			$("#BTN_Default_Action").off("click").on("click", function() {
+				//送需求部门接口人路径ID
+				var memeoId_judge = "obj_59651431218a4e77b76ec8a34be941ca";
+				flag_judge = judgeMemo(memeoId_judge);
+				window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+				return false;
+			});
+		}
+		if(text == '发送'){
+			/*
+			* 点击取消时，把自定义的发送按钮的点击事件重写。
+			*/
+			$("#BTN_Default_Close").removeAttr("onclick"); //移除关闭点击事件
+			$("#BTN_Default_Close").off("click").on("click", function() {
+				flag_judge = "";
+				parent.$('#dialog_toolbar_action').dialog('close');
+				awsui.ajax.get("./jd", {
+					sid: frmMain.sid.value,
+					boId: $("#commentId").val(),
+					taskInstId: frmMain.taskInstId.value,
+					cmd: "CLIENT_BPM_TASK_CC_CANCEL",
+					success: function () {
+					}
+				});
+				parent.$('#BTN_Default_Close').attr("onclick","$('#dialog_toolbar_action').dialog('close');return false;");
+				//移除发送点击事件
+				$("#BTN_Default_Action").removeAttr("onclick"); 
+				//添加下一步事件
+				$("#BTN_Default_Action").off("click").on("click", function() {
+					//送需求部门接口人路径ID
+					var memeoId_judge = "obj_59651431218a4e77b76ec8a34be941ca";
+					flag_judge = judgeMemo(memeoId_judge);
+					window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+					return false;
+				});
+				
+			});	
+			//如果是需求部门接口人路径则重写发送按钮事件
+			if(flag_judge){
+				flag_judge = "";
+				$("#BTN_Default_Action").removeAttr("onclick"); //移除发送点击事件
+				$("#BTN_Default_Action").off("click").on("click", function() {	
+					demandDepartmentSign();
+				});
+			}
+			flag_judge = "";
+		}
+	}else if(stepId=="obj_c7835a7796f00001abba116f1c6b5ec0"){//技术部领导审核
+		if (openState == 1) {
+			hiddenMemo("obj_baa355492eac4227bc15ae5c61e6da35");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_baa355492eac4227bc15ae5c61e6da35").parent().next().next().remove();
+			$("#dialog_toolbar_action_page_frame").show();
+		}else{
+			hiddenMemo("obj_029f01c8f5b04fc4968a0ea0bfee9f7b");
+			$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_029f01c8f5b04fc4968a0ea0bfee9f7b").parent().next().next().remove();
+			awsui.ajax.request({
+				type : "POST",
+				url : "./jd",
+				alert:false,
+				dataType : "json",
+				data : {
+					cmd : "com.actionsoft.apps.cmcc_getParentTaskState",
+					sid:sid,
+					parentTaskId:parentTaskInstId
+				},
+				ok : function(r) {
+					var  taskState = r.data.taskState;
+					if(taskState==11){
+						WBCDLJ = "技术部内部审核";
+						updateMemo("obj_baa355492eac4227bc15ae5c61e6da35","返回技术部内部审核");
+						hiddenMemo("obj_7683137d7a2e494c953d6bc5db473ffb");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_7683137d7a2e494c953d6bc5db473ffb").parent().next().next().remove();
+					}else{
+						WBCDLJ = "技术部审核";
+						updateMemo("obj_7683137d7a2e494c953d6bc5db473ffb","增加技术部内部审核人");
+					}
+					$("#dialog_toolbar_action_page_frame").show();
+				}
+			});			
+		}
+		nextStepName_jq = "技术部内部审核";
+		
+		//处理加签
+		setTimeout(function(){
+			var actionIdMap = new Object();
+			actionIdMap[3]="obj_7683137d7a2e494c953d6bc5db473ffb";//阅办
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+				 if (openState == 1) {
+					reload_BTN_Default_Action(actionIdMap,"obj_baa355492eac4227bc15ae5c61e6da35","");
+				 }else if(openState == 11){
+					reload_BTN_Default_Action(actionIdMap,"obj_baa355492eac4227bc15ae5c61e6da35","");
+				 }
+			}
+		},500);
+	}else if(stepId == "obj_c7835d078f500001477b19d01c80159d"){//相关部门落实
+		$("#dialog_toolbar_action_page_frame").show();
+		setTimeout(function(){
+			var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+			reload_BTN_Default_Action(null,null,null,"obj_783deda90a564d50af42e1d28382327d");
+		},500);
+	}else if(stepId == "obj_c7835a64531000015d8525a0317019e8"){//总部接口人送需求部门会签时，同一部门的接口人不能选两个或两个以上的人员
+		//chenxf add 2018-06-12
+		$("#dialog_toolbar_action_page_frame").show();
+		var text = $("#BTN_Default_Action").text();
+		if(text=='下一步'){
+			//移除发送点击事件
+			$("#BTN_Default_Action").removeAttr("onclick"); 
+			//添加下一步事件
+			$("#BTN_Default_Action").off("click").on("click", function() {
+				//送需求部门接口人路径ID
+				var memeoId_judge = "obj_8cbc8fed802e4114b2c52a74549c98dc";
+				flag_judge = judgeMemo(memeoId_judge);
+				window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+				return false;
+			});
+		}
+		if(text == '发送'){
+			/*
+			* 点击取消时，把自定义的发送按钮的点击事件重写。
+			*/
+			$("#BTN_Default_Close").removeAttr("onclick"); //移除关闭点击事件
+			$("#BTN_Default_Close").off("click").on("click", function() {
+				flag_judge = "";
+				parent.$('#dialog_toolbar_action').dialog('close');
+				awsui.ajax.get("./jd", {
+					sid: frmMain.sid.value,
+					boId: $("#commentId").val(),
+					taskInstId: frmMain.taskInstId.value,
+					cmd: "CLIENT_BPM_TASK_CC_CANCEL",
+					success: function () {
+					}
+				});
+				parent.$('#BTN_Default_Close').attr("onclick","$('#dialog_toolbar_action').dialog('close');return false;");
+				//移除发送点击事件
+				$("#BTN_Default_Action").removeAttr("onclick"); 
+				//添加下一步事件
+				$("#BTN_Default_Action").off("click").on("click", function() {
+					//送需求部门接口人路径ID
+					var memeoId_judge = "obj_8cbc8fed802e4114b2c52a74549c98dc";
+					flag_judge = judgeMemo(memeoId_judge);
+					window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+					return false;
+				});
+				
+			});	
+			//如果是需求部门接口人路径则重写发送按钮事件
+			if(flag_judge){
+				flag_judge = "";
+				$("#BTN_Default_Action").removeAttr("onclick"); //移除发送点击事件
+				$("#BTN_Default_Action").off("click").on("click", function() {
+					demandDepartmentSign();
+				});
+			}
+			flag_judge = "";
+		}
+	}else{
+		$("#dialog_toolbar_action_page_frame").show();
+	}
+});
+$(document).ready(function(){
+	$("#BTN_TRANSACT").off("click").on("click", function() {
+		$("#dialog_toolbar_action_page_frame").hide();
+		FormToolBarAction.BTN_TRANSACT();		
+	});
+});
+// ]]></script>
+<script type="text/javascript" id="formSave">// <![CDATA[
+/*
+参数isTransact为true，表示办理按钮触发的保存动作
+其他情况是保存按钮触发的保存动作
+*/
+function formSave(isTransact){
+	if(isTransact == true){
+		$("#dialog_toolbar_action_page_frame").hide();
+		 var isModify =window.frames["urlFormIframe"].isModify;
+		 if(isModify == true){
+			alert("请先点击保存");
+            return false;
+		 }
+    }
+}
+// ]]></script>
+</body>
+</html>

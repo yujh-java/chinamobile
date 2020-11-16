@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>ce9f141f-8a7c-4bbc-8a4c-a2a7c28458b5</id>
+    <createUser>admin</createUser>
+    <createTime>2017-05-10 09:44:26</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-11-01 10:12:59</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuFr9AczfW410MUsm5NNVmmY5CWXaL6mXJq9H44l9jmsA5M1LPl9jp74cEoe2gvNFD</signature>
+    <managed>false</managed>
+    <title>一般委托项目启动反馈只读</title>
+    <deleted>false</deleted>
+    <categoryName>集团一般委托项目启动反馈</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/hq/workflow/general?form=general_read&amp;process_id=@processId()&amp;show=","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>3f2c4344-4fa2-490e-9fe4-86d645361d20</id>
+            <title>一般委托项目启动反馈只读</title>
+            <templateFile>{"pc":"集团一般委托项目启动反馈-一般委托项目启动反馈只读.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

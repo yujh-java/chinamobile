@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><I18N#单位通讯录></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- JQuery -->
+    <script type="text/javascript" src="../commons/js/jquery/scripts/jquery.js">
+    </script>
+    <!-- AWS UI -->
+    <link rel="stylesheet" type="text/css" href="../commons/css/awsui.css">
+    <script type="text/javascript" src="../commons/js/awsui.js">
+    </script>
+    <!-- skin resource of AWS-->
+    <link rel=Stylesheet type="text/css" media=all href="../apps/com.actionsoft.apps.entaddress/css/print.css">
+    <script type="text/javascript" src="../apps/com.actionsoft.apps.entaddress/js/coolbuttons.js"></script>
+    <script type="text/javascript" src="../apps/com.actionsoft.apps.entaddress/js/print.js"></script>
+    <script type="text/javascript">
+   		 <!--国际化语言-->
+		var 离线 = '<I18N#离线>';
+		var 在线 = '<I18N#在线>';
+		
+	</script>
+    <style type="text/css">
+        #print_Context TR TD {
+            border-bottom: 1px dotted #E0E0E0;
+            height: 10px;
+        }
+		hr{
+			border: 1px solid #dddddd;
+			border-top: 0;
+		}
+		.infoMessage{
+			width:65px;
+			border:0px;
+	   }
+    </style>
+    <script type="text/javascript">
+        var sessionId = "<#sid>";
+        var addressParams = <#params>;
+
+		var positionNameDisplay = <#positionNameDisplay>;
+		var positionName = '<#positionName>';
+		
+		var officeFaxDisplay = <#officeFaxDisplay>;
+		var officeFaxName = '<#officeFaxName>';
+    </script>
+	<style media="print" type="text/css">
+	    .Noprint {
+	        display: none;
+	    }
+	</style>
+</head>
+<body style="margin: 0">
+	<!--
+    <div class="Noprint" style="padding: 10px 0 5px 10px; ">
+		<span id="printBtn" class="button blue" onclick="javaScript:window.print();"><I18N#打印></span>
+    </div>
+   -->
+    <div id=VIEW_LIST name="VIEW_LIST" style="width: 100%; margin: 0; padding: 0; ">
+       <table class="awsui-ux" style="width: 100%; padding: 0;  ">
+			<tr>
+				<td>
+				 <table class="table table-bordered" id="print_Context" style="width=100%;">
+				 	<tr>
+				 		<th class="reportTitle" style="width:40px;"><I18N#序号></th>
+						<th class="reportTitle" style="width:80px;"><span style="padding-left: 20px; "><I18N#姓名></span></th>
+						<th class="reportTitle" style="width:120px;" fieldName="dept" ><I18N#部门></th>
+						<th class="reportTitle" style="width:140px;"><I18N#邮箱></th>
+						<th class="reportTitle" style="width:100px;" fieldName="phone" ><I18N#电话></th>
+						<th class="reportTitle" style="width:100px;"><I18N#手机></th>
+				 	</tr>
+				 </table>
+				</td>
+			</tr>
+	  </table>
+    </div>
+</body>
+</html>

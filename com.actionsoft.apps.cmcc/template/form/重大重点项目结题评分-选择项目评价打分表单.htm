@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<![endif]-->
+
+		<title>重大重点项目评价打分表单</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+		<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css'  name='schemeCss'/>
+	
+      <link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1489747055000' name='buttonCss'/>
+
+
+
+
+
+
+<style>
+body {
+min-width: 1248px !important;overflow: auto !important;
+}
+</style>
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+	<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<table id="aws-form-maintable" class="awsui-ux aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-titlebg" class="aws-form-ux-titlebg"><!--若自定义模板title的 id --></tr>
+<tr id="aws-form-formcontent" class="aws-form-ux-formcontent">
+<td>
+<table style="border-collapse: separate; border-spacing: 0px;" width="100%" align="center">
+<tbody>
+<tr>
+<td>
+<table id="table_container" class="awsui-ux table-striped" style="padding: 0px;" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" name="urlFormIframe" frameborder="0" scrolling="no"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1491962589000" type="text/javascript"></script>
+<script language="JavaScript" src="../js/cmcc.common.logoffbutton.js?v=1490265928000" type="text/javascript"></script>
+<script type="text/javascript" id="formOnload">// <![CDATA[
+function formOnload(){
+/*
+var openState = $("#openState").val();
+var stepId = $('#userTaskDefId').val();//节点ID
+var processInstId = $("#processInstId").val();//流程实例Id
+var sid = $("#sid").val();
+*/
+  var host = window.location.host;
+  if(openState != 1){
+     var newurl="http://"+host+"/spms/hq/workflow/end?type=hq-end_score&form=end_score_grade_read&process_id=@processId()";
+     document.getElementById("urlFormIframe").src = newurl;
+  }else{
+      var newurl="http://"+host+"/spms/hq/workflow/end?type=hq-end_score&form=main&process_id=@processId()";
+       document.getElementById("urlFormIframe").src = newurl;
+  }
+ 	awsui.ajax.request({
+		type : "POST",
+		url : "./jd",
+        alert:false,
+		dataType : "json",
+		data : {
+			cmd : "com.actionsoft.apps.cmcc_TitleScore",
+			sid:sid,
+			processid:processInstId
+		},
+		success : function(data) {
+			var html = data.msg;
+			$("#logsbody").append(html);
+		}
+	});
+}
+// ]]></script>
+<script id="formSave">// <![CDATA[
+/*
+参数isTransact为true，表示办理按钮触发的保存动作
+其他情况是保存按钮触发的保存动作
+*/
+function formSave(isTransact){
+	if(isTransact == true){
+   		 var val=window.frames["urlFormIframe"].isSubmit;
+   		 var modify = window.frames["urlFormIframe"].isModify;//修改分数状态
+   		 if(val==undefined)
+			 {
+			 alert("请先填写表单,再点击提交下一步");
+			 return false;
+			 }
+   		 if(val == false){
+         	alert("请先点击保存，再点击提交下一步");
+           return false;
+         } 
+   		 if(modify==true)
+   			 {
+   			  alert("请先保存修改数据，再点击提交下一步");
+              return false;
+   			 }
+    }
+	return true;
+}
+// ]]></script>
+</body>
+</html>

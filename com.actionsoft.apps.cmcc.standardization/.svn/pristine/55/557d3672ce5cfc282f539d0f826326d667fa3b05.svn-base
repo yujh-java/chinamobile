@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/Users/w18101089057/Desktop/dev/6.2.1地址簿过滤参数/201904121658addressFilterParams.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/aws_jdbc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/aws_lib"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

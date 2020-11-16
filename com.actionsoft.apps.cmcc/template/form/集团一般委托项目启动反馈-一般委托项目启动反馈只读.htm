@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <title>一般委托项目启动反馈表单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--公共的js和css start-->[#AWSImport] [#AWSUIImport]
+    <!--公共的js和css end-->
+    <!--配色方案-->
+    <link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css?v=1427093102000' name='schemeCss' />
+    <link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1493708787828' name='buttonCss' />
+    <link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1514184326000?v=1514184326000?v=1514184326000?v=1493273986000' name='themeCss' />
+    <link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1508724470000?v=1514184326000?v=1514184326000?v=1514184326000' name='themeCss' />
+    <style>body { min-width: 1248px !important; overflow: auto !important; }</style>
+
+
+
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+  
+  <body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<div border="0" style="display: none;">
+<p id="sign">&nbsp;</p>
+</div>
+<table id="aws-form-maintable" class="awsui-ux aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-titlebg" class="aws-form-ux-titlebg"><!--若自定义模板title的 id --></tr>
+<tr id="aws-form-formcontent" class="aws-form-ux-formcontent">
+<td>
+<table style="border-collapse: separate; border-spacing: 0px;" width="100%" align="center">
+<tbody>
+<tr>
+<td>
+<table id="table_container" class="awsui-ux table-striped" style="padding: 0px;" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" name="urlFormIframe" frameborder="0" scrolling="no"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1491963007000" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+$('#dialog_toolbar_action_page_frame').load(function() {
+	var isProc;
+	 awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_QueryPro",
+              sid: sid,
+              processId: processInstId
+            },
+            success: function(r) {
+              isProc = r.data.isPro;
+            }
+          });
+	
+        var taskuser;
+        var xqbmuser;
+        if (stepId == "obj_c76ec50b0cb000019fadbea01f001775") { //研发机构接口人办理节点
+          $("#dialog_toolbar_action_page_frame").show();
+			var parentTaskId = $("#parentTaskInstId").val();
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_queryParentActivityId",
+              sid: sid,
+              parentTaskId: parentTaskId,
+              processId: processInstId
+            },
+            ok: function(r) {
+              var isYjy = r.data.isYjy;
+              if (isYjy == "是") {
+                setTimeout(function() {
+                  var yzrMemoIdEnd = new Array();
+                  //yzrMemoIdNotEnd.push(['obj_042296a1e6db42e09d4741c6c76c14a0']);
+				  yzrMemoIdEnd.push(['obj_5dbfe100adf14e6ba3ba7ee1d42d6991']);
+                  reload_BTN_Default_Action(null, null, null, null, yzrMemoIdEnd, null);
+                },
+                500);
+              } else {
+				//hiddenMemo("obj_042296a1e6db42e09d4741c6c76c14a0");
+                //$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_042296a1e6db42e09d4741c6c76c14a0").parent().next().next().remove();
+				hiddenMemo("obj_5dbfe100adf14e6ba3ba7ee1d42d6991");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_5dbfe100adf14e6ba3ba7ee1d42d6991").parent().next().next().remove();
+              }
+            }
+          });
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_QueryYFJG",
+              sid: sid,
+              processId: processInstId
+            },
+            success: function(r) {
+              taskuser = r.data.taskuser;
+              window.frames["dialog_toolbar_action_page_frame"].document.getElementById('participantsAddress').value = taskuser;
+            }
+          });
+        } else if (stepId == "obj_c77e78141240000136c72e8a1770ba00") { //研发机构接口人办理节点 
+          $("#dialog_toolbar_action_page_frame").show();
+          //wuxx
+           var parentTaskId = $("#parentTaskInstId").val();
+           awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_queryParentActivityId",
+              sid: sid,
+              parentTaskId: parentTaskId,
+              processId: processInstId
+            },
+            ok: function(r) {
+              var isYjy = r.data.isYjy;
+              if (isYjy == "是") {
+                setTimeout(function() {
+                  var yzrMemoIdNotEnd = new Array();
+                  
+				  yzrMemoIdNotEnd.push(['obj_81ac216eb66c4bbeb78c4bedc91d613b']);
+                  reload_BTN_Default_Action(null, null, null, null, yzrMemoIdNotEnd, null);
+                },
+                500);
+              } else {
+				
+				hiddenMemo("obj_81ac216eb66c4bbeb78c4bedc91d613b");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_81ac216eb66c4bbeb78c4bedc91d613b").parent().next().next().remove();
+              }
+            }
+          });
+          
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_QueryYFJG",
+              sid: sid,
+              processId: processInstId
+            },
+            ok: function(r) {
+              //alert(document.getElementById("sign").value);
+				xqbmuser = r.data.xqbmuser;
+				if (document.getElementById("sign").value == 2 
+						&& window.frames["dialog_toolbar_action_page_frame"].document.getElementById('participantsAddress')) {
+					window.frames["dialog_toolbar_action_page_frame"].document.getElementById('participantsAddress').value = xqbmuser;
+				}else if(document.getElementById("sign").value == 3 
+						&& window.frames["dialog_toolbar_action_page_frame"].document.getElementById('participantsAddress')){
+					window.frames["dialog_toolbar_action_page_frame"].document.getElementById('participantsAddress').value = xqbmuser;
+				}
+            }
+          });
+
+         
+
+        } else if (stepId == "obj_c76ec3f7f8b000018c97ea0029284f20") { //处领导审核节点
+          if (openState == 1) {
+            hiddenMemo("obj_2a7d9ad8f5f84b53a6c508fef73b7bc2");
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_2a7d9ad8f5f84b53a6c508fef73b7bc2").parent().next().next().remove();
+          } else if (openState == 11) {
+            WBCDLJ = "处领导审核";
+            hiddenMemo("obj_de9dd1b1c0f1438ea4f3fecc4de869d8");
+            hiddenMemo("obj_4d62d1079f8b4e9095cf04001dcf8128");
+            hiddenMemo("obj_bd343dce61d8488badfa7f6f1d58f137");
+
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_de9dd1b1c0f1438ea4f3fecc4de869d8").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_4d62d1079f8b4e9095cf04001dcf8128").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_bd343dce61d8488badfa7f6f1d58f137").parent().next().next().remove();
+          }
+          nextStepName_jq = "处领导审核";
+          $("#dialog_toolbar_action_page_frame").show();
+          setTimeout(function() {
+            var actionIdMap = new Object();
+            actionIdMap[3] = "obj_de9dd1b1c0f1438ea4f3fecc4de869d8"; //加签
+            var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+            if (toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+              if (openState == 1) {
+                reload_BTN_Default_Action(actionIdMap, "obj_2a7d9ad8f5f84b53a6c508fef73b7bc2", null);
+              } else if (openState == 11) {
+                reload_BTN_Default_Action(actionIdMap, "obj_2a7d9ad8f5f84b53a6c508fef73b7bc2", null);
+
+              }
+            }
+
+          },
+          500);
+
+        } else if (stepId == "obj_c76ec49a38e00001b94719401c913240") { //研发机构牵头部所领导审核节点
+		
+          $("#dialog_toolbar_action_page_frame").show();
+          var subtask = ""; //当前任务实例是否有子任务
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_querySubTask",
+              sid: sid,
+              taskInstId: taskId
+            },
+            ok: function(r) {
+              subtask = r.data.msg;
+              if (openState == 1) {
+                nextStepName_jq = "研发机构相关部所会签";
+                nextStepName_xt = "研发机构项目承担部所内部会签";
+                hiddenMemo("obj_eeb58de385c54211aa61f20ed9400b8c");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_eeb58de385c54211aa61f20ed9400b8c").parent().next().next().remove();
+                if (subtask == "有") {
+                  hiddenMemo("obj_dfe6bea0c985455a8c604cc7869dc218");
+                  updateMemo("obj_9da19cb4745a4408acb4950301f3ed13", "返回研发机构接口人");
+                  $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_dfe6bea0c985455a8c604cc7869dc218").parent().next().next().remove();
+                } else if (subtask == "没有") {
+                  hiddenMemo("obj_9da19cb4745a4408acb4950301f3ed13");
+                  $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_9da19cb4745a4408acb4950301f3ed13").parent().next().next().remove();
+                }
+              } else if (openState == 11) {
+                //nextStepName_jq = "研发机构项目承担部所内部会签";
+                nextStepName_jq = "相关部所内部会签";
+                nextStepName_xt = "相关部所内部会签";
+                //WBCDLJ="研发机构牵头部所领导审核";
+                hiddenMemo("obj_dfe6bea0c985455a8c604cc7869dc218");
+                //hiddenMemo("obj_47f7f8fc8e8c416680471621aa7a983f");
+                hiddenMemo("obj_9da19cb4745a4408acb4950301f3ed13");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_dfe6bea0c985455a8c604cc7869dc218").parent().next().next().remove();
+                //$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_47f7f8fc8e8c416680471621aa7a983f").parent().next().next().remove();
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_9da19cb4745a4408acb4950301f3ed13").parent().next().next().remove();
+
+                awsui.ajax.request({
+                  type: "POST",
+                  url: "./jd",
+                  alert: false,
+                  dataType: "json",
+                  data: {
+                    cmd: "com.actionsoft.apps.cmcc_getParentTaskState",
+                    sid: sid,
+                    parentTaskId: parentTaskInstId
+                  },
+                  ok: function(r) {
+                    var taskState = r.data.taskState;
+                    var name = r.data.name;
+                    if (taskState == 11) {
+                      WBCDLJ = "研发机构相关部所会签";
+                      hiddenMemo("obj_6fadf2dd8054416eba5bb6c3ba6e3216");
+                      hiddenMemo("obj_47f7f8fc8e8c416680471621aa7a983f");
+                      updateMemo("obj_eeb58de385c54211aa61f20ed9400b8c", "返回研发机构相关部所会签");
+                      $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_6fadf2dd8054416eba5bb6c3ba6e3216").parent().next().next().remove();
+                      $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_47f7f8fc8e8c416680471621aa7a983f").parent().next().next().remove();			  
+                    } else {
+                      if (name == '协同') {
+                        WBCDLJ = "研发机构项目承担部所审核";
+                        hiddenMemo("obj_6fadf2dd8054416eba5bb6c3ba6e3216");
+                        hiddenMemo("obj_47f7f8fc8e8c416680471621aa7a983f");
+                        updateMemo("obj_eeb58de385c54211aa61f20ed9400b8c", "返回研发机构项目承担部所审核");
+                        $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_6fadf2dd8054416eba5bb6c3ba6e3216").parent().next().next().remove();
+                        $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_47f7f8fc8e8c416680471621aa7a983f").parent().next().next().remove();
+                      } else {
+                        WBCDLJ = "研发机构项目承担部所审核";
+                        hiddenMemo("obj_6fadf2dd8054416eba5bb6c3ba6e3216");
+                        updateMemo("obj_47f7f8fc8e8c416680471621aa7a983f", "送相关部所内部会签");
+                        updateMemo("obj_eeb58de385c54211aa61f20ed9400b8c", "返回研发机构项目承担部所审核");
+                        $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_6fadf2dd8054416eba5bb6c3ba6e3216").parent().next().next().remove(); 
+						if (subtask == "没有") {
+							if($(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0)){
+						     var one_div = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('div')[2];  //  获取<span>节点中第三个<div>元素节点
+							 var one_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[2]; //  获取<span>节点中第三个<label>元素节点
+							 var three_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[1];  //  获取<span>节点中第二个<br>元素节点
+							 var one_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[0]; //  获取<span>节点中第一个<br>元素节点
+							 $(three_br).before(one_label);    //移动节点
+							 var three_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[3]; ////  获取<span>节点中第四个<label>元素节点
+							 $(three_label).before(one_div);
+							 var one1_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[2]; //  获取<span>节点中第三个<label>元素节点
+							 $(one1_label).after(one_br);
+							 }
+						}
+					  }  
+					
+                      // $("#dialog_toolbar_action_page_frame").show();
+                    }
+                  }
+                });
+              }
+            }
+          });
+
+          setTimeout(function() {
+            var actionIdMap = new Object();
+            actionIdMap[3] = "obj_47f7f8fc8e8c416680471621aa7a983f"; //加签
+           // actionIdMap[1] = "obj_6fadf2dd8054416eba5bb6c3ba6e3216"; //阅办
+			actionIdMap[4] = "obj_6fadf2dd8054416eba5bb6c3ba6e3216"; //协同
+            var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+            if (toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+              if (openState == 1) {
+                reload_BTN_Default_Action(actionIdMap, "obj_eeb58de385c54211aa61f20ed9400b8c", null);
+              } else if (openState == 11) {
+                reload_BTN_Default_Action(actionIdMap, "obj_eeb58de385c54211aa61f20ed9400b8c", null);
+
+              }
+            }
+
+          },
+          500);
+        }else if (stepId == "obj_c77e77f2e2c000019a8f1fa0c3231f19") { //部所领导审核节点
+		   var subtask = ""; //当前任务实例是否有子任务
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_querySubTask",
+              sid: sid,
+              taskInstId: taskId
+            },
+            ok: function(r) {
+              subtask = r.data.msg;
+			    nextStepName_yb = "相关部所内部会签";
+          if (openState == 1) {
+            nextStepName_jq = "研发机构相关部所会签";
+            hiddenMemo("obj_ee07546add9b49cb99d4378c134bf704");
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_ee07546add9b49cb99d4378c134bf704").parent().next().next().remove();
+			if (subtask == "有") {
+			  var one_div = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('div')[1];  //  获取<span>节点中第三个<div>元素节点
+			  var one_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[1]; //  获取<span>节点中第三个<label>元素节点
+			 
+			 var three_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[2];  //  获取<span>节点中第二个<br>元素节点
+			 var one_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[0]; //  获取<span>节点中第一个<br>元素节点
+			 $(three_br).before(one_label);    //移动节点
+			 var three_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[3]; ////  获取<span>节点中第四个<label>元素节点
+			 $(three_label).before(one_div);
+			 var one1_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[2]; //  获取<span>节点中第三个<label>元素节点
+			 $(one1_label).after(one_br);
+			}
+			
+          } else if (openState == 11) {
+            nextStepName_jq = "相关部所内部会签";
+            //WBCDLJ="部所领导审核";
+            hiddenMemo("obj_6a6043c6b45e4296af580411c325932a");
+            hiddenMemo("obj_7d9bcd4a9bdf4550afa3e522db63629a");
+            hiddenMemo("obj_f805cfd90fef4a9ab43408dbed9279c5");
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_6a6043c6b45e4296af580411c325932a").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_7d9bcd4a9bdf4550afa3e522db63629a").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f805cfd90fef4a9ab43408dbed9279c5").parent().next().next().remove();
+            awsui.ajax.request({
+              type: "POST",
+              url: "./jd",
+              alert: false,
+              dataType: "json",
+              data: {
+                cmd: "com.actionsoft.apps.cmcc_getParentTaskState",
+                sid: sid,
+                parentTaskId: parentTaskInstId
+              },
+              ok: function(r) {
+			  var taskState = r.data.taskState;
+				if (taskState == 11) {
+						  WBCDLJ = "研发机构相关部所会签";
+						  hiddenMemo("obj_f9d5c02fc10d488d8c94cdd2e11798e0");
+						  updateMemo("obj_ee07546add9b49cb99d4378c134bf704", "返回研发机构相关部所会签");
+						  $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f9d5c02fc10d488d8c94cdd2e11798e0").parent().next().next().remove();
+						} else {
+						  WBCDLJ = "研发机构任务承担部所";
+						  updateMemo("obj_f9d5c02fc10d488d8c94cdd2e11798e0", "送相关部所内部会签");
+						  if (subtask == "没有") {
+						if($(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0)){
+						 var one_div = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('div')[0];  //  获取<span>节点中第三个<div>元素节点
+					     var one_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[0]; //  获取<span>节点中第三个<label>元素节点
+						 var three_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[1];  //  获取<span>节点中第二个<br>元素节点
+					     var one_br = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('br')[0]; //  获取<span>节点中第一个<br>元素节点
+						$(three_br).before(one_label);    //移动节点
+						 var three_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[1]; ////  获取<span>节点中第四个<label>元素节点
+						 $(three_label).before(one_div);
+						var one1_label = $(window.frames["dialog_toolbar_action_page_frame"].document).find('#commentList').get(0).getElementsByTagName('label')[0]; //  获取<span>节点中第三个<label>元素节点
+						$(one1_label).after(one_br);
+						}
+						}
+						}
+						
+              }
+            });
+          }
+          $("#dialog_toolbar_action_page_frame").show();
+          setTimeout(function() {
+            var actionIdMap = new Object();
+			actionIdMap[3] = "obj_f9d5c02fc10d488d8c94cdd2e11798e0"; //加签
+            var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+            if (toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+              if (openState == 1) {
+                reload_BTN_Default_Action(actionIdMap, "obj_ee07546add9b49cb99d4378c134bf704", null);
+
+              } else if (openState == 11) {
+                reload_BTN_Default_Action(actionIdMap, "obj_ee07546add9b49cb99d4378c134bf704", null);
+
+              }
+            }
+
+          },
+          500);
+			  }
+          });	  
+		/*
+          nextStepName_yb = "相关部所内部会签";
+          if (openState == 1) {
+            nextStepName_jq = "研发机构相关部所会签";
+            hiddenMemo("obj_ee07546add9b49cb99d4378c134bf704");
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_ee07546add9b49cb99d4378c134bf704").parent().next().next().remove();
+          } else if (openState == 11) {
+            nextStepName_jq = "相关部所内部会签";
+            //WBCDLJ="部所领导审核";
+            hiddenMemo("obj_6a6043c6b45e4296af580411c325932a");
+            hiddenMemo("obj_7d9bcd4a9bdf4550afa3e522db63629a");
+            hiddenMemo("obj_f805cfd90fef4a9ab43408dbed9279c5");
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_6a6043c6b45e4296af580411c325932a").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_7d9bcd4a9bdf4550afa3e522db63629a").parent().next().next().remove();
+            $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f805cfd90fef4a9ab43408dbed9279c5").parent().next().next().remove();
+            awsui.ajax.request({
+              type: "POST",
+              url: "./jd",
+              alert: false,
+              dataType: "json",
+              data: {
+                cmd: "com.actionsoft.apps.cmcc_getParentTaskState",
+                sid: sid,
+                parentTaskId: parentTaskInstId
+              },
+              ok: function(r) {
+                var taskState = r.data.taskState;
+                if (taskState == 11) {
+                  WBCDLJ = "研发机构相关部所会签";
+                  hiddenMemo("obj_f9d5c02fc10d488d8c94cdd2e11798e0");
+                  updateMemo("obj_ee07546add9b49cb99d4378c134bf704", "返回研发机构相关部所会签");
+                  $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f9d5c02fc10d488d8c94cdd2e11798e0").parent().next().next().remove();
+                } else {
+                  WBCDLJ = "研发机构任务承担部所";
+                  updateMemo("obj_f9d5c02fc10d488d8c94cdd2e11798e0", "送相关部所内部会签");
+                }
+              }
+            });
+          }
+          $("#dialog_toolbar_action_page_frame").show();
+          setTimeout(function() {
+            var actionIdMap = new Object();
+            actionIdMap[3] = "obj_f9d5c02fc10d488d8c94cdd2e11798e0"; //加签
+            var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+            if (toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT") > -1) {
+              if (openState == 1) {
+                reload_BTN_Default_Action(actionIdMap, "obj_ee07546add9b49cb99d4378c134bf704", null);
+
+              } else if (openState == 11) {
+                reload_BTN_Default_Action(actionIdMap, "obj_ee07546add9b49cb99d4378c134bf704", null);
+
+              }
+            }
+
+          },
+          500);
+		  */
+
+        } else if (stepId == 'obj_c76ec3ff222000015e4c1d801ab81215') { //研发机构接口人办理节点
+		$("#dialog_toolbar_action_page_frame").show();
+		 setTimeout(function() {
+                  var yzrMemoIdNotEnd = new Array();
+                  yzrMemoIdNotEnd.push(['obj_f8e65e752cc54038bb7af946acfb1a1e']);
+                  reload_BTN_Default_Action(null, null, null, null, yzrMemoIdNotEnd, null);
+                },
+                500);
+                
+		 var parentTaskId = $("#parentTaskInstId").val();
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_queryParentActivityId",
+              sid: sid,
+              parentTaskId: parentTaskId,
+              processId: processInstId
+            },
+            ok: function(r) {
+              var parentActivityId = r.data.parentActivityId;
+			
+              if (parentActivityId == "obj_c76ec40f9f90000162d7155f19e0ed10"||parentActivityId == "obj_c7cf4268db600001e565186aec708340") { //部领导审核提交
+                hiddenMemo("obj_f4e89879a8df4478bd8a0ae5c36a36e7");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f4e89879a8df4478bd8a0ae5c36a36e7").parent().next().next().remove();
+              } else if (parentActivityId == "obj_c76ec49a38e00001b94719401c913240") { //部所领导返回
+                hiddenMemo("obj_93f727655ff2476f833cd7e537b51c07");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_93f727655ff2476f833cd7e537b51c07").parent().next().next().remove();
+                updateMemo("obj_f4e89879a8df4478bd8a0ae5c36a36e7", "送研发机构内部审核"); 
+              }
+              $("#dialog_toolbar_action_page_frame").show();
+            }
+          });
+		  
+        } else if (stepId == 'obj_c76ec53546200001382e1d60ea9051e0') { //需求部门项目经理节点
+			setTimeout(function(){
+			 $("#dialog_toolbar_action_page_frame").show();
+			if(isProc=="是"){
+				hiddenMemo("obj_e23dd966c09847d4979de0ef12257e06");//送处领导审批
+				$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_e23dd966c09847d4979de0ef12257e06").parent().next().next().remove();
+				}
+				if(isProc=="不是"){
+				hiddenMemo("obj_225382d8bb384e43afca8c54571ab8c3");//送需求部门接口人
+				$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_225382d8bb384e43afca8c54571ab8c3").parent().next().next().remove();
+				}
+			var  auditMenu= window.frames["dialog_toolbar_action_page_frame"].document.getElementById('obj_e23dd966c09847d4979de0ef12257e06');//审核菜单
+			var  auditMenu1= window.frames["dialog_toolbar_action_page_frame"].document.getElementById('obj_225382d8bb384e43afca8c54571ab8c3');//审核菜单
+			 if (openState == 1&&(auditMenu||auditMenu1)) {
+			 //校验是否保存表单
+			 $("#BTN_Default_Action").removeAttr("onclick");
+			 $("#BTN_Default_Action").off("click").on("click", function() {
+				 var bol = true;
+				 var val = window.frames["urlFormIframe"].isSubmit;
+				 var modify = window.frames["urlFormIframe"].isModify; //修改表单状态
+				  var sh_clsssName = window.frames["dialog_toolbar_action_page_frame"].document.getElementById('obj_e23dd966c09847d4979de0ef12257e06').parentElement.getAttribute("class");
+				 var sh1_clsssName = window.frames["dialog_toolbar_action_page_frame"].document.getElementById('obj_225382d8bb384e43afca8c54571ab8c3').parentElement.getAttribute("class");
+					 if ((sh_clsssName.indexOf("hover") > 0 || sh_clsssName.indexOf("checked") > 0)||(sh1_clsssName.indexOf("hover") > 0 || sh1_clsssName.indexOf("checked") > 0)) {
+						if(val==false){
+							bol = false;
+							 alert("请先点击保存，再点击提交下一步");
+							 return false;
+					    }else  if (modify == true) {
+						       bol = false;
+							  alert("请先保存修改数据，再点击提交下一步");
+							  return false;
+						}	 
+					 }
+				if(bol){
+						window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+						return false;
+					}
+			 });
+		 }
+
+			 },500);
+			}/*else if (stepId == 'obj_c76ec52836a000013f432f701d8010c8') { //任务负责人办理节点
+          $("#dialog_toolbar_action_page_frame").show();
+          var parentTaskId = $("#parentTaskInstId").val();
+          awsui.ajax.request({
+            type: "POST",
+            url: "./jd",
+            alert: false,
+            dataType: "json",
+            data: {
+              cmd: "com.actionsoft.apps.cmcc_queryParentActivityId",
+              sid: sid,
+              parentTaskId: parentTaskId,
+              processId: processInstId
+            },
+            ok: function(r) {
+              var isYjy = r.data.isYjy;
+              if (isYjy == "是") {
+                setTimeout(function() {
+                  var yzrMemoIdNotEnd = new Array();
+                  yzrMemoIdNotEnd.push(['obj_042296a1e6db42e09d4741c6c76c14a0']);
+                  reload_BTN_Default_Action(null, null, null, null, yzrMemoIdNotEnd, null);
+                },
+                500);
+              } else {
+                hiddenMemo("obj_042296a1e6db42e09d4741c6c76c14a0");
+                $(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_042296a1e6db42e09d4741c6c76c14a0").parent().next().next().remove();
+              }
+            }
+          });
+
+        }*/ else {
+          $("#dialog_toolbar_action_page_frame").show();
+        }
+      });
+//传阅后，不能再继续传阅，当状态是9的时候，就隐藏提交下一步，不允许再传阅
+$(document).ready(function() {
+	$("#BTN_TRANSACT").off("click").on("click",function() {
+		$("#dialog_toolbar_action_page_frame").hide();
+		FormToolBarAction.BTN_TRANSACT();
+	});
+	if(openState=='9'){
+		$("#BTN_TRANSACT").hide();
+	}
+});
+// ]]></script>
+<script type="text/javascript" id="formOnload">// <![CDATA[
+function formOnload() {
+        var host = window.location.host;
+        awsui.ajax.request({
+          type: "POST",
+          url: "./jd",
+          alert: false,
+          dataType: "json",
+          data: {
+            cmd: "com.actionsoft.apps.cmcc_ProjectFeedback",
+            sid: sid,
+            processid: processInstId
+          },
+          success: function(data) {
+            var html = data.msg;
+            $("#logsbody").append(html);
+          }
+        });
+
+        /*if (stepId == "obj_c76ec52836a000013f432f701d8010c8") { //任务负责人办理节点
+          if (openState != 1) {
+            // 只读表单
+            var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=3"; //显示上传文件
+            document.getElementById("urlFormIframe").src = newurl;
+          } else {
+            var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=2"; //上传文件
+            document.getElementById("urlFormIframe").src = newurl;
+          }
+        } else if (stepId == "obj_c76ec53546200001382e1d60ea9051e0" || stepId == "obj_c76ec54681900001c9ddb390c6791e8f" || stepId == "obj_c76ec5572d8000016e89e3e1a2d4e5f0"||stepId =='obj_c7cf56f92a8000015e521370ab5014e0') //打分环节
+        {
+          if (openState != 1) {
+            //只读表单
+            var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=5";
+            document.getElementById("urlFormIframe").src = newurl;
+          } else {
+            var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=4";
+            document.getElementById("urlFormIframe").src = newurl;
+          }
+        } else if (stepId == "obj_c77e77f2e2c000019a8f1fa0c3231f19" || stepId == "obj_c77e780201c000012eca11a015b01cd5" || stepId == "obj_c77e78141240000136c72e8a1770ba00") {
+          var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=3"; //显示上传文件
+          document.getElementById("urlFormIframe").src = newurl;
+        } else if (stepId == "obj_c76ec57117f0000120cd10301fc0cfc0") { //总部研发项目接口人办理
+          var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=5"; //显示上传文件、打分等内容
+          document.getElementById("urlFormIframe").src = newurl;
+        } else {
+          //只读表单
+          var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=1";
+          document.getElementById("urlFormIframe").src = newurl;
+        }*/
+		if(openState != 1){
+		
+			var newurl ="http://"+host+"/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=1";//只读表单
+			document.getElementById("urlFormIframe").src = newurl;
+			var newurl2 = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=3";//显示上传附件
+			var newurl3 = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=5";//显示评分
+			var lists = [
+					{'stepid':'obj_c76ec53546200001382e1d60ea9051e0','url':newurl3},
+					{'stepid':'obj_c76ec52836a000013f432f701d8010c8','url':newurl2},
+					{'stepid':'obj_c76ec3d76fc00001b3399dab1a3e32a0','url':newurl}
+				];
+			getProcessAllStepId(lists);
+			
+		}else{
+			if (stepId == "obj_c76ec52836a000013f432f701d8010c8") { //任务负责人办理节点
+			  
+				var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=2"; //上传文件
+				document.getElementById("urlFormIframe").src = newurl;
+				
+			} else if (stepId == "obj_c76ec53546200001382e1d60ea9051e0" || stepId == "obj_c76ec54681900001c9ddb390c6791e8f" || stepId == "obj_c76ec5572d8000016e89e3e1a2d4e5f0"||stepId =='obj_c7cf56f92a8000015e521370ab5014e0') 
+			{
+				var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=4"; //打分环节
+				document.getElementById("urlFormIframe").src = newurl;
+			
+			} else if (stepId == "obj_c77e77f2e2c000019a8f1fa0c3231f19" || stepId == "obj_c77e780201c000012eca11a015b01cd5" || stepId == "obj_c77e78141240000136c72e8a1770ba00") {
+			  
+				var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=3"; //显示上传文件
+				document.getElementById("urlFormIframe").src = newurl;
+			  
+			} else if (stepId == "obj_c76ec57117f0000120cd10301fc0cfc0") { //总部研发项目接口人办理
+			
+				var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=5"; //显示上传文件、打分等内容
+				document.getElementById("urlFormIframe").src = newurl;
+			  
+			} else {
+				//只读表单
+				var newurl = "http://" + host + "/spms/hq/workflow/general?form=general_read&process_id=@processId()&show=1";
+				document.getElementById("urlFormIframe").src = newurl;
+			}
+		}
+        if (openState == 11) {
+          reload_BTN_ADHOC_TASK_OK();
+        }
+      }
+// ]]></script>
+<script type="text/javascript" id="formSave">// <![CDATA[
+/*
+		 参数isTransact为true，表示办理按钮触发的保存动作
+		 其他情况是保存按钮触发的保存动作
+		 */
+      function formSave(isTransact) {
+        var stepId = document.getElementById('userTaskDefId').value;
+        if (isTransact == true) {
+          var val = window.frames["urlFormIframe"].isSubmit;
+          var modify = window.frames["urlFormIframe"].isModify; //修改表单状态
+          if (stepId == 'obj_c76ec52836a000013f432f701d8010c8' || stepId == 'obj_c76ec54681900001c9ddb390c6791e8f' || stepId == 'obj_c76ec5572d8000016e89e3e1a2d4e5f0'||stepId =='obj_c7cf56f92a8000015e521370ab5014e0') {
+            if (val == false) {
+              alert("请先点击保存，再点击提交下一步");
+              return false;
+            }
+            if (modify == true) {
+              alert("请先保存修改数据，再点击提交下一步");
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+// ]]></script>
+<script type="text/javascript" id="auditMenuChange">// <![CDATA[
+function auditMenuChange(rowIndx, colIndx, column, dataModel, data) {
+        if (stepId == "obj_c77e78141240000136c72e8a1770ba00") {
+          var radios = window.frames['dialog_toolbar_action_page_frame'].document.getElementsByName("commentOption");
+          for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked == true) {
+              if (radios[i].id == "obj_66dea7d3a09b477e8c8cafe8c1ae6d68") {
+                document.getElementById("sign").value = 2;
+              } else if(radios[i].id == "obj_81ac216eb66c4bbeb78c4bedc91d613b"){
+                document.getElementById("sign").value = 3;
+	      }else {
+                document.getElementById("sign").value = 1;
+              }
+            }
+          }
+        }
+      }
+// ]]></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>d0865807-45d7-4004-ba07-184ae683ed50</id>
+    <createUser>admin</createUser>
+    <createTime>2017-05-26 11:51:45</createTime>
+    <updateTime>2017-05-26 12:06:55</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuaCZLGNNZmMihDUU3VL39Xi5Gd4sdtdqjM31WRzhO/JiCkwsO/PhyIuYq3hPlFYW6</signature>
+    <managed>false</managed>
+    <title>项目管理人员维护单</title>
+    <deleted>false</deleted>
+    <categoryName>数据信息</categoryName>
+    <administrator>admin</administrator>
+    <defaultLanguage></defaultLanguage>
+    <url></url>
+    <urlHeight></urlHeight>
+    <formItems>
+        <formItem>
+            <id>de31f7a0-3377-4237-9558-7a1d25611044</id>
+            <title>项目管理人员维护单</title>
+            <templateFile>{"pc":"数据信息-项目管理人员维护单.htm","mobile":"数据信息-项目管理人员维护单_m.htm","tablet":"数据信息-项目管理人员维护单.htm"}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>6ec4dd4f-3cd9-484f-98ac-15624043d41b</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":""}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+        <formItem>
+            <id>4a2b6ce0-c55b-4685-a6ea-baa9c7a120b0</id>
+            <title>项目管理人员维护明细</title>
+            <templateFile>{"pc":"数据信息-项目管理人员维护明细.htm","mobile":"数据信息-项目管理人员维护明细_m.htm","tablet":"数据信息-项目管理人员维护明细.htm"}</templateFile>
+            <grid>true</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId>109cda9b-8c2b-44c6-a891-73ce11e866f9</boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

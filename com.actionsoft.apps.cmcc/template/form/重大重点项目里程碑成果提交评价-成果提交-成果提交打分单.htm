@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<![endif]-->
+
+		<title>重大重点项目里程碑成果评价单</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--公共的js和css start-->
+		[#AWSImport]
+		[#AWSUIImport]
+		<!--公共的js和css end-->
+		<!--配色方案-->
+		<link type='text/css' rel='stylesheet' id='buttonCss' href='../css/cmcc.common.css?v=1493708787000' name='buttonCss'/>
+		<link rel='stylesheet' id='schemeCss' href='../apps/_bpm.platform/css/colorschemes/scheme_aws.css'  name='schemeCss'/>
+	
+
+<style>
+	body {
+		min-width: 1248px !important;overflow: auto !important;
+		}
+</style>
+
+
+
+
+
+<link type='text/css' rel='stylesheet' id='themeCss' href='../apps/_bpm.platform/css/theme/theme.css' name='themeCss'/>
+</head>
+	<body>
+<form id="frmMain" method="post" name="frmMain">
+<div border="0" style="display: none;"><a id="trackVar" border="0" href="#" target="_blank" rel="noopener"></a></div>
+<table id="aws-form-maintable" class="aws-form-ux-maintable" style="table-layout: auto;" border="0" cellspacing="0" cellpadding="0" align="center"><!--每个模板必须含有 aws-form-titlebg 和 title样式 否则无法应用配色风格-->
+<tbody>
+<tr id="aws-form-formcontent">
+<td><iframe id="urlFormIframe" style="width: 100%; height: 400px;" name="urlFormIframe" frameborder="0" scrolling="no"></iframe></td>
+</tr>
+<tr class="aws-form-bottom">
+<td class="aws-form-ux-actionsoft">[#Actionsoft]</td>
+</tr>
+<tr class="aws-form-bottom" style="font-size: 14px;">
+<td style="overflow: hidden;">
+<div class="aws-form-ux-tab-content" border="0">
+<div class="aws-form-ux-tab-item" border="0" style="border-top: 1px solid #DDD;" tit="tab1"><!--<h3 style="text-align:center;margin:0px 20px 20px 20px">审批意见</h3> -->
+<table id="oplogs" class="table table-bordered table-striped" style="width: 100%;" align="center">
+<tbody id="logsbody">
+<tr>
+<td colspan="2">
+<div border="0" align="center"><strong>审批意见</strong></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script language="JavaScript" src="../js/cmcc.common.toolbar.js?v=1495702489000" type="text/javascript"></script>
+<script id="auditMenuChange">// <![CDATA[
+//审核菜单改变事件
+function auditMenuChange(){
+	var radios=window.frames['dialog_toolbar_action_page_frame'].document.getElementsByName("commentOption");
+	for(var i=0;i<radios.length;i++){
+		if(radios[i].checked==true){
+			routeId = radios[i].id;
+		}
+	}
+}
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+//cmd=CLIENT_BPM_TASK_TRANSACT&
+$('#dialog_toolbar_action_page_frame').load(function() { 
+		  
+	 var val=window.frames["urlFormIframe"].isSubmit;
+	 var canMemoids = new Array();
+	 canMemoids[0]="obj_bd9e71178d1b4d85800ed1bb96e2b256";
+	 canMemoids[1]="obj_c37d4091d61640a0a43e396f9c5cb89e";
+	 canMemoids[2]="obj_d275193aa27f453899ae5b7d89638312";//向下办理按钮ID
+	 canMemoids[3]="obj_1cd349b7f32545bf9bcbcc25af7d35d7";
+	 
+	 var zbMemoids = new Array();
+	 zbMemoids[0] = "obj_cbda89de847c405182fe91db508fa15a";
+	 zbMemoids[1] ="obj_432b0107831b47b8bd585e6f3b37dede";
+	 zbMemoids[2] = "obj_9da2d881d8a44baabf4c123efd7d0d87";//转办按钮ID
+	 if(stepId=="obj_c76e783ba260000133f0a0e7c0d0a170" || stepId=="obj_c76e786112500001a440eb6cc1707d90" ||
+		stepId=='obj_c76e787ba2b000014fbcaad3aa672790'||stepId=="obj_c76e782d21800001e7a53700d2921478"){
+		//审核菜单
+		var parentTaskId = $("#parentTaskInstId").val();
+		awsui.ajax.request({
+			type : "POST",
+			url : "./jd",
+			alert:false,
+			dataType : "json",
+			data : {
+				cmd : "com.actionsoft.apps.cmcc_queryParentActivityId",
+				sid:sid,
+				parentTaskId:parentTaskId,
+				processId:processInstId
+			},
+			ok : function(r) {
+				var parentActivityId = r.data.parentActivityId;
+				//根据父任务节点不同，路径显示顺序不同
+				if(stepId=="obj_c76e783ba260000133f0a0e7c0d0a170"){//部门负责人节点
+					if(parentActivityId == "obj_c76e786112500001a440eb6cc1707d90"){//从处室领导返回
+						//隐藏第一条路径“送部门内部处室处理”
+						hiddenMemo("obj_f915bde978fa4fa7bd0b0f56139068a3");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f915bde978fa4fa7bd0b0f56139068a3").parent().next().next().remove();
+						//修改第三条路径；“送部门内部处室处理2”--》“送部门内部处室处理”
+						updateMemo("obj_f5473c0196d64d7c984e42817e7b22d3","送部门内部处室处理");						
+					}else{
+						//从接口人处返回，隐藏第三条路径“送部门内部处室处理2”
+						hiddenMemo("obj_f5473c0196d64d7c984e42817e7b22d3");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_f5473c0196d64d7c984e42817e7b22d3").parent().next().next().remove();
+					}
+					$("#dialog_toolbar_action_page_frame").show();
+				}else if(stepId=="obj_c76e786112500001a440eb6cc1707d90"){
+					if(parentActivityId == "obj_c76e787ba2b000014fbcaad3aa672790"){//从项目经理返回
+						//隐藏第一条路径“送内部项目经理处理”
+						hiddenMemo("obj_69920dc8a3964c9b8fb434fa85a8391a");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_69920dc8a3964c9b8fb434fa85a8391a").parent().next().next().remove();
+						//修改第三条路径；“送内部项目经理处理2”--》“送内部项目经理处理”
+						updateMemo("obj_ffdeb7b5d1a942e4be29aab4974128f7","送部门内部项目经理处理");						
+					}else{
+						//从接口人处返回，隐藏第三条路径“送内部项目经理处理2”
+						hiddenMemo("obj_ffdeb7b5d1a942e4be29aab4974128f7");
+						$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_ffdeb7b5d1a942e4be29aab4974128f7").parent().next().next().remove();
+					}
+					$("#dialog_toolbar_action_page_frame").show();
+				}else if(stepId=="obj_c76e782d21800001e7a53700d2921478"){//需求部门接口人处理
+							/*setTimeout(function(){
+							
+					      },100);*/
+					var isProc;
+					 awsui.ajax.request({
+						type: "POST",
+						url: "./jd",
+						alert: false,
+						dataType: "json",
+						data: {
+						  cmd: "com.actionsoft.apps.cmcc_QueryPro",
+						  sid: sid,
+						  processId: processInstId
+						},
+						success: function(r) {
+						  isProc = r.data.isPro;
+						  if(isProc=="是"){
+								hiddenMemo("obj_0d5c740bfe2d4a42b951060fb717b127");
+								$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_0d5c740bfe2d4a42b951060fb717b127").parent().next().next().remove(); 
+							}
+							if(isProc=="不是"){
+								hiddenMemo("obj_1cd349b7f32545bf9bcbcc25af7d35d7");
+								$(window.frames["dialog_toolbar_action_page_frame"].document).find("#obj_1cd349b7f32545bf9bcbcc25af7d35d7").parent().next().next().remove();
+							}
+							$("#dialog_toolbar_action_page_frame").show();
+						}
+						
+					  });
+				}else{
+					$("#dialog_toolbar_action_page_frame").show();
+				}
+				
+			}
+		});
+		//校验方法
+		var toolbarsrc = document.getElementById("dialog_toolbar_action_page_frame").src;
+		if(toolbarsrc.indexOf("cmd=CLIENT_BPM_TASK_TRANSACT")>-1){
+			setTimeout(function(){
+				//重写取消事件
+				$("#BTN_Default_Close").removeAttr("onclick"); //移除原先点击事件
+				$("#BTN_Default_Close").off("click").on("click",function() {
+					parent.$('#dialog_toolbar_action').dialog('close');
+					awsui.ajax.get("./jd", {
+						sid: frmMain.sid.value,
+						boId: $("#commentId").val(),
+						taskInstId: frmMain.taskInstId.value,
+						cmd: "CLIENT_BPM_TASK_CC_CANCEL",
+						success: function () {
+						}
+					});
+					parent.$('#BTN_Default_Close').attr("onclick","$('#dialog_toolbar_action').dialog('close');return false;");
+
+				});
+				$("#BTN_Default_Action").removeAttr("onclick");
+				$("#BTN_Default_Action").off("click").on("click", function(){
+					var bolMemod = true;
+					//重写转办方法
+					for(var i = 0;i<zbMemoids.length;i++){
+						var zbMemoId = zbMemoids[i];
+						var wtblElement = window.frames["dialog_toolbar_action_page_frame"].document.getElementById(zbMemoId);
+						if(wtblElement){
+							var sjsnbsh_clsssName = wtblElement.parentElement.getAttribute("class");
+							if (sjsnbsh_clsssName.indexOf("hover") > 0 || sjsnbsh_clsssName.indexOf("checked") > 0) {
+								bolMemod = false;
+								var url = "./w?sid=" + sid + "&cmd=CLIENT_BPM_TASK_DELEGATE_TASK_PAGE&processInstId=" + processInstId + "&taskInstId=" + taskId + "&appId=" + $("#appId").val();
+								if (window.frames['dialog_toolbar_action_page_frame'].checkCommentInfo()) {
+									var commentInfo = window.frames['dialog_toolbar_action_page_frame'].getCommentInfo("#Comment_Exec_Window");
+									disableAll();
+									awsui.ajax.request({
+										url : './jd',
+										type : 'POST',
+										dataType: 'json',
+										alert: false,
+										data : {
+												sid : $("#sid").val(),
+												cmd : 'CLIENT_BPM_FORM_PAGE_SAVE_COMMENT',
+												processInstId : $("#processInstId").val(),
+												taskInstId : $("#taskInstId").val(),
+												commentInfo : awsui.encode(commentInfo)
+											},
+										ok : function(r) {
+											$('#dialog_toolbar_action').dialog('close');
+											FormToolBarAction.openDialog("转办", url);
+											return false;
+										},
+										err : function(r) {
+											enableAll();
+											//错误情况处理
+											$.simpleAlert(r.msg, r.result);
+										}
+									});
+								}
+							return false;
+						   }
+						}
+					}
+					//校验退回
+					for(var j = 0;j<canMemoids.length;j++){
+						var canMemoid = canMemoids[j];
+						var sjsnbshElement = window.frames["dialog_toolbar_action_page_frame"].document.getElementById(canMemoid);
+						if(sjsnbshElement){
+							var sjsnbsh_clsssName = sjsnbshElement.parentElement.getAttribute("class");
+							if(sjsnbsh_clsssName.indexOf("hover") > 0 || sjsnbsh_clsssName.indexOf("checked") > 0){	
+								if(val==false){
+									bolMemod = false;
+									alert("请先保存表单，再点击提交下一步");
+									return false;
+								}
+							}
+						}
+					}
+					if(bolMemod){
+						window.frames['dialog_toolbar_action_page_frame'].saveCommentInfo();
+						return false;
+					}
+				});			
+			 },500);
+		}
+	 }else{
+		 $("#dialog_toolbar_action_page_frame").show();
+	 }
+});
+// ]]></script>
+<script type="text/javascript" id="formSave">// <![CDATA[
+/*
+参数isTransact为true，表示办理按钮触发的保存动作
+其他情况是保存按钮触发的保存动作
+*/
+function formSave(isTransact){
+     var modify = window.frames["urlFormIframe"].isModify;//修改状态
+	 var val=window.frames["urlFormIframe"].isSubmit;
+	if(isTransact == true){
+		$("#dialog_toolbar_action_page_frame").hide();
+		if(modify==true){
+			alert("请先保存表单，再点击提交下一步");
+            return false;
+		}else if(stepId=="obj_c76e787ba2b000014fbcaad3aa672790" && val == false){
+			alert("请先保存表单，再点击提交下一步");
+            return false;
+		}
+    }
+	
+}
+// ]]></script>
+<script id="formOnload">// <![CDATA[
+function formOnload(){
+	var host = window.location.host;
+	var isProc;
+	 if(stepId=='obj_c76e782d21800001e7a53700d2921478'){
+		 awsui.ajax.request({
+				type: "POST",
+				url: "./jd",
+				alert: false,
+				dataType: "json",
+				data: {
+				  cmd: "com.actionsoft.apps.cmcc_QueryPro",
+				  sid: sid,
+				  processId: processInstId
+				},
+				success: function(r) {
+				  isProc = r.data.isPro;
+						if(isProc=='是'){
+						   if(openState != 1){
+									var newurl="http://"+host+"/spms/hq/workflow/milestone?form=check_score&process_id="+processInstId;
+									document.getElementById("urlFormIframe").src = newurl;
+								}else{
+								   var newurl="http://"+host+"/spms/hq/workflow/milestone?form=score&process_id="+processInstId;
+								   document.getElementById("urlFormIframe").src = newurl;
+								}
+						}else{
+							if(openState != 1){
+								var newurl="http://"+host+"/spms/hq/workflow/milestone?form=check_score&process_id="+processInstId;
+								document.getElementById("urlFormIframe").src = newurl;
+							}else{
+								var newurl="http://"+host+"/spms/hq/workflow/milestone?form=check&process_id="+processInstId;
+								document.getElementById("urlFormIframe").src = newurl;
+							}
+							
+						}
+				  
+				}
+			  });
+		  }else{
+				if(openState != 1){
+					var newurl="http://"+host+"/spms/hq/workflow/milestone?form=check_score&process_id="+processInstId;
+					document.getElementById("urlFormIframe").src = newurl;
+				}else{
+				   var newurl="http://"+host+"/spms/hq/workflow/milestone?form=score&process_id="+processInstId;
+				   document.getElementById("urlFormIframe").src = newurl;
+				}
+		  }
+ 	awsui.ajax.request({
+		type : "POST",
+		url : "./jd",
+        alert:false,
+		dataType : "json",
+		data : {
+			cmd : "com.actionsoft.apps.cmcc_queryOperatelog",
+			sid:sid,
+			processid:processInstId
+		},
+		success : function(data) {
+			var html = data.msg;
+			$("#logsbody").append(html);
+		}
+	});
+}
+$(document).ready(function(){
+	$("#BTN_TRANSACT").off("click").on("click", function() {
+		$("#dialog_toolbar_action_page_frame").hide();
+		FormToolBarAction.BTN_TRANSACT();		
+	});
+});
+// ]]></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>981a266c-35be-42e0-a5f1-a639641d39da</id>
+    <createUser>admin</createUser>
+    <createTime>2017-09-25 18:40:04</createTime>
+    <updateUser></updateUser>
+    <updateTime>2017-10-23 14:37:48</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuVoK3sRbxNMV7EL54vlGXd1pjKMBYc6qf2K6oOkdNpdglun1/NDGGCRfX2tb5rxXe</signature>
+    <managed>false</managed>
+    <title>研究院结项表单快照</title>
+    <deleted>false</deleted>
+    <categoryName>研究院结项流程</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"http://10.1.5.36/spms/cmri/workflow/end?form=end_read&amp;type=cmri-end&amp;process_id=@processId()","mobile":""}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>78a9514a-c027-4be0-a3b7-b34824016a05</id>
+            <title>研究院结项表单快照</title>
+            <templateFile>{"pc":"研究院结项流程-研究院结项表单快照.htm","mobile":"","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css"}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>

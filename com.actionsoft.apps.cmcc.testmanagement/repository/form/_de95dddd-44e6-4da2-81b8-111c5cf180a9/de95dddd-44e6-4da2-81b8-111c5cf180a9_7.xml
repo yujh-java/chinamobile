@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formModel>
+    <id>de95dddd-44e6-4da2-81b8-111c5cf180a9</id>
+    <createUser>admin</createUser>
+    <createTime>2018-12-04 16:40:39</createTime>
+    <updateUser></updateUser>
+    <updateTime>2018-12-21 15:49:35</updateTime>
+    <signature>DgQSSyFmOqrf7WQa6WFesZuTOnzFe+zevZg0BYW55MuhMOtUylRD92QW2MZY8fzuDODOtw/2zVmiJYOrGw4aocdGm9hb0ShWFNOV/zRQJxHaMGATQfO1ftjDPrPA0NCT</signature>
+    <managed>false</managed>
+    <title>测试管理确认单</title>
+    <deleted>false</deleted>
+    <categoryName>测试准备阶段</categoryName>
+    <administrator>admin  </administrator>
+    <defaultLanguage></defaultLanguage>
+    <url>{"pc":"https://www.baidu.com","mobile":"www.baidu.com"}</url>
+    <urlHeight>{"pc":"400","mobile":"400"}</urlHeight>
+    <formItems>
+        <formItem>
+            <id>bbd898b4-c5dc-49fa-ba3f-905b1a9d478c</id>
+            <title>测试准备阶段表单</title>
+            <templateFile>{"pc":"测试准备阶段-测试准备阶段表单.htm","mobile":"测试准备阶段-测试准备阶段表单_m.htm","tablet":""}</templateFile>
+            <grid>false</grid>
+            <gridSetting></gridSetting>
+            <orderBy></orderBy>
+            <pageLimit>0</pageLimit>
+            <boModelId></boModelId>
+            <dictionaryFileName></dictionaryFileName>
+            <hiddenHead>false</hiddenHead>
+            <theme>{"pc":"_bpm.platform","mobile":"_bpm.platform"}</theme>
+            <itemDisplays/>
+            <scheme>{"pc":"scheme_aws.css","mobile":""}</scheme>
+            <calcFormula></calcFormula>
+            <conditionControl></conditionControl>
+            <validate></validate>
+            <icon></icon>
+            <gridControl></gridControl>
+        </formItem>
+    </formItems>
+</formModel>
